@@ -1,3 +1,52 @@
-﻿body
-{
+﻿
+#menu-header {
+    list-style-type: none;
+    display: inline-flex;
+    background: #6B6570;
 }
+
+    #menu-header li {
+        float: left;
+        padding-left: 6vw;
+        font-size: 2em;
+        background: #6B6570;
+    }
+
+#menu-header li a {
+    color: #ace894;
+    text-decoration-line:none;
+}
+
+#menu-header #title{
+    font-size:6em;
+    padding-left:0em;
+    padding-right:0.5em;
+    color: #ace894;
+    
+}
+
+#menu-header #icono_usuario {
+    width: 2em;
+    height: 2em;
+    background: #6B6570;
+    padding-right:0.5em;
+    padding-top: 0.5em;
+}
+
+#menu-header #dropmenu button {
+    font-size: 1em;
+    background: #6B6570;
+    color: #ace894;
+}
+
+.dropmenu_elements{
+    overflow:auto;
+}
+.dropmenu_elements a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+}
+
+
