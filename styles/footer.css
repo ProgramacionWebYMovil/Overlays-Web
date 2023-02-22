@@ -11,6 +11,7 @@
 
 #main-footer {
     display:flex;
+    justify-content:center;
 }
 
 .socialLink-footer{
@@ -19,4 +20,13 @@
 
 #copyright-footer{
     text-align:center;
+    font-size:0.8em;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 26px 0;
+}
+
+.ul-footer{
+    min-width:166px;
 }
