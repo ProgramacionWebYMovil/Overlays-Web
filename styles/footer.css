@@ -24,6 +24,11 @@
     display:flex;
     justify-content:center;
     align-items:center;
+
+}
+
+.tag-footer {
+    margin: 0px 10px;
 }
 
 .ul-footer{
