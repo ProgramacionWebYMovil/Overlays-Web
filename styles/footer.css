@@ -1,0 +1,16 @@
+﻿.li-footer {
+    list-style-type: none;
+}
+
+.social-icon {
+    width: 25px;
+    align-content:center;
+}
+
+#main-footer {
+    display:flex;
+}
+
+.socialLink-footer{
+    align-content:center;
+}
