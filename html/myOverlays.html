@@ -4,14 +4,20 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <script src="/js/myOverlays.js"></script>
-
+    
 </head>
 <body>
+    <h1 id="prueba">pepe</h1>
     <header w3-include-html="/templates/header.html"></header>
-    <main w3-include-html="/templates/templateOverlays.html"></main>
+    <main>
+        <div w3-include-html="/templates/overlayCard.html"></div>
+    </main>
     <footer w3-include-html="/templates/footer.html"></footer>
+
+
     <script>w3IncludeHTML();</script>
+    <script type="module" src="/js/myOverlays.js"></script>
 </body>
 </html>
