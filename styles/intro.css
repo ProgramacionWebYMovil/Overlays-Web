@@ -1,5 +1,6 @@
 body {
     background: #4A314D;
+    margin: 0;
 }
 
 logo img {
@@ -13,7 +14,6 @@ logo img {
 p {
     text-align: center;
     color: #ace894;
-    padding-bottom: 100px;
 }
 
 productos {
@@ -41,8 +41,8 @@ productos img:hover{
 
 footer{
     position: absolute;
-    width:99%;
-    height: 30%;
+    width:100%;
     bottom:0;
+
     background: #6B6570;
 }
