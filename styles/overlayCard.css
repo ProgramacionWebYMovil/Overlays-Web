@@ -1,0 +1,22 @@
+﻿#cardOverlay{
+    width:250px;
+}
+
+#cardOverlay img {
+    width: 25px;
+    height:25px;
+}
+
+
+#date-cardOverlay {
+    display: flex;
+    align-items: center;
+}
+
+#info-CardOverlay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
