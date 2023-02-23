@@ -1,0 +1,48 @@
+body {
+    background: #4A314D;
+}
+
+logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:80px;
+    height:80px;
+}
+
+p {
+    text-align: center;
+    color: #ace894;
+    padding-bottom: 100px;
+}
+
+productos {
+    display:flex;
+    width:300px;
+    height:215px;
+    margin: auto;
+    border-top: 4px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+}
+productos img {
+    width:0px;
+    flex-grow:1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+productos img:hover{
+    cursor: crosshair;
+    width: 150px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+footer{
+    position: absolute;
+    width:99%;
+    height: 30%;
+    bottom:0;
+    background: #6B6570;
+}
