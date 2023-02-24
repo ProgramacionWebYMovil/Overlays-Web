@@ -1,9 +1,12 @@
-﻿body{
-    margin:0 0 0 0;
+﻿body {
+    margin: 0 0 0 0;
+    font-family: Copperplate,Copperplate Gothic Light,fantasy;
 }
 nav {
-    background: #4a314d;
-    width:100vw;
+    --background-main-color: #5b5a5a;
+    --text-main-color: #25fc00;
+    background: var(--background-main-color);
+    width: 100vw;
 }
 
 #menu-header {
@@ -16,14 +19,11 @@ nav {
     padding-left:inherit;
     margin-left:0.2em;
 }
-#menu-header li{
-    
-}
+
 #menu-header li a {
     float: left;
-    color: #ace894;
-    text-decoration:none;
-
+    color: var(--text-main-color);
+    text-decoration: none;
 }
 
 #menu-header #title a{
@@ -34,6 +34,8 @@ nav {
     width: 2em;
     height: 2em;
 }
+
+/*Creación del dropdown menu*/
 #menu-header #dropmenu {
     display: inline-flex;
     flex-direction: column;
@@ -43,20 +45,19 @@ nav {
 }
 #menu-header #dropmenu button {
     font-size: 1em;
-    color: #ace894;
-    background: #4a314d;
+    color: var(--text-main-color);
+    background: var(--background-main-color);
     border: none;
-    width: 10em;
+    width: 7em;
     height: 2em;
-    
 }
 
 #menu-header #dropmenu div {
     display: none;
     text-decoration-line: none;
     z-index: 1;
-    background: #4a314d;
-    
+    background: var(--background-main-color);
+    flex-direction: column;
 }
 
 #dropmenu .dropmenu_elements a {
@@ -66,9 +67,36 @@ nav {
     border:groove;
 }
 
+/*Condición para mostrar el dropdown menu*/
 #menu-header #dropmenu:hover div{
     display: inline-flex;
+}
+
+#menu-header #sessionOptions {
+    display: inline-flex;
     flex-direction: column;
+    height: 2em;
+    width: 2em;
+    overflow: visible;
+    align-items: flex-end;
+}
+
+#menu-header #sessionOptions div {
+    display: none;
+    text-decoration-line: none;
+    z-index: 1;
+    background: var(--background-main-color);
+    flex-direction: column;
+    width: max-content;
     
+}
+
+#menu-header #sessionOptions div a {
+    border: groove;
+}
+
+#menu-header #sessionOptions:hover div {
+    display: inline-flex;
+    justify-content:left;
 }
 
