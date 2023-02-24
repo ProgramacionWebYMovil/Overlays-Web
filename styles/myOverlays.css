@@ -1,0 +1,9 @@
+﻿#cards-main {
+    display: flex;
+    justify-content:center;
+
+}
+
+.card-main{
+    margin:1.5em;
+}
