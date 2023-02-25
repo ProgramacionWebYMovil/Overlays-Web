@@ -1,0 +1,43 @@
+﻿.cardOverlay{
+    width:17em;
+    background-color:var(--color4);
+    border-radius:10px;
+    padding:1em;
+    display:flex;
+    flex-direction:column;
+}
+
+.previewOverlay-main {
+    width: 7em;
+    height: 7em;
+    align-self:center;
+}
+
+.info-cardOverlay img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+.date-cardOverlay {
+    display: flex;
+    align-items: center;
+}
+
+.info-cardOverlay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:0.5em;
+}
+
+.cardOverlay button{
+    background:none;
+    border:none;
+}
+
+
+
+
+
+
