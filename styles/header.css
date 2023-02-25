@@ -1,52 +1,102 @@
-﻿
+﻿body {
+    margin: 0 0 0 0;
+    font-family:  sans-serif;
+}
+nav {
+    --background-main-color: #1b1b1b;
+    --text-main-color: #25fc00;
+    background: var(--background-main-color);
+    width: 100vw;
+}
+
 #menu-header {
     list-style-type: none;
     display: inline-flex;
-    background: #6B6570;
+    justify-content: space-between;
+    align-items: center;
+    width: 99%;
+    font-size: 1em;
+    padding-left:inherit;
+    margin-left:0.2em;
 }
-
-    #menu-header li {
-        float: left;
-        padding-left: 6vw;
-        font-size: 2em;
-        background: #6B6570;
-    }
 
 #menu-header li a {
-    color: #ace894;
-    text-decoration-line:none;
+    float: left;
+    color: var(--text-main-color);
+    text-decoration: none;
 }
 
-#menu-header #title{
-    font-size:6em;
-    padding-left:0em;
-    padding-right:0.5em;
-    color: #ace894;
-    
+#menu-header #title a{
+    font-size:2em;
 }
 
 #menu-header #icono_usuario {
     width: 2em;
     height: 2em;
-    background: #6B6570;
-    padding-right:0.5em;
-    padding-top: 0.5em;
 }
 
+/*Creación del dropdown menu*/
+#menu-header #dropmenu {
+    display: inline-flex;
+    flex-direction: column;
+    height:1em;
+    overflow:visible;
+
+}
 #menu-header #dropmenu button {
     font-size: 1em;
-    background: #6B6570;
-    color: #ace894;
+    color: var(--text-main-color);
+    background: var(--background-main-color);
+    border: none;
+    width: 7em;
+    height: 2em;
 }
 
-.dropmenu_elements{
-    overflow:auto;
+#menu-header #dropmenu div {
+    display: none;
+    text-decoration-line: none;
+    z-index: 1;
+    background: var(--background-main-color);
+    flex-direction: column;
 }
-.dropmenu_elements a {
+
+#dropmenu .dropmenu_elements a {
+    float: none;
     display: block;
-    color: #000000;
-    padding: 5px;
-    text-decoration: none;
+    text-align: left;
+    border:groove;
 }
 
+/*Condición para mostrar el dropdown menu*/
+#menu-header #dropmenu:hover div{
+    display: inline-flex;
+}
+
+#menu-header #sessionOptions {
+    display: inline-flex;
+    flex-direction: column;
+    height: 2em;
+    width: 2em;
+    overflow: visible;
+    align-items: flex-end;
+}
+
+#menu-header #sessionOptions div {
+    display: none;
+    text-decoration-line: none;
+    z-index: 1;
+    background: var(--background-main-color);
+    flex-direction: column;
+    width: max-content;
+    
+}
+
+#menu-header #sessionOptions div a {
+    border: groove;
+}
+
+#menu-header #sessionOptions:hover div {
+    display: inline-flex;
+    justify-content:left;
+}
 
