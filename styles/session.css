@@ -1,0 +1,45 @@
+﻿body {
+    list-style:none;
+    margin:0;
+}
+
+#sessionForm {
+    font-size:x-large;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    
+}
+
+#sessionForm ul{
+    padding:0;
+    list-style-type:none;
+    display:inline-flex;
+    flex-direction:column;
+    align-items:flex-start;
+    
+}
+
+#sessionForm ul li {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    flex-wrap:wrap;
+}
+
+#sessionOptions{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#sessionOptions #actionButton{
+    font-size:x-large;
+}
+
+#sessionOptions  div{
+    display:flex;
+    flex-direction:column;
+}
+    
