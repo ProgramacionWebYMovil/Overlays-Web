@@ -1,0 +1,50 @@
+﻿:root {
+    --color1: #25fc00;
+    --color2: #1b1b1b;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+#plans {
+    display:flex;
+}
+
+#plans ul {
+    list-style-type: none;
+    display:flex;
+    flex-direction:column;
+    padding:0;
+    
+}
+
+.plan button {
+    width:100%;
+    border:none;
+}
+
+
+.features{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.tick-cross{
+    font-size:1.5em;
+    margin-right:1em;
+}
+
+.plan{
+    background-color:var(--color1);
+    margin:2em;
+    padding:2em;
+    display:flex;
+    border-radius:1em;
+    
+}
