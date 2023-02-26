@@ -9,8 +9,8 @@ body {
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
-    width:80px;
-    height:80px;
+    width:150px;
+    height:150px;
 }
 
 #brand_name-intro{
@@ -24,23 +24,29 @@ body {
     text-align: center;
     color: #6fff10;
     font-size:2em;
-    font-family: "DS-digit";
+    font-family: "Optimus";
 }
 
 #productos-intro{
+    background: #ace894;
+    height: 350px;
+    margin: auto;
+}
+
+#productos_text-intro{
     text-align: center;
     color: #794780;
-    font-family: "Arial Black";
+    font-family: "DS-digit";
     font-size: 2em;
     font-weight: bold;
-    background: #ace894;
+    padding-top: 20px;
 }
 
 .productos_images-intro {
     display:flex;
     width:300px;
     height:215px;
-    margin:auto;
+    margin: auto;
     border-top: 4px solid rgba(0, 0, 0, 0.3);
     border-bottom: 4px solid rgba(0, 0, 0, 0.3);
 }
@@ -62,21 +68,28 @@ body {
 
 @font-face {
     font-family: 'Blue Ocean';
-    src: url('/fonts/BLUE OCEAN.ttf') format('truetype');
+    src: url('../fonts/BLUE OCEAN.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Robo Girls';
-    src: url('/fonts/Robo Girls.ttf') format('truetype');
+    src: url('../fonts/Robo Girls.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'DS-digit';
-    src: url('/fonts/DS-DIGIT.ttf') format('truetype');
+    src: url('../fonts/DS-DIGIT.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Optimus';
+    src: url('../fonts/Optimus.otf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }

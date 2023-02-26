@@ -4,14 +4,11 @@ body{
     overflow-x: hidden;
 }
 
-#prices{
-}
-
 #title-prices {
     text-align: center;
     color: #6fff10;
     font-size:3em;
-    font-family: "Robo Girls";
+    font-family: "Optimus";
 }
 #description-prices {
     text-align: center;
@@ -46,13 +43,20 @@ body{
 .price-prices{
     text-align: center;
     color: #25fc00;
-    font-size:2em;
-    font-family: "DS-digit";
+    font-size:1.5em;
+    font-family: "Optimus";
 }
 
 .description-prices{
     text-align: center;
     color: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'Blue Ocean';
+    src: url('../fonts/BLUE OCEAN.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
@@ -65,6 +69,12 @@ body{
 @font-face {
     font-family: 'DS-digit';
     src: url('/fonts/DS-DIGIT.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Optimus';
+    src: url('../fonts/Optimus.otf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }
