@@ -16,18 +16,24 @@ body{
 #description-prices {
     text-align: center;
     color: #6fff10;
-    font-size:3em;
+    font-size:2em;
     font-family: "Robo Girls";
 }
 
 .container-prices{
-    margin: auto;
+    display: flex;
+    justify-content:center;
+    list-style: none;
 }
 
 .box-prices{
-    background: #4A314D;
+    /*background-color: rgba(74, 49, 77, 0.9);*/
+    background: linear-gradient(to bottom, #311134, #4A314D);
+    border: 2px solid #1b1b1b;
     width: 300px;
-
+    border-radius: 5%;
+    margin-right: 20px;
+    justify-content:center;
 }
 
 .type-prices{
@@ -60,4 +66,3 @@ body{
     font-style: normal;
     font-weight: normal;
 }
-
