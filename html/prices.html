@@ -1,11 +1,44 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Precios</title>
+        <script src="http://www.w3schools.com/lib/w3data.js"></script>
+        <link rel="stylesheet" href="/styles/header.css" />
+        <link rel="stylesheet" href="/styles/prices.css" />
+        <link rel="stylesheet" href="/styles/footer.css" />
+    </head>
 
-</body>
+    <body>
+        <header w3-include-html="/templates/header.html"></header>
+        <script>w3IncludeHTML();</script>
+
+        <div id="prices">
+            <h1 id="title-prices">Precios</h1>
+            <p id="description-prices">Elige tu plan ideal: </p>
+            <ul class="container-prices">
+                <li class="box-prices">
+                    <p class="type-prices"> Gratis</p>
+                    <p class="price-prices">0€</p>
+                    <p class="description-prices"> Podrás utilizar Overlays prediterminados, hechos por nosotros. </p>
+                </li>
+                <li class="box-prices">
+                    <p class="type-prices"> Mensual</p>
+                    <p class="price-prices">9.99€/mes</p>
+                    <p class="description-prices"> Podrás utilizar Overlays prediterminados, hechos por nosotros. <br>
+                    Podrás editar y personalizar tus Overlays como desees.</p>
+                </li>
+                <li class="box-prices">
+                    <p class="type-prices"> Anual</p>
+                    <p class="price-prices">59.99€/año</p>
+                    <p class="description-prices"> Podrás utilizar Overlays prediterminados, hechos por nosotros. <br>
+                    Podrás editar y personalizar tus Overlays como desees. </p>
+                </li>
+            </ul>
+        </div>
+
+        <footer w3-include-html="/templates/footer.html"></footer>
+        <script>w3IncludeHTML();</script>
+    </body>
 </html>

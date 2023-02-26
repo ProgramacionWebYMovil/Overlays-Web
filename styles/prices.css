@@ -1,0 +1,63 @@
+body{
+    background: #6b6570;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#prices{
+}
+
+#title-prices {
+    text-align: center;
+    color: #6fff10;
+    font-size:3em;
+    font-family: "Robo Girls";
+}
+#description-prices {
+    text-align: center;
+    color: #6fff10;
+    font-size:3em;
+    font-family: "Robo Girls";
+}
+
+.container-prices{
+    margin: auto;
+}
+
+.box-prices{
+    background: #4A314D;
+    width: 300px;
+
+}
+
+.type-prices{
+    text-align: center;
+    color: #6fff10;
+    font-size:2em;
+    font-family: "Robo Girls";
+}
+
+.price-prices{
+    text-align: center;
+    color: #25fc00;
+}
+
+.description-prices{
+    text-align: center;
+    color: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'Robo Girls';
+    src: url('../fonts/Robo Girls.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'DS-digit';
+    src: url('../fonts/DS-DIGIT.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+

@@ -10,18 +10,25 @@
     </head>
 
     <body>
-        <logo>
-            <img src="./images/logotipos/logo temporal.png" alt="Imagen del Logo"/>
-            <p> Nombre de la marca. <br> Texto de Presentación</p>
-        </logo>
+        <header w3-include-html="/templates/header.html"></header>
+        <script>w3IncludeHTML();</script>
 
-        <productos>
-            <img src="./images/tipo_productos/score.png" alt="Imagen del Score"/>
-            <img src="./images/tipo_productos/crono.png" alt="Imagen del Crono"/>
-            <img src="./images/tipo_productos/coin.png" alt="Imagen del Coin"/>
-        </productos>
+        <div id="logo-intro">
+            <img src="./images/logotipos/logo.png" alt="Imagen del Logo"/>
+            <p id="brand_name-intro"> Overlay Oasis</p>
+            <p id="description-intro"> Potencia la calidad de tus directos con nuestras superposiciones personalizables.</p>
+        </div>
 
-        <footer w3-include-html="footer.html"></footer>
+        <div id="productos-intro">
+            <p> Nuetros Overlays:</p>
+            <div class="productos_images-intro">
+                <img src="./images/tipo_productos/score.png" alt="Imagen del Score"/>
+                <img src="./images/tipo_productos/crono.png" alt="Imagen del Crono"/>
+                <img src="./images/tipo_productos/coin.png" alt="Imagen del Coin"/>
+            </div>
+        </div>
+
+        <footer w3-include-html="/templates/footer.html"></footer>
         <script>w3IncludeHTML();</script>
     </body>
 </html>

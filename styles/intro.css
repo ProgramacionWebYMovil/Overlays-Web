@@ -1,30 +1,51 @@
 body {
     background: #4A314D;
     margin: 0;
+    overflow-x: hidden;
 }
 
-logo img {
+#logo-intro img {
     display: block;
+    margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
     width:80px;
     height:80px;
 }
 
-p {
+#brand_name-intro{
     text-align: center;
-    color: #ace894;
+    color: #6fff10;
+    font-size:3em;
+    font-family: "Blue Ocean";
 }
 
-productos {
+#description-intro{
+    text-align: center;
+    color: #6fff10;
+    font-size:2em;
+    font-family: "DS-digit";
+}
+
+#productos-intro{
+    text-align: center;
+    color: #794780;
+    font-family: "Arial Black";
+    font-size: 2em;
+    font-weight: bold;
+    background: #ace894;
+}
+
+.productos_images-intro {
     display:flex;
     width:300px;
     height:215px;
-    margin: auto;
+    margin:auto;
     border-top: 4px solid rgba(0, 0, 0, 0.3);
     border-bottom: 4px solid rgba(0, 0, 0, 0.3);
 }
-productos img {
+
+.productos_images-intro img {
     width:0px;
     flex-grow:1;
     object-fit: cover;
@@ -32,17 +53,30 @@ productos img {
     transition: .5s ease;
 }
 
-productos img:hover{
+.productos_images-intro img:hover{
     cursor: crosshair;
     width: 150px;
     opacity: 1;
     filter: contrast(120%);
 }
 
-footer{
-    position: absolute;
-    width:100%;
-    bottom:0;
+@font-face {
+    font-family: 'Blue Ocean';
+    src: url('/fonts/BLUE OCEAN.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
 
-    background: #6B6570;
+@font-face {
+    font-family: 'Robo Girls';
+    src: url('/fonts/Robo Girls.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'DS-digit';
+    src: url('/fonts/DS-DIGIT.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }

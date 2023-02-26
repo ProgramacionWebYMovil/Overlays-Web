@@ -1,4 +1,13 @@
-﻿.li-footer {
+﻿#footer {
+    position: absolute;
+    width: 100%;
+    bottom: -20em;
+    background: #1b1b1b;
+    color: #FFFFFF;
+
+}
+
+.li-footer {
     list-style-type: none;
     display: flex;
     margin: inherit;
