@@ -4,9 +4,33 @@
     <head>
         <meta charset="utf-8" />
         <title>¿Cómo usar?</title>
+        <script src="http://www.w3schools.com/lib/w3data.js"></script>
+        <link rel="stylesheet" href="../styles/header.css" />
+        <link rel="stylesheet" href="../styles/howToUse.css.css" />
+        <link rel="stylesheet" href="../styles/footer.css" />
     </head>
 
     <body>
+    <header w3-include-html="/templates/header.html"></header>
+    <script>w3IncludeHTML();</script>
 
+    <div id="howToUse">
+        <h1 id="title-howToUse">¿Cómo se utiliza? </h1>
+        <p id="introduction-howToUse"> Si no sabes como se utiliza, no te preocupes. <br> ¡Te echamos una mano!</p>
+        <ul class="container-howToUse">
+            <li class="box-howToUse">
+                <h2 class="type-howToUse">¿Cómo poner un overlay en mi directo?</h2>
+                <p class="description-howToUse">Pues no sé. Un poco perdida yo</p>
+            </li>
+
+            <li class="box-howToUse">
+                <h2 class="type-howToUse">¿Cómo personalizar mi propio overlay?</h2>
+                <p class="description-howToUse">Pues no sé tampoco la verdad.</p>
+            </li>
+        </ul>
+    </div>
+
+    <footer w3-include-html="/templates/footer.html"></footer>
+    <script>w3IncludeHTML();</script>
     </body>
 </html>

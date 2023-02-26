@@ -17,7 +17,7 @@ body{
     text-align: center;
     color: #6fff10;
     font-size:2em;
-    font-family: "Robo Girls";
+    font-family: "DS-digit";
 }
 
 .container-prices{
@@ -46,6 +46,8 @@ body{
 .price-prices{
     text-align: center;
     color: #25fc00;
+    font-size:2em;
+    font-family: "DS-digit";
 }
 
 .description-prices{
@@ -55,14 +57,14 @@ body{
 
 @font-face {
     font-family: 'Robo Girls';
-    src: url('../fonts/Robo Girls.ttf') format('truetype');
+    src: url('/fonts/Robo Girls.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'DS-digit';
-    src: url('../fonts/DS-DIGIT.ttf') format('truetype');
+    src: url('/fonts/DS-DIGIT.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }
