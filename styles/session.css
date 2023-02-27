@@ -1,6 +1,14 @@
-﻿body {
-    list-style:none;
-    margin:0;
+﻿#session {
+    list-style: none;
+    margin: 0;
+    --second-color:#ffbb00 ;
+    --background-main-color: #032a88; 
+    --text-main-color: #ffffff;
+    color:var(--text-main-color);
+    background: var(--background-main-color);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 #sessionForm {
@@ -8,8 +16,6 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-
-    
 }
 
 #sessionForm ul{
@@ -34,12 +40,33 @@
     align-items:center;
 }
 
-#sessionOptions #actionButton{
-    font-size:x-large;
+#sessionOptions {
+    width: max-content;
+}
+
+#sessionOptions #actionButton {
+    font-size: x-large;
+    background: var(--second-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    -webkit-text-stroke: #032a88 0.03em;
+    width: max-content;
+}
+
+
+#sessionOptions:hover #actionButton{
+    background: red;
 }
 
 #sessionOptions  div{
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
+}
+
+#sessionOptions div button {
+    background: none;
+    border: none;
+
 }
     
