@@ -1,21 +1,27 @@
-﻿body {
-    background: #6b6570;
+﻿:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
+}
+
+body {
+    background: var(--colorPrincipal);
     margin: 0;
     overflow-x: hidden;
+    font-family: Poppins;
 }
 
 #title-howToUse {
     text-align: center;
-    color: #6fff10;
+    color: var(--colorTerciario);
     font-size: 3em;
-    font-family: "Optimus";
 }
 
 #introduction-howToUse {
     text-align: center;
-    color: #4A314D;
+    color: var(--colorSecundario);
     font-size: 2em;
-    font-family: "Optimus";
 }
 
 .container-howToUse {
@@ -25,8 +31,8 @@
 
 .box-howToUse {
     /*background-color: rgba(74, 49, 77, 0.9);*/
-    background: linear-gradient(to bottom, #311134, #4A314D);
-    border: 2px solid #1b1b1b;
+    background: var(--colorPrincipalOscuro);
+    border: 2px solid var(--colorTerciario);
     width: 750px;
     /*border-radius: 20px 20px 20px 20px;*/
     border-radius: 20px;
@@ -37,40 +43,11 @@
 
 .type-howToUse {
     text-align: center;
-    color: #6fff10;
+    color: var(--colorTerciario);
     font-size: 2em;
-    font-family: "Optimus";
 }
 
 .description-howToUse {
     text-align: center;
-    color: #FFFFFF;
-}
-
-@font-face {
-    font-family: 'Blue Ocean';
-    src: url('../fonts/BLUE OCEAN.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Robo Girls';
-    src: url('/fonts/Robo Girls.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'DS-digit';
-    src: url('/fonts/DS-DIGIT.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Optimus';
-    src: url('../fonts/Optimus.otf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
+    color: var(--colorSecundario);
 }
