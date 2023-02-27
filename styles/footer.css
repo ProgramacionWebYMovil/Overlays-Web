@@ -1,11 +1,18 @@
-﻿#footer {
+﻿:root {
+    --colorPrincipal:#032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario:#FFBB00;
+    --colorPrincipalOscuro:#04006B;
+}
+
+#footer {
     position: relative;
     width: 100%;
     bottom: -1em;
     clear: both;
     margin: 0;
-    background: #1b1b1b;
-    color: #FFFFFF;
+    background: linear-gradient(var(--colorPrincipalOscuro),var(--colorPrincipal));
+    color: var(--colorSecundario);
 }
 
 .li-footer {
@@ -45,6 +52,10 @@
 
 .ul-footer{
     min-width:166px;
+}
+
+h3{
+    color:var(--colorTerciario);
 }
 
 #form-footer {
