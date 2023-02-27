@@ -1,0 +1,32 @@
+#scoreboard-body{
+}
+
+#title-scoreboard{
+    text-align: center;
+}
+
+.container-scoreboard{
+    width: 50%;
+    height: 270px;
+    margin: auto;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4385ef;
+    padding: 10px 90px 15px 90px;
+    border-radius: 10px;
+    z-index: -10;
+    box-shadow: inset 0px -5px 1px #234d8e, 6px 7px 3px rgb(66 66 66 / 50%);
+}
+
+.num_box-scoreboard{
+    background-color: #e85c5c;
+    box-shadow: inset 0 -5px 1px #842f2f, 6px 7px 3px rgb(66 66 66 / 50%);
+    width: 80px;
+    height: 80px;
+    font-size: 1em;
+    list-style: none;
+    text-align: center;
+}
+
+
