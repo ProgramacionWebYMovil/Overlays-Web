@@ -93,7 +93,7 @@ nav {
     height: 2em;
     width: 2em;
     overflow: visible;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 #menu-header #sessionOptions div {
