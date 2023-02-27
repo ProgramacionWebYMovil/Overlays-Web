@@ -1,9 +1,4 @@
-﻿#header_body{
-    margin: 0 0 0 0;
-    font-family:  sans-serif;
-}
-
-nav {
+﻿nav {
     --background-main-color: #1b1b1b;
     --text-main-color: #25fc00;
     background: var(--background-main-color);
