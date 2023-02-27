@@ -1,6 +1,90 @@
 ﻿<!DOCTYPE html>
-
+<!--Esta será una página estática-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="stylesheet" href="/styles/prices.css" />
+</head>
+<body>
+    <header w3-include-html="/templates/header.html"></header>
+    <main>
+        <h1>Pricing</h1>
+        <h2>Choose the best choice for yourself</h2>
+        <div id="plans">
+            <div class="plan">
+                <ul>
+                    <li>
+                        <h2>Free</h2>
+                    </li>
+                    <li>
+                        <h3><span style="font-size: 1.5em">$0</span>/month</h3>
+                    </li>
+                    <li>
+                        <div class="features">
+                            <p class="tick-cross">&#10003</p>
+                            <p>Use all our overlays</p>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="features">
+                            <p class="tick-cross">&#10060</p>
+                            <p>Use each type of overlay<br />more than once</p>
+                        </div>
+                    <li/>
+                    <li>
+                        <div class="features">
+                            <p class="tick-cross">&#10060</p>
+                            <p>Customize the overlays<br />as you wish </p>
+                        </div>
+                    </li>
+                    <li>
+                        <button>
+                            START
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="plan">
+                <ul>
+                    <li>
+                        <h2>Premium</h2>
+                    </li>
+                    <li>
+                        <h3><span style="font-size: 1.5em">$4.99</span>/month</h3>
+                    </li>
+                    <li>
+                        <div class="features">
+                            <p class="tick-cross">&#10003</p>
+                            <p>Use all our overlays</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="features">
+                            <p class="tick-cross">&#10003</p>
+                            <p>Use each type of overlay<br />more than once</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="features">
+                            <p class="tick-cross">&#10003</p>
+                            <p>Customize the overlays<br />as you wish </p>
+                        </div>
+                    </li>
+                    <li>
+                        <button>
+                            START
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer w3-include-html="/templates/footer.html"></footer>
+
     <head>
         <meta charset="utf-8" />
         <title>Precios</title>
@@ -39,7 +123,6 @@
             </ul>
         </div>
 
-        <footer w3-include-html="/templates/footer.html"></footer>
-        <script>w3IncludeHTML();</script>
-    </body>
+    <script>w3IncludeHTML();</script>
+</body>
 </html>

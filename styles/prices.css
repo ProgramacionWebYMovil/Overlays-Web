@@ -1,9 +1,13 @@
+:root {
+    --color1: #25fc00;
+    --color2: #1b1b1b;
 body{
     background: #6b6570;
     margin: 0;
     overflow-x: hidden;
 }
 
+main {
 #title-prices {
     text-align: center;
     color: #6fff10;
@@ -19,10 +23,16 @@ body{
 
 .container-prices{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
     justify-content:center;
     list-style: none;
 }
 
+#plans {
+    display:flex;
 .box-prices{
     /*background-color: rgba(74, 49, 77, 0.9);*/
     background: linear-gradient(to bottom, #311134, #4A314D);
@@ -33,13 +43,18 @@ body{
     justify-content:center;
 }
 
+#plans ul {
+    list-style-type: none;
+    display:flex;
+    flex-direction:column;
+    padding:0;
 .type-prices{
     text-align: center;
     color: #6fff10;
     font-size:2em;
     font-family: "Robo Girls";
 }
-
+    
 .price-prices{
     text-align: center;
     color: #25fc00;
@@ -47,11 +62,20 @@ body{
     font-family: "Optimus";
 }
 
+.plan button {
+    width:100%;
+    border:none;
+    
 .description-prices{
     text-align: center;
     color: #FFFFFF;
 }
 
+
+.features{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 @font-face {
     font-family: 'Blue Ocean';
     src: url('../fonts/BLUE OCEAN.ttf') format('truetype');
@@ -59,6 +83,9 @@ body{
     font-weight: normal;
 }
 
+.tick-cross{
+    font-size:1.5em;
+    margin-right:1em;
 @font-face {
     font-family: 'Robo Girls';
     src: url('/fonts/Robo Girls.ttf') format('truetype');
@@ -66,6 +93,13 @@ body{
     font-weight: normal;
 }
 
+.plan{
+    background-color:var(--color1);
+    margin:2em;
+    padding:2em;
+    display:flex;
+    border-radius:1em;
+    
 @font-face {
     font-family: 'DS-digit';
     src: url('/fonts/DS-DIGIT.ttf') format('truetype');
