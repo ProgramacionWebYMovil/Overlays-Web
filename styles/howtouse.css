@@ -47,30 +47,4 @@
     color: #FFFFFF;
 }
 
-@font-face {
-    font-family: 'Blue Ocean';
-    src: url('../fonts/BLUE OCEAN.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
 
-@font-face {
-    font-family: 'Robo Girls';
-    src: url('/fonts/Robo Girls.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'DS-digit';
-    src: url('/fonts/DS-DIGIT.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Optimus';
-    src: url('../fonts/Optimus.otf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}

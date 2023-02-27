@@ -7,6 +7,7 @@
 
 body{
     margin:0;
+    font-family:Poppins;
 }
 
 main {
@@ -19,7 +20,8 @@ main {
 }
 
 body {
-    background-color: rgb(18,18,18);
+    background-color: var(--colorPrincipal);
+    overflow-x:hidden;
 }
 
 #plans {
@@ -27,7 +29,8 @@ body {
 }
 
 h1 {
-    color:var(--colorTerciario);
+    color:var(--colorSecundario);
+    
 }
 
 #plans ul {
@@ -40,6 +43,13 @@ h1 {
 .plan button {
     width: 100%;
     border: none;
+    font-family:Poppins;
+    border-radius:15px;
+    background-color:var(--colorTerciario);
+}
+
+.plan h2{
+    font-size:2em;
 }
 
 
@@ -64,7 +74,7 @@ h1 {
 
 
 .plan {
-    background: linear-gradient(var(--colorPrincipalOscuro),var(--colorPrincipal));
+    background: var(--colorPrincipalOscuro);
     margin: 2em;
     padding: 1.5em;
     display: flex;
