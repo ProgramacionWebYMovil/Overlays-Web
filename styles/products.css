@@ -1,0 +1,25 @@
+﻿:root {
+    --color1: #25fc00;
+    --color2: #1b1b1b;
+}
+
+
+.cards-main {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color2);
+}
+
+.card-main {
+    margin: 1.5em;
+}
+
+footer {
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}

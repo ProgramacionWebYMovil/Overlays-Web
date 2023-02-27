@@ -1,80 +1,52 @@
+:root {
+    --color1: #25fc00;
+    --color2: #1b1b1b;
+}
+
 body{
-    background: #6b6570;
-    margin: 0;
-    overflow-x: hidden;
+    margin:0;
 }
 
-#title-prices {
-    text-align: center;
-    color: #6fff10;
-    font-size:3em;
-    font-family: "Optimus";
-}
-#description-prices {
-    text-align: center;
-    color: #6fff10;
-    font-size:2em;
-    font-family: "DS-digit";
-}
-
-.container-prices{
+main {
     display: flex;
-    justify-content:center;
-    list-style: none;
-}
-
-.box-prices{
-    /*background-color: rgba(74, 49, 77, 0.9);*/
-    background: linear-gradient(to bottom, #311134, #4A314D);
-    border: 2px solid #1b1b1b;
-    width: 300px;
-    border-radius: 5%;
-    margin-right: 20px;
-    justify-content:center;
-}
-
-.type-prices{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: #6fff10;
-    font-size:2em;
-    font-family: "Robo Girls";
 }
 
-.price-prices{
-    text-align: center;
-    color: #25fc00;
-    font-size:1.5em;
-    font-family: "Optimus";
+#plans {
+    display: flex;
 }
 
-.description-prices{
-    text-align: center;
-    color: #FFFFFF;
+#plans ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
 }
 
-@font-face {
-    font-family: 'Blue Ocean';
-    src: url('../fonts/BLUE OCEAN.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
+.plan button {
+    width: 100%;
+    border: none;
 }
 
-@font-face {
-    font-family: 'Robo Girls';
-    src: url('/fonts/Robo Girls.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
+
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@font-face {
-    font-family: 'DS-digit';
-    src: url('/fonts/DS-DIGIT.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
+.tick-cross {
+    font-size: 1.5em;
+    margin-right: 1em;
 }
-@font-face {
-    font-family: 'Optimus';
-    src: url('../fonts/Optimus.otf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
+
+.plan {
+    background-color: var(--color1);
+    margin: 2em;
+    padding: 2em;
+    display: flex;
+    border-radius: 1em;
 }
