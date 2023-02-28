@@ -10,27 +10,51 @@
     flex-direction:column;
     font-size:5em;
     width:fit-content;
+    font-family:Poppins;
 }
 
-.players{
-    display:flex;
+.players {
+    display: flex;
+    border-color: white;
 }
 
-.names{
-    margin-right:1em;
-    background-color:green;
+.names {
+    background-color: black;
+    padding: 0.5em;
+    color: white;
 }
 
-.puntos{
-    background-color:green;
-    
+#player1 {
+    border-bottom: solid;
+    border-bottom-width: 0.01em;
+    border-color: white;
+}
+
+
+
+#player2 {
+    border-top: solid;
+    border-top-width: 0.01em;
+}
+
+.puntos {
+    background-color: black;
+    padding: 0.5em;
+    color: white;
 }
 
 
 .sets{
-    color:var(--colorPrincipal);
-    margin-right:0.5em;
-    background-color:rebeccapurple;
+    background-color:white;
     display:flex;
-    
+    color:black;
+}
+
+.sets1, .sets2, .sets3 {
+    padding:0.5em;
+}
+
+
+p{
+    margin:0;
 }
