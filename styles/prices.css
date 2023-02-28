@@ -7,6 +7,7 @@
 
 body{
     margin:0;
+    font-family:Poppins;
 }
 
 main {
@@ -19,7 +20,8 @@ main {
 }
 
 body {
-    background-color: rgb(18,18,18);
+    background-color: var(--colorPrincipal);
+    overflow-x:hidden;
 }
 
 #plans {
@@ -27,7 +29,8 @@ body {
 }
 
 h1 {
-    color:var(--colorTerciario);
+    color:var(--colorSecundario);
+    
 }
 
 #plans ul {
@@ -37,11 +40,20 @@ h1 {
         padding: 0;
 }
 
+
 .plan button {
     width: 100%;
     border: none;
+    font-family: Poppins;
+    border-radius: 15px;
+    background-color: var(--colorTerciario);
 }
 
+.plan h2{
+    font-size:2em;
+    padding:0.5em;
+    margin:0em;
+}
 
 .features {
     display: flex;
@@ -49,25 +61,34 @@ h1 {
     align-items: center;
 }
 
+
 .tick-cross {
     font-size: 1.5em;
     margin-right: 1em;
 }
 
-.plan h3, h2 {
+.plan h3, h2{
     color:var(--colorTerciario);
 }
 
-.plan{
+.plan p{
     color: white;
+    font-family:Poppins;
 }
 
 
 .plan {
-    background: linear-gradient(var(--colorPrincipalOscuro),var(--colorPrincipal));
+    background: var(--colorPrincipalOscuro);
     margin: 2em;
     padding: 1.5em;
     display: flex;
     border-radius: 1em;
+    width: 15em;
+    justify-content: center;
 }
+
+hr {
+    border-color:var(--colorTerciario);
+}
+
 

@@ -20,12 +20,13 @@
 nav {
     background: linear-gradient(var(--colorPrincipalOscuro),var(--colorPrincipal));
     width: 100vw;
+    font-family:Poppins;
 }
 
 #menu-header {
     list-style-type: none;
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 99%;
     font-size: 1em;
@@ -37,6 +38,10 @@ nav {
     float: left;
     color: var(--colorTerciario);
     text-decoration: none;
+}
+
+#menu-header a {
+    font-weight: bold;
 }
 
 #menu-header #title a{
@@ -52,37 +57,34 @@ nav {
 #menu-header #dropmenu {
     display: inline-flex;
     flex-direction: column;
-    height:1em;
     overflow:visible;
-
-}
-#menu-header #dropmenu button {
-    font-size: 1em;
-    color: var(--colorTerciario);
-    background: none;
-    border: none;
-    width: 7em;
-    height: 2em;
+    position:relative;
 }
 
 #menu-header #dropmenu div {
     display: none;
+    position:absolute;
     text-decoration-line: none;
     z-index: 1;
-    background: var(--colorPrincipal);
     flex-direction: column;
+}
+
+.dropmenu_elements {
+    top: 30px;
+    background:none;
 }
 
 #dropmenu .dropmenu_elements a {
     float: none;
     display: block;
     text-align: left;
-    border:groove;
+    font-weight: normal;
 }
 
 /*Condición para mostrar el dropdown menu*/
 #menu-header #dropmenu:hover div{
     display: inline-flex;
+    justify-content:center;
 }
 
 #menu-header #sessionOptions {
@@ -91,21 +93,21 @@ nav {
     height: 2em;
     width: 2em;
     overflow: visible;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 #menu-header #sessionOptions div {
     display: none;
     text-decoration-line: none;
     z-index: 1;
-    background: var(--colorPrincipal);
     flex-direction: column;
     width: max-content;
     
 }
 
+
 #menu-header #sessionOptions div a {
-    border: groove;
+    font-weight: normal;
 }
 
 #menu-header #sessionOptions:hover div {

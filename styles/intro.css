@@ -1,5 +1,14 @@
+:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
+}
+
+
 body {
-    background: #4A314D;
+    background:var(--colorPrincipal);
+    font-family:Poppins;
     margin: 0;
     overflow-x: hidden;
 }
@@ -15,28 +24,25 @@ body {
 
 #brand_name-intro{
     text-align: center;
-    color: #6fff10;
+    color: var(--colorTerciario);
     font-size:3em;
-    font-family: "Blue Ocean";
 }
 
 #description-intro{
     text-align: center;
-    color: #6fff10;
+    color: var(--colorTerciario);
     font-size:2em;
-    font-family: "Optimus";
 }
 
 #productos-intro{
-    background: #ace894;
+    background-color:var(--colorTerciario);
     height: 350px;
     margin: auto;
 }
 
 #productos_text-intro{
     text-align: center;
-    color: #794780;
-    font-family: "DS-digit";
+    color:var(--colorPrincipal);
     font-size: 2em;
     font-weight: bold;
     padding-top: 20px;
@@ -64,32 +70,4 @@ body {
     width: 150px;
     opacity: 1;
     filter: contrast(120%);
-}
-
-@font-face {
-    font-family: 'Blue Ocean';
-    src: url('../fonts/BLUE OCEAN.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Robo Girls';
-    src: url('../fonts/Robo Girls.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'DS-digit';
-    src: url('../fonts/DS-DIGIT.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Optimus';
-    src: url('../fonts/Optimus.otf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
 }
