@@ -1,0 +1,36 @@
+﻿:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
+}
+
+#scoreboard{
+    display:flex;
+    flex-direction:column;
+    font-size:5em;
+    width:fit-content;
+}
+
+.players{
+    display:flex;
+}
+
+.names{
+    margin-right:1em;
+    background-color:green;
+}
+
+.puntos{
+    background-color:green;
+    
+}
+
+
+.sets{
+    color:var(--colorPrincipal);
+    margin-right:0.5em;
+    background-color:rebeccapurple;
+    display:flex;
+    
+}
