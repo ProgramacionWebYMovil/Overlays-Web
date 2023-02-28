@@ -1,0 +1,35 @@
+﻿body {
+    --second-color: #ffbb00;
+    --background-main-color: #032a88;
+    --text-main-color: #ffffff;
+}
+
+#paymentGateway {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-main-color);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1015%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1016)'%3e%3c/rect%3e%3cpath d='M581.506773904007 490.1559813626226L586.1379828220354 556.3853544644561 683.1664380157715 516.3238545364966z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1107.2579829693047-31.927283198959838L1017.3508505473173-22.477662800816958 1076.4788473555254 107.65822563309254z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M540.505%2c445.989C569.075%2c446.083%2c593.977%2c428.184%2c608.191%2c403.401C622.33%2c378.749%2c625.828%2c347.844%2c610.536%2c323.89C596.141%2c301.341%2c567.227%2c296.106%2c540.505%2c297.38C516.327%2c298.533%2c494.115%2c309.614%2c481.157%2c330.058C467.139%2c352.175%2c461.654%2c379.65%2c473.586%2c402.958C486.538%2c428.259%2c512.081%2c445.895%2c540.505%2c445.989' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M155.841%2c190.088C197.292%2c191.874%2c241.145%2c179.746%2c262.511%2c144.181C284.391%2c107.76%2c277.061%2c61.646%2c254.711%2c25.512C233.558%2c-8.687%2c196.053%2c-28.263%2c155.841%2c-28.277C115.604%2c-28.291%2c76.526%2c-9.656%2c56.855%2c25.445C37.571%2c59.856%2c43.663%2c101.819%2c63.988%2c135.626C83.646%2c168.323%2c117.725%2c188.446%2c155.841%2c190.088' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1250.839543630113 499.8778731380142L1376.0671208268775 584.3449405007742 1460.5341881896377 459.11736330400964 1335.306610992873 374.6502959412496z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M816.182%2c618.217C865.658%2c616.831%2c908.56%2c586.543%2c932.761%2c543.368C956.402%2c501.193%2c956.662%2c450.748%2c933.994%2c408.042C909.728%2c362.325%2c867.893%2c321.534%2c816.182%2c323.732C766.85%2c325.829%2c738.892%2c374.423%2c714.531%2c417.372C690.641%2c459.492%2c665.845%2c507.028%2c687.712%2c550.233C711.161%2c596.565%2c764.274%2c619.671%2c816.182%2c618.217' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1015'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='50%25' y1='100%25' x2='50%25' y2='0%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1016'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(3%2c 42%2c 136%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+}
+
+#paymentGateway ul{
+    list-style-type:none;
+    justify-content:space-between;
+    
+}
+
+#paymentGateway ul li{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+#paymentGateway button{
+    color: var(--text-main-color);
+    background:var(--second-color);
+    border:none;
+    font-size:large;
+    border-radius:5px;
+
+}

@@ -34,7 +34,7 @@ h1 {
 }
 
 #plans ul {
-        list-style-type: none;
+
         display: flex;
         flex-direction: column;
         padding: 0;
