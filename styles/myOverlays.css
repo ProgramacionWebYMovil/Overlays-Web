@@ -1,20 +1,26 @@
 ﻿:root {
-    --color1:#25fc00;
-    --color2:#1b1b1b;
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
 }
 
 
 
-
+h1{
+    color:var(--colorTerciario);
+}
 
 .cards-main {
     display: flex;
     justify-content:center;
-    background-color:var(--color2);
 }
 
 .card-main {
     margin: 1.5em;
+    color:var(--colorSecundario);
+    background-color:var(--colorPrincipalOscuro);
+    border-radius:2em;
 }
 
 footer {
@@ -23,7 +29,15 @@ footer {
     width:100%;
 }
 
-body{
-    margin:0;
+main {
+    
+    display:flex;
+    justify-content:center;
+}
+
+body {
+    background-color: var(--colorPrincipal);
+    margin: 0;
     overflow-x: hidden;
+    font-family: Poppins;
 }
