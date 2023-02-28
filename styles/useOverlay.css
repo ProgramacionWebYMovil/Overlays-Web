@@ -1,0 +1,50 @@
+﻿:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
+}
+
+
+body
+{
+    margin:0;
+    font-family:Poppins;
+}
+header{
+    width:100%;
+}
+footer {
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+main{
+    background-color:var(--colorPrincipal);
+    
+}
+
+#controles{
+    display:grid;
+    grid-column:2;
+    grid-template-columns:repeat(4,10em);
+    column-gap:2em;
+    row-gap:2em;
+    padding:3em;
+    justify-content:center;
+}
+
+#overlay{
+    display:flex;
+    justify-content:center;
+
+}
+
+main button{
+    border:none;
+    background-color:var(--colorTerciario);
+    border-radius:0.5em;
+    font-size:3em;
+}
+
