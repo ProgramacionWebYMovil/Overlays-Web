@@ -8,7 +8,7 @@
 #scoreboard{
     display:flex;
     flex-direction:column;
-    font-size:5em;
+    font-size:2em;
     width:fit-content;
     font-family:Poppins;
 }

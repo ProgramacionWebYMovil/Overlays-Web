@@ -19,7 +19,7 @@
 
 nav {
     background: linear-gradient(var(--colorPrincipalOscuro),var(--colorPrincipal));
-    width: 100vw;
+    /*width: 100vw; COMENTO PORQUE DA PROBLEMAS CON LAS PAGINAS*/
     font-family:Poppins;
 }
 

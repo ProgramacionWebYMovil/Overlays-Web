@@ -41,6 +41,12 @@
     justify-content:space-around;
 }
 
+#logo-footer{
+    width:150px;
+    height:150px;
+    margin-top: 60px;
+}
+
 .socialLink-footer{
     padding-left:10px;
     color: var(--colorSecundario);
