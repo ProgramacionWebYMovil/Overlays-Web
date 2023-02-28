@@ -90,6 +90,18 @@ h1 {
     border-radius: 1em;
     width: 15em;
     justify-content: center;
+    position: relative;
+}
+
+.plan .features {
+    display: none;
+    z-index: 1;
+    flex-direction: column;
+}
+
+.plan:focus-within .features  {
+    display: flex;
+    justify-content: center;
 }
 
 hr {
