@@ -1,0 +1,16 @@
+﻿
+@font-face {
+    font-family: "Digital";
+    src: url(/fonts/DS-DIGIB.TTF);
+
+
+}
+
+#timer{
+    font-size:10em;
+    font-family: Digital;
+    list-style-type:none;
+    display:flex;
+    flex-direction:row;
+
+}
