@@ -21,7 +21,6 @@
     background: #04006B;
     color: white;
     padding: 10px;
-    border-radius: 5%;
 }
 
 .score-scoreboard {
@@ -45,4 +44,12 @@
 #title-scoreboard {
     text-align: center;
     margin-bottom: 20px;
+}
+
+#name_team1{
+    border-radius:0.1em 0 0 0.1em;
+}
+
+#name_team2 {
+    border-radius: 0 0.1em 0.1em 0;
 }
