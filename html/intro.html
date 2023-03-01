@@ -2,8 +2,9 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>OverLays</title>
+        <title>Home</title>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
+        <link rel="icon" type="image/png" href="/images/logotypes/logo.png">
         <link rel="stylesheet" href="/styles/header.css" />
         <link rel="stylesheet" href="/styles/intro.css" />
         <link rel="stylesheet" href="/styles/footer.css" />
@@ -14,19 +15,53 @@
         <script>w3IncludeHTML();</script>
 
         <div id="logo-intro">
-            <img src="../images/logotipos/logo.png" alt="Imagen del Logo"/>
+            <img src="../images/logotypes/logo.png" alt="Imagen del Logo"/>
             <p id="brand_name-intro"> Overlay Oasis</p>
-            <p id="description-intro"> Potencia la calidad de tus directos con nuestras superposiciones personalizables.</p>
+            <p id="description-intro"> Enhance the quality of your live performances with our customizable overlays.</p>
         </div>
 
-        <div id="productos-intro">
-            <p id="productos_text-intro"> Nuetros Overlays:</p>
-            <div class="productos_images-intro">
-                <img src="../images/tipo_productos/score.png" alt="Imagen del Score"/>
-                <img src="../images/tipo_productos/crono.png" alt="Imagen del Crono"/>
-                <img src="../images/tipo_productos/coin.png" alt="Imagen del Coin"/>
-            </div>
-        </div>
+        <ul id="products_purpose-intro">
+
+            <li id="products-intro">
+                <p id="products_text-intro"> Type of Overlays:</p>
+                <div class="products_images-intro">
+                    <figure>
+                        <img src="../images/products_purpose/score.png" alt="Score image"/>
+                        <figcaption>Scoreboard</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../images/products_purpose/timer.png" alt="Timer image"/>
+                        <figcaption>Timer</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../images/products_purpose/coin.png" alt="Coin image"/>
+                        <figcaption>Head or Tails</figcaption>
+                    </figure>
+                </div>
+            </li>
+
+            <li id="purpose-intro">
+                <p id="purpose_text-intro"> What are they used for?</p>
+                <div class="purpose_container-intro">
+                    <div class="purpose_images-intro">
+                        <img src="../images/products_purpose/football.png" alt="Football image"/>
+                        <img src="../images/products_purpose/basket.png" alt="Basketball image"/>
+                        <img src="../images/products_purpose/padel.png" alt="Padel image"/>
+                        <img src="../images/products_purpose/tennis.png" alt="Tennis image"/>
+                        <img src="../images/products_purpose/imagination.png" alt="Imagination image"/>
+                    </div>
+
+                    <div class="purpose_names-intro">
+                        <p>Football</p>
+                        <p>Basketball</p>
+                        <p>Padel</p>
+                        <p>Tennis</p>
+                        <p>...and more! <br> Everything you could imagine!</p>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
 
         <footer w3-include-html="/templates/footer.html"></footer>
         <script>w3IncludeHTML();</script>
