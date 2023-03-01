@@ -15,32 +15,30 @@
 
 .players {
     display: flex;
-    border-color: white;
 }
 
 .names {
     background-color: black;
     padding: 0.5em;
     color: white;
+    border-radius:0.1em 0 0 0.1em ;
 }
 
 #player1 {
-    border-bottom: solid;
-    border-bottom-width: 0.01em;
-    border-color: white;
+    margin-bottom:1px;   
 }
 
 
 
 #player2 {
-    border-top: solid;
-    border-top-width: 0.01em;
+    margin-top:1px;    
 }
 
 .puntos {
     background-color: black;
     padding: 0.5em;
     color: white;
+    border-radius:0 0.1em 0.1em 0;
 }
 
 
