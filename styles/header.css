@@ -75,7 +75,7 @@ nav {
 }
 
 #dropmenu .dropmenu_elements a {
-    float: none;
+    float: left;
     display: block;
     text-align: left;
     font-weight: normal;
