@@ -18,8 +18,38 @@ body {
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
-    width:150px;
-    height:150px;
+    width: 150px;
+    height: 150px;
+    -webkit-animation: 20s rotate linear infinite;
+    animation: 20s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+#logo-intro img:hover{
+    -webkit-animation-direction: reverse;
+    animation-direction:reverse;
 }
 
 #brand_name-intro{
