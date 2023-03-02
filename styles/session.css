@@ -1,4 +1,11 @@
-﻿body{
+﻿:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
+}
+
+body{
     margin:0;
     display:flex;
     flex-direction:column;
@@ -68,10 +75,9 @@ main{
 #sessionOptions #actionButton {
     font-size: x-large;
     background: var(--second-color);
-    color: #ffffff;
+    color: var(--colorPrincipal);
     border: none;
     border-radius: 7px;
-    -webkit-text-stroke: #032a88 0.03em;
     width: 100%;
 }
 
@@ -90,4 +96,7 @@ main{
     border: none;
 
 }
-    
+
+#changeSessionOptions b {
+    color:var(--colorTerciario);
+}
