@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="UTF-8">
         <title>Payment Gateaway</title>
+        <script src="http://www.w3schools.com/lib/w3data.js"></script>
         <link rel="icon" type="image/png" href="/images/logotypes/logo.png">
         <link rel="stylesheet" href="/styles/header.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/payment.css" />
     </head>
 
     <body>
@@ -12,5 +14,7 @@
         <main>
             <div w3-include-html="/templates/templatePaymentGateway.html"></div>
         </main>
+
+        <script>w3IncludeHTML();</script>
     </body>
 </html>
