@@ -49,6 +49,11 @@ nav {
     font-weight: bold;
 }
 
+#title {
+    display: flex;
+    align-items: center;
+}
+
 #menu-header #title a{
     font-size:2em;
 }
@@ -57,7 +62,7 @@ nav {
     width: 2em;
     height: 2em;
     float: left;
-    margin-top: 0.4em;
+    margin-right:0.1em;
 }
 
 #menu-header #icono_usuario {
