@@ -21,6 +21,9 @@ nav {
     background: linear-gradient(var(--colorPrincipalOscuro),var(--colorPrincipal));
     /*width: 100vw; COMENTO PORQUE DA PROBLEMAS CON LAS PAGINAS*/
     font-family:Poppins;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 #menu-header {
@@ -46,6 +49,13 @@ nav {
 
 #menu-header #title a{
     font-size:2em;
+}
+
+#menu-header #title img{
+    width: 2em;
+    height: 2em;
+    float: left;
+    margin-top: 0.4em;
 }
 
 #menu-header #icono_usuario {
