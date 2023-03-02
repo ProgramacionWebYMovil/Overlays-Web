@@ -1,4 +1,9 @@
-﻿body{
+﻿header{
+    position: sticky;
+    top: 0;
+}
+
+body{
     margin:0;
     display:flex;
     flex-direction:column;

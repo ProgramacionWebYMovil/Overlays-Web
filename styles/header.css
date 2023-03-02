@@ -21,9 +21,11 @@ nav {
     background: linear-gradient(var(--colorPrincipalOscuro),var(--colorPrincipal));
     /*width: 100vw; COMENTO PORQUE DA PROBLEMAS CON LAS PAGINAS*/
     font-family:Poppins;
+    /*
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;*/
 }
 
 #menu-header {

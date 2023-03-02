@@ -5,6 +5,11 @@
     --colorPrincipalOscuro: #04006B;
 }
 
+header{
+    position: sticky;
+    top: 0;
+}
+
 body{
     margin:0;
     font-family:Poppins;

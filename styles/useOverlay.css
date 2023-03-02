@@ -5,6 +5,10 @@
     --colorPrincipalOscuro: #04006B;
 }
 
+header{
+    position: sticky;
+    top: 0;
+}
 
 body
 {

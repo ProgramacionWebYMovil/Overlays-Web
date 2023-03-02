@@ -5,7 +5,10 @@
     --colorPrincipalOscuro: #04006B;
 }
 
-
+header{
+    position: sticky;
+    top: 0;
+}
 
 h1 {
     color: var(--colorTerciario);
