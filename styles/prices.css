@@ -94,17 +94,17 @@ h1 {
     display: flex;
     border-radius: 1em;
     width: 15em;
-    justify-content: center;
     position: relative;
+    flex-direction: column;
 }
 
-.plan .features {
+.plan_list .features {
     display: none;
     z-index: 1;
     flex-direction: column;
 }
 
-.plan:focus-within .features  {
+.plan_list:focus-within .features  {
     display: flex;
     justify-content: center;
 }
@@ -113,4 +113,12 @@ hr {
     border-color:var(--colorTerciario);
 }
 
+#button-purchase:hover{
+    background-color: #5FAD43;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+#button-purchase a{
+    font-family: Poppins;
+    color: #1b1b1b;
+}
 
