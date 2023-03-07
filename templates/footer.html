@@ -33,28 +33,33 @@
 
         <ul class="ul-footer">
 
-            <h3>Contacto</h3>
-            <form id="form-footer" method="post" name="emailForm" action="/php/form-to-email.php">
-                <div id="message-form-footer">
-                    <div>
-                        <div class="nameEmail-form-footer">
-                            <label for="name">Name:</label>
-                            <input type="text" name="name" />
+            <li>
+                <h3>Contacto</h3>
+            </li>
+            <li>
+                <form id="form-footer" method="post" name="emailForm" action="/php/form-to-email.php">
+                    <div id="message-form-footer">
+                        <div>
+                            <div class="nameEmail-form-footer">
+                                <label for="name">Name:</label>
+                                <input type="text" name="name" />
+                            </div>
+                            <div class="nameEmail-form-footer">
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" />
+                            </div>
                         </div>
-                        <div class="nameEmail-form-footer">
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" />
+
+                        <div>
+                            <label for="message">Message:</label>
+                            <textarea id="textArea-form-footer" type="text" name="message"></textarea>
                         </div>
                     </div>
+                    <button type="submit">Send</button>
 
-                    <div>
-                        <label for="message">Message:</label>
-                        <textarea id="textArea-form-footer" type="text" name="message"></textarea>
-                    </div>
-                </div>
-                <button type="submit">Send</button>
-
-            </form>
+                </form>
+            </li>
+            
         </ul>
     </div>
 
