@@ -18,7 +18,7 @@ body {
     margin: 0;
 }
 
-.section{
+section{
     display:flex;
     flex-direction:column;
     text-align:center;
@@ -45,9 +45,16 @@ body {
     background-color:var(--colorPrincipalOscuro);
 }
 
-.cards{
-    display:flex;
-    justify-content:space-around;
+#cards_Overlays{
+    display:grid;
+    grid-template-columns:repeat(4,auto);
+    justify-items:center;
+}
+
+#cards_howWork {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    justify-items: center;
 }
 
 .card{
@@ -111,5 +118,16 @@ p{
 #logo-intro img:hover{
     -webkit-animation-direction: reverse;
     animation-direction:reverse;
+}
+
+.platforms, .software_programs {
+    width: 15em;
+}
+
+.images{
+    display:grid;
+    grid-template-columns:repeat(4,auto);
+    align-items:center;
+    justify-items:center;
 }
 

@@ -13,20 +13,20 @@
     <body>
         <header w3-include-html="/templates/header.html"></header>
         
-        <div class="section" id="section1">
+        <section id="section1">
             <img src="/images/logotypes/logo.png" alt="Imagen del Logo"/>
             <h1>Streaming Overlays</h1>
             <h2> Enhance the quality of your live performances with our customizable overlays.</h2>
-        </div>
+        </section>
 
-        <div class="section" id="section2">
+        <section id="section2">
             <h2>¿Que es un overlay?</h2>
             <p>Un overlay es un gráfico que puedes superponer en tus directos para enriquecer la experiencia de tus viewers</p>
-        </div>
+        </section>
 
-        <div class="section" id="section3">
+        <section id="section3">
             <h2>Nuestros overlays</h2>
-            <div class="cards">
+            <div id="cards_Overlays">
                 <div class="card">
                     <img />
                     <h3>Cuenta atras</h3>
@@ -51,11 +51,11 @@
                     <p>TEXTO texto texto texto</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section" id="section4">
+        <section id="section4">
             <h2>Como funciona</h2>
-            <div class="cards">
+            <div id="cards_howWork">
                 <div class="card">
                     <h3>Selecciona tu overlay</h3>
                     <p>Elige entre x superposiciones disponibles</p>
@@ -70,33 +70,27 @@
                 </div>
             </div>
             
-        </div>
+        </section>
 
-        <div class="section">
+        <section>
             <h2>Stremea donde quieras</h2>
-            <div>
-                <img />
-                <img />
-                <img />
-                <img />
-                <img />
-                <img />
-                <img />
+            <div class="images">
+                <img class="platforms" src="/images/platforms/youtube_platform.png" alt="Youtube">
+                <img class="platforms" src="/images/platforms/twitch_platform.png" alt="Twitch"/>
+                <img class="platforms" src="/images/platforms/facebook_platform.png" alt="Facebook Gaming"/>
+                <img class="platforms" src="/images/platforms/tiktok_platform.png" alt="Tik Tok Live"/>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
+        <section>
             <h2>Con el software que quieras</h2>
-            <div>
-                <img />
-                <img />
-                <img />
-                <img />
-                <img />
-                <img />
-                <img />
+            <div class="images">
+                <img class="software_programs" src="/images/software_programs/streamlabs_software.png" alt="Streamlabs" />
+                <img class="software_programs" src="/images/software_programs/obs_software.png" alt="OBS" />
+                <img class="software_programs" src="/images/software_programs/wirecast_software.jpg" alt="Wirecast" />
+                <img class="software_programs" src="/images/software_programs/vmix_software.png" alt="Vmix" />
             </div>
-        </div>
+        </section>
 
         <footer w3-include-html="/templates/footer.html"></footer>
         <script>w3IncludeHTML();</script>
