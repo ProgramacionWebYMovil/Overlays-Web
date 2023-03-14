@@ -157,3 +157,24 @@ p{
     justify-items:center;
 }
 
+/*Media query para evitar que los overlays cards se queden pegados*/
+@media screen and (max-width:1300px){
+    .card_overlay {
+        width: 12em;
+        height: 12em;
+    }
+
+    .image_card {
+        background-color: white;
+        align-items: center;
+        display: flex;
+        width: 12em;
+        border-radius: 1em;
+        justify-content: center;
+    }
+
+    #cards_Overlays img {
+        width: 10em;
+    }
+}
+
