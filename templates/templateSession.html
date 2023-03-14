@@ -1,37 +1,37 @@
 ﻿<head>
-    <link rel="stylesheet" type="text/css" href="/styles/big_style/session.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/big_style/session.css" media="screen and (min-width:1024px)"/>
+    <link rel="stylesheet" type="text/css" href="/styles/mid_style/session.css" media="screen and (min-width:768px) and (max-width:1023px)"/>
+    <link rel="stylesheet" type="text/css" href="/styles/small_style/session.css" media="screen and (max-width:767px)"/>
+    
 </head>
 <body>
-
-    <div id="session">
-        <form id="sessionForm" action="" method="post">
-            <ul>
-                <li>
-                    <label for="name">FULL NAME</label>
-                    <input type="text" id="name" name="user_name">
-                </li>
-                <li>
-                    <label for="mail">EMAIL</label>
-                    <input type="email" id="mail" name="user_mail">
-                </li>
-                <li>
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="user_mail">
-                </li>
-                <li>
-                    <label for="password">CONFIRM PASSWORD</label>
-                    <input type="password" id="passwordRepeat" name="passwordRepeat" />
-                </li>
-            </ul>
-        </form>
-        <div id="sessionOptions">
-            <button id="actionButton">Sing up</button>
-            <div id="changeSessionOptions">
-                <p>
-                    If you have already an account,<br /> please <button><b>log in</b></button> .
-                </p>
-            
-            </div>
-        </div>
-    </div>
+    <h1 id="titleForm" style="text-align: center;">CREATE ACCOUNT</h1>
+    <form id="sessionForm" action="" method="post">
+        <ul>
+            <li>
+                <label for="name">FULL NAME</label>
+                <input type="text" id="name" name="user_name">
+            </li>
+            <li>
+                <label for="mail">EMAIL</label>
+                <input type="email" id="mail" name="user_mail">
+            </li>
+            <li>
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="user_mail">
+            </li>
+            <li>
+                <label for="password">CONFIRM PASSWORD</label>
+                <input type="password" id="passwordRepeat" name="passwordRepeat" />
+            </li>
+            <li>
+                <input type="submit" id="submit" value="Sign up"></input>
+                <div id="changeSessionOptions">
+                    <p>
+                        If you have already an account,<br/> please <input id="changeButton" type="button" value="log in"/> .
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </form>
 </body>
