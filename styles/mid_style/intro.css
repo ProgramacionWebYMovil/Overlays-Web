@@ -1,0 +1,133 @@
+﻿:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+
+body {
+    background: var(--colorPrincipal);
+    font-family: Poppins;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#section1 h2 {
+    color: var(--colorSecundario);
+}
+
+#section1 {
+    align-items: center;
+}
+
+#section2, #section3 {
+    justify-content: center;
+    margin: 2em 0 2em 0;
+}
+
+#section3 {
+    display: flow-root;
+}
+
+#section2, #section4 {
+    background-color: var(--colorPrincipalOscuro);
+}
+
+#cards_Overlays {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows:repeat(2,auto);
+    grid-row-gap:2em;
+    justify-items: center;
+}
+
+#cards_howWork {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    justify-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorPrincipalOscuro);
+    padding: 1.5em;
+    border-radius: 1em;
+    width: 15em;
+    height: 15em;
+    justify-content: center;
+}
+
+h1 {
+    color: var(--colorTerciario);
+}
+
+h2 {
+    color: var(--colorTerciario);
+}
+
+p {
+    color: white;
+}
+
+
+
+#section1 img {
+    z-index: 100;
+    margin-top: 80px;
+    width: 10em;
+    height: 10em;
+    -webkit-animation: 20s rotate linear infinite;
+    animation: 20s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+#logo-intro img:hover {
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.platforms, .software_programs {
+    width: 15em;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    justify-items: center;
+}
