@@ -30,16 +30,23 @@ section {
 
 #section1 {
     align-items: center;
+    margin:1em;
 }
 
 #section2, #section3 {
     justify-content: center;
-    margin: 2em 0 2em 0;
+    margin:2em 0 2em 0;
 }
 
 #section3 {
     display: flow-root;
 }
+
+#section3 h2 {
+    margin:1em 0 2em 0;
+}
+
+
 
 #section2, #section4 {
     background-color: var(--colorPrincipalOscuro);
@@ -55,8 +62,12 @@ section {
 
 #cards_howWork {
     display: grid;
-    grid-template-columns: repeat(3,auto);
+    grid-template-areas:"card1 card2" "card3 card3";
     justify-items: center;
+}
+
+#card3{
+    grid-area:card3;
 }
 
 .card {
@@ -67,7 +78,12 @@ section {
     border-radius: 1em;
     width: 15em;
     height: 15em;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items:center;
+}
+
+.card img{
+    width:4em;
 }
 
 h1 {

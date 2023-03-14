@@ -51,6 +51,27 @@ section{
     justify-items:center;
 }
 
+.card_overlay {
+    transition: transform 0.5s;
+}
+.card_overlay:hover {
+    transform: scale(1.05);
+}
+
+#cards_Overlays img{
+    width:13em;
+}
+
+.image_card {
+    background-color: white;
+    height:7em;
+    align-items:center;
+    display:flex;
+    width:15em;
+    border-radius:1em;
+    justify-content:center;
+}
+
 #cards_howWork {
     display: grid;
     grid-template-columns: repeat(3,auto);
@@ -65,8 +86,13 @@ section{
     border-radius:1em;
     width:15em;
     height:15em;
-    justify-content:center;
+    justify-content:flex-start;
+    align-items:center;
     
+}
+
+#section4 .card img{
+    width:4em;
 }
 
 h1{
@@ -121,7 +147,7 @@ p{
 }
 
 .platforms, .software_programs {
-    width: 15em;
+    width: 10em;
 }
 
 .images{
