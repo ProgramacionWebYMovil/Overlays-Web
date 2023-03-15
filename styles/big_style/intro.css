@@ -28,17 +28,26 @@ section{
     color:var(--colorSecundario);
 }
 
-#section1{
-    align-items:center;
+#section1 {
+    align-items: center;
+    margin: 0 1em 1em 1em;
 }
 
-#section2, #section3 {
+#section2, #section3{
     justify-content:center;
     margin: 2em 0 2em 0;
 }
 
 #section3 {
     display:flow-root;
+}
+
+#section3 h2 {
+    margin: 0em 0 2em 0;
+}
+
+#section4 h2 {
+    margin: 1em 0 2em 0;
 }
 
 #section2, #section4{
@@ -53,6 +62,7 @@ section{
 
 .card_overlay {
     transition: transform 0.5s;
+    background-color: var(--colorPrincipalOscuro);
 }
 .card_overlay:hover {
     transform: scale(1.05);
@@ -78,21 +88,28 @@ section{
     justify-items: center;
 }
 
-.card{
-    display:flex;
-    flex-direction:column;
-    background-color:var(--colorPrincipalOscuro);
-    padding:1.5em;
-    border-radius:1em;
-    width:15em;
-    height:15em;
-    justify-content:flex-start;
-    align-items:center;
-    
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    border-radius: 1em;
+    width: 15em;
+    height: 15em;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px inset var(--colorSecundario);
+}
+/*Cartas how to work*/
+#card1, #card2, #card3 {
+    background-color: var(--colorPrincipal);
 }
 
 #section4 .card img{
-    width:4em;
+    width:3em;
+}
+
+#section4{
+    padding-bottom:2em;
 }
 
 h1{
@@ -108,7 +125,7 @@ p{
 }
 
 
-
+/*Logo principal*/
 #section1 img {
     z-index:100;
     margin-top: 80px;
@@ -119,7 +136,7 @@ p{
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
 }
-
+/*Accon de girar*/
 @keyframes rotate {
     from {
         transform: rotate(0deg);
@@ -157,7 +174,9 @@ p{
     justify-items:center;
 }
 
-/*Media query para evitar que los overlays cards se queden pegados*/
+/*Media query para evitar que los overlays cards se queden pegados
+    ademas hacer mas pequeño los howtowork cards
+*/
 @media screen and (max-width:1300px){
     .card_overlay {
         width: 12em;
@@ -175,6 +194,15 @@ p{
 
     #cards_Overlays img {
         width: 10em;
+    }
+
+    #card1,#card2,#card3{
+        width:13em;
+        height:13em;
+    }
+
+    #section4 .card img{
+        width:2.5em;
     }
 }
 
