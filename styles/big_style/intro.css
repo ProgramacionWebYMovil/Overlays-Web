@@ -38,6 +38,12 @@ section{
     margin: 2em 0 2em 0;
 }
 
+#section2 p{
+    margin-left:2em;
+    margin-right:2em;
+    margin-top:0em;
+}
+
 #section3 {
     display:flow-root;
 }
@@ -60,11 +66,16 @@ section{
     justify-items:center;
 }
 
-.card_overlay {
+#cards_Overlays a {
+    text-decoration: none;
+}
+
+.card {
     transition: transform 0.5s;
     background-color: var(--colorPrincipalOscuro);
 }
-.card_overlay:hover {
+
+.card:hover {
     transform: scale(1.05);
 }
 
@@ -102,6 +113,7 @@ section{
 /*Cartas how to work*/
 #card1, #card2, #card3 {
     background-color: var(--colorPrincipal);
+    justify-content:center;
 }
 
 #section4 .card img{

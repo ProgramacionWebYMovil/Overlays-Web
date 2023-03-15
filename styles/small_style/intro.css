@@ -1,4 +1,216 @@
-﻿body
-{
-    display:none;
+﻿:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+
+body {
+    background: var(--colorPrincipal);
+    font-family: Poppins;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#section1 h2 {
+    color: var(--colorSecundario);
+}
+
+#section1 {
+    align-items: center;
+    margin: 0 1em 1em 1em;
+}
+
+#section2, #section3 {
+    justify-content: center;
+    margin: 2em 0 2em 0;
+}
+
+#section2 p {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 0em;
+}
+
+#section3 {
+    display: flow-root;
+}
+
+    #section3 h2 {
+        margin: 0em 0 2em 0;
+    }
+
+#section4 h2 {
+    margin: 1em 0 2em 0;
+}
+
+
+
+#section2, #section4 {
+    background-color: var(--colorPrincipalOscuro);
+}
+
+#cards_Overlays {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4,auto);
+    grid-row-gap: 2em;
+    justify-items: center;
+    text-decoration: none;
+}
+
+#cards_Overlays a {
+    text-decoration: none;    
+}
+
+.card {
+    transition: transform 0.5s;
+    background-color: var(--colorPrincipalOscuro);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+#cards_Overlays img {
+    width: 13em;
+}
+
+.image_card {
+    background-color: white;
+    height: 7em;
+    align-items: center;
+    display: flex;
+    width: 15em;
+    border-radius: 1em;
+    justify-content: center;
+}
+
+#cards_howWork {
+    display: grid;
+    grid-template-rows:repeat(3,auto);
+    grid-template-columns:auto;
+    justify-items: center;
+    grid-row-gap: 2em;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    border-radius: 1em;
+    width: 15em;
+    height: 15em;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px inset var(--colorSecundario);
+}
+
+/*Cartas how to work*/
+#card1, #card2, #card3 {
+    background-color: var(--colorPrincipal);
+    /*border-color:var(--colorSecundario);
+    border:inset;*/
+    justify-content: center;
+}
+
+#section4 .card img {
+    width: 3em;
+}
+
+#section4 {
+    padding-bottom: 2em;
+}
+
+h1 {
+    color: var(--colorTerciario);
+}
+
+h2 {
+    color: var(--colorTerciario);
+}
+
+p {
+    color: white;
+}
+
+
+/*Logo principal*/
+#section1 img {
+    z-index: 100;
+    margin-top: 80px;
+    width: 10em;
+    height: 10em;
+    -webkit-animation: 20s rotate linear infinite;
+    animation: 20s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+/*Accon de girar*/
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+#logo-intro img:hover {
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.platforms, .software_programs {
+    width: 7em;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    justify-items: center;
+}
+
+
+
+
+/*Media screen para corregir los logos de las plataformas y
+    software
+*/
+@media screen and (max-width:550px){
+    .images{
+        grid-template-columns:repeat(2,auto);
+        grid-template-rows:repeat(2,auto);
+        grid-row-gap:1em;
+    }
+
+    #section6 {
+        margin-bottom: 1em;
+    }
 }
