@@ -5,34 +5,12 @@
     --colorPrincipalOscuro: #04006B;
 }
 
-#menu-header a {
-    box-shadow: inset 0 0 0 0 var(--colorTerciario);
-    padding: 0.25rem;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-
-#menu-header a:hover {
-    box-shadow: inset 10em 0 0 0 var(--colorTerciario);
-    color: var(--colorPrincipal);
-}
-
-
 nav {
     background: linear-gradient(var(--colorPrincipalOscuro),var(--colorPrincipal));
-    /*width: 100vw; COMENTO PORQUE DA PROBLEMAS CON LAS PAGINAS*/
-    font-family:Poppins;
-    /*
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;*/
 }
 
 #menu-header {
-    list-style-type: none;
     display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
     width: 99%;
     font-size: 1em;
     padding-left:inherit;
@@ -54,10 +32,6 @@ nav {
     align-items: center;
 }
 
-#menu-header #title a{
-    font-size:2em;
-}
-
 #menu-header #title img{
     width: 2em;
     height: 2em;
@@ -65,9 +39,37 @@ nav {
     margin-right:0.1em;
 }
 
+#menu-header #title a{
+    font-size:2em;
+    text-decoration: none;
+    color: var(--colorTerciario);
+}
+
 #menu-header #icono_usuario {
     width: 2em;
     height: 2em;
+}
+
+#menu-header a {
+    box-shadow: inset 0 0 0 0 var(--colorTerciario);
+    padding: 0.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+#menu-header a:hover {
+    box-shadow: inset 10em 0 0 0 var(--colorTerciario);
+    color: var(--colorPrincipal);
+}
+
+.dropall {
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 99%;
+    font-size: 1em;
+    padding-left:inherit;
+    margin-left:0.2em;
 }
 
 /*Creación del dropdown menu*/
@@ -122,7 +124,7 @@ nav {
 
 }
 
-
+/*Condición para mostrar el session Options*/
 #menu-header #sessionOptions div a {
     font-weight: normal;
 }
