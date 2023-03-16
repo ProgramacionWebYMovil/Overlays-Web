@@ -25,7 +25,7 @@
             </li>
             <li>
                 <label for="password">CONFIRM PASSWORD</label>
-                <input type="password" id="passwordRepeat" name="passwordRepeat"  required>
+                <input type="password" id="passwordRepeat" name="passwordRepeat" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\.!@#$%^&*_=+-]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, at least one symbol (!@#$%^&*_=+-) and at least 8 or more characters"required>
             </li>
             <li>
                 <input type="submit" id="submit" value="Sign up" > </input>

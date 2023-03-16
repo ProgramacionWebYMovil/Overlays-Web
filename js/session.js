@@ -17,11 +17,17 @@ function loadPage(){
     passwordConfirm = list[7];
     sessionOptions = list[9];
     changeButton.addEventListener("click",() => changePage(changeButton));
+    document.querySelector("#submit").addEventListener("click",function(event){
+        //event.preventDefault();
+        let passwordRepeat = document.querySelector("#passwordRepeat");
+        if( passwordRepeat.value !== document.querySelector("#password").value) passwordRepeat.setCustomValidity("Passwords don't match.");
+        else passwordRepeat.setCustomValidity("");
+    })
     let inputs = document.querySelectorAll("input");
     
     for(let i = 0;i<inputs.length;i++) {
         formValidate(inputs[i])
-        inputs[i].addEventListener("change", 
+        inputs[i].addEventListener("blur", 
             function(event) {
                 event.target.classList.add('interacted'); 
 
@@ -57,19 +63,21 @@ function resolveValidation(inputElement, error){
             break;
         
         case "patternMismatch":
-            console.log(inputElement)
-            inputElement.name == "passwordRepeat" ? checkPasswordConfirmation(document.querySelector("#password"),inputElement):
             inputElement.setCustomValidity(inputElement.title);
             break;
     }
 
 }
 
+function checkPasswordConfirmation(original, confirmation ){
+    if(original.value !== confirmation.value) alert("Password do not match");
+     
+}
+
 function changePage(button){
     let textChange = document.querySelector("#changeSessionOptions").querySelector("p");
     let submitButton = document.querySelector("#submit");
     let formList = document.querySelector("#sessionForm ul");
-    console.log(sessionOptions);
     let title = document.querySelector("#titleForm");
     switch(button.value){
         case "log in":
@@ -80,7 +88,6 @@ function changePage(button){
             fullName = formList.removeChild(fullName);
             textChange.innerHTML = 
             `If you don't have an account,<br/>please  ${button.outerHTML}`;
-            console.log(button.outerHTML);
             break;
 
         default:
@@ -91,7 +98,6 @@ function changePage(button){
             formList.insertBefore(passwordConfirm,sessionOptions);
             textChange.innerHTML =
             `If you have already an account,<br /> please ${button.outerHTML}` ;
-            console.log(button.outerHTML);
     }
     document.querySelector("#changeButton").
     addEventListener("click",() => changePage(changeButton));
