@@ -60,9 +60,25 @@ function fetchJson(json) {
 }
 
 function loadJson(json) {
-    //Recorro 
-    for (key in json.english) {
-        console.log(key);
+    var data;
+    //Ingles
+    if (true) {
+        data = json.english;
+
+    //Español
+    } else {
+        data = json.spanish;
+    }
+
+    let body = document.querySelector('body');
+    /*Recorro el json
+     * data es json.english
+     * key será cada clave
+     * data[key] es el valor de cada clave
+     */
+    for (key in data) {
+        body.querySelector("#" + key).innerHTML = data[key];
+        console.log("hola");
     }
 }
 

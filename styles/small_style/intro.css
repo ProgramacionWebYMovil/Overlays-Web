@@ -68,19 +68,14 @@ section {
     grid-template-rows: repeat(4,auto);
     grid-row-gap: 2em;
     justify-items: center;
-    text-decoration: none;
 }
 
-#cards_Overlays a {
-    text-decoration: none;    
-}
-
-.card {
+.cardHowWork, .card_overlay {
     transition: transform 0.5s;
     background-color: var(--colorPrincipalOscuro);
 }
 
-.card:hover {
+.cardHowWork:hover, .card_overlay:hover {
     transform: scale(1.05);
 }
 
@@ -98,6 +93,20 @@ section {
     justify-content: center;
 }
 
+.card_overlay {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    border-radius: 1em;
+    width: 15em;
+    justify-content: flex-start;
+    height: auto;
+}
+
+.card_overlay p, .cardHowWork p {
+    margin: 0;
+}
+
 #cards_howWork {
     display: grid;
     grid-template-rows:repeat(3,auto);
@@ -107,27 +116,21 @@ section {
 }
 
 
-.card {
+.cardHowWork {
     display: flex;
     flex-direction: column;
     padding: 1.5em;
     border-radius: 1em;
     width: 15em;
-    height: 15em;
+    height: auto;
     justify-content: flex-start;
     align-items: center;
     border: 2px inset var(--colorSecundario);
-}
-
-/*Cartas how to work*/
-#card1, #card2, #card3 {
     background-color: var(--colorPrincipal);
-    /*border-color:var(--colorSecundario);
-    border:inset;*/
-    justify-content: center;
 }
 
-#section4 .card img {
+
+#section4 .cardHowWork img {
     width: 3em;
 }
 

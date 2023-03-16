@@ -71,22 +71,22 @@ section {
     text-decoration: none;
 }
 
-#cards_Overlays a{
-    text-decoration:none;
-}
 
-.card {
+
+.cardHowWork, .card_overlay {
     transition: transform 0.5s;
     background-color: var(--colorPrincipalOscuro);
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
+    .cardHowWork:hover, .card_overlay:hover {
+        transform: scale(1.05);
+    }
 
 #cards_Overlays img {
     width: 13em;
 }
+
+
 
 .image_card {
     background-color: white;
@@ -98,6 +98,21 @@ section {
     justify-content: center;
 }
 
+.card_overlay {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    border-radius: 1em;
+    width: 15em;
+    justify-content: flex-start;
+    height: auto;
+}
+
+
+.card_overlay p, .cardHowWork p {
+    margin: 0;
+}
+
 #cards_howWork {
     display: grid;
     grid-template-areas: "card1 card2" "card3 card3";
@@ -105,33 +120,26 @@ section {
     grid-row-gap: 2em;
 }
 
-#card3{
+.cardHowWork:last-child{
     grid-area:card3;
 }
 
-.card {
+.cardHowWork {
     display: flex;
     flex-direction: column;
     padding: 1.5em;
     border-radius: 1em;
     width: 15em;
-    height: 15em;
+    height: auto;
     justify-content: flex-start;
     align-items: center;
-    border:2px inset var(--colorSecundario);
-}
-
-/*Cartas how to work*/
-#card1, #card2, #card3 {
+    border: 2px inset var(--colorSecundario);
     background-color: var(--colorPrincipal);
-    /*border-color:var(--colorSecundario);
-    border:inset;*/
-    justify-content: center;
 }
 
-#section4 .card img {
+
+#section4 .cardHowWork img {
     width: 3em;
-    
 }
 
 #section4 {
