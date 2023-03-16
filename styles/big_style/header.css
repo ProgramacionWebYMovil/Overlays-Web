@@ -16,6 +16,7 @@ nav {
     font-size: 1em;
     padding-left:inherit;
     justify-content: space-around;
+    align-items: center;
 }
 
 #menu-header a {
@@ -57,7 +58,11 @@ nav {
     color: var(--colorPrincipal);
 }
 
-.dropall {
+.dropall{
+    width: 40%;
+}
+
+.dropall_elements{
     list-style-type: none;
     display: inline-flex;
     justify-content: space-around;
@@ -65,7 +70,6 @@ nav {
     font-size: 1em;
     padding-left:inherit;
     margin-left:0.2em;
-    width: 40%;
 }
 
 /*Creación del dropdown menu*/
