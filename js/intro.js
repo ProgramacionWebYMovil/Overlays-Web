@@ -34,7 +34,7 @@
 
 
 //METODO PARA FETCH
-function loadTemplate(fileName, id, callback) {
+function loadTemplate(fileName, id) {
 
     //FETCH 
     fetch(fileName)
@@ -44,15 +44,30 @@ function loadTemplate(fileName, id, callback) {
          * se procesa la información retornada*/
         .then((text) => { 
             //console.log(text);
-            document.getElementById(id).innerHTML = text;
-            //Si al llamar loadTemplate, se añade como parametro un callback, este llamará al método
-            if (callback) {
-                callback();
-            }
+            document.querySelector(id).innerHTML = text;
         })
+}
+
+function fetchJson(json) {
+    fetch(json)
+        .then(data => {
+            return data.json()
+        })
+        .then(items => {
+            console.log(items);
+            loadJson(items);
+        })
+}
+
+function loadJson(json) {
+    //Recorro 
+    for (key in json.english) {
+        console.log(key);
+    }
 }
 
 
 
 loadTemplate("/templates/header.html", "header");
 loadTemplate("/templates/footer.html", "footer");
+fetchJson("/json/intro.json");
