@@ -17,18 +17,6 @@
     flex-direction: column;
 }
 
-.li-footer {
-    list-style-type: none;
-    display: flex;
-    margin: inherit;
-}
-
-.li-footer a {
-    text-decoration:none;
-    color:var(--colorSecundario);
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-
 .li-footer a:hover{
     color:var(--colorTerciario);
 }
@@ -63,6 +51,34 @@
     text-decoration:none;
 }
 
+.ul-footer {
+    list-style-type: none;
+
+    border-bottom: 1px solid #ffbb00;
+    padding-bottom: 1em;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5%
+}
+
+.ul-footer .li-footer{
+    flex-basis: 50%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.ul-footer li:first-child{
+    break-before: column;
+}
+
+h3{
+    color:var(--colorTerciario);
+    display: none;
+}
+
+/*Pie de footer: Copyright*/
 #copyright-footer{
     text-align:center;
     font-size:0.8em;
@@ -76,24 +92,7 @@
     margin: 0px 10px;
 }
 
-.ul-footer{
-    list-style-type:none;
-    display: grid;
-    grid-template-areas: ". h3"
-                        " a a"
-                        "a a";
-}
-.ul-footer > li > h3{
-    grid-area: h3;
-}
-.ul-footer > li > a {
-    grid-area: a;
-}
-
-h3{
-    color:var(--colorTerciario);
-}
-
+/* No se ve el mensaje para este tamaño*/
 #ul-contac_us{
     display: none;
 }
