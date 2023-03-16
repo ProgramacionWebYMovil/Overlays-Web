@@ -39,7 +39,7 @@ nav {
 }
 
 #menu-header #title a{
-    font-size:1.5em;
+    font-size:1.2em;
     text-decoration: none;
 }
 
@@ -125,7 +125,7 @@ nav {
 .dropmenu_elements {
     top: 0;
     background:none;
-    left: -6.2em;
+    left: -6em;
 
     background-color: rgb(0,0,0, 0.8);
     padding: 10px;
@@ -165,7 +165,6 @@ nav {
     background-color: rgb(0,0,0, 0.8);
     padding: 10px;
     border-radius: 5%;
-    top: 0.2em;
 }
 
 /*Condición para mostrar el session Options*/

@@ -63,6 +63,10 @@ nav {
     width: 40%;
 }
 
+.dropall i{
+    display: none;
+}
+
 .dropall_elements{
     list-style-type: none;
     display: inline-flex;
