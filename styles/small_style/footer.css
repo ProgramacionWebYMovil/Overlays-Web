@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --colorPrincipal:#032A88;
     --colorSecundario: #FFFFFF;
     --colorTerciario:#FFBB00;
@@ -13,6 +13,8 @@
     background: linear-gradient(var(--colorPrincipalOscuro),var(--colorPrincipal));
     color: var(--colorSecundario);
     font-family: Poppins;
+    display: flex;
+    flex-direction: column;
 }
 
 .li-footer {
@@ -38,6 +40,7 @@
 
 #main-footer {
     display:flex;
+    flex-direction: column;
     justify-content:space-around;
 }
 
@@ -45,10 +48,12 @@
     width:150px;
     height:150px;
     margin-top: 60px;
+    display: none;
 }
 
 #nav_footer {
     display:flex;
+    flex-direction: column;
     justify-content:space-around;
 }
 
@@ -72,12 +77,25 @@
 }
 
 .ul-footer{
-    min-width:166px;
     list-style-type:none;
+    display: grid;
+    grid-template-areas: ". h3"
+                        " a a"
+                        "a a";
+}
+.ul-footer > li > h3{
+    grid-area: h3;
+}
+.ul-footer > li > a {
+    grid-area: a;
 }
 
 h3{
     color:var(--colorTerciario);
+}
+
+#ul-contac_us{
+    display: none;
 }
 
 #form-footer {
