@@ -1,9 +1,17 @@
-/*SIMPLEMENTE AÑADIR LAS CARD TEMPLATES A MYOVELAYS.HTML*/
-let mainElement = document.querySelector("body");
-console.log(mainElement);
-let overlayCard = document.querySelector("header");
+function loadTemplate(fileName, id) {
 
-let clonedItem = overlayCard.cloneNode(true);
+    //FETCH 
+    fetch(fileName)
+        //Primer .then se especifica que queremos del objeto (html) bruto que nos devolverá la llamada fetch
+        .then((response) => { return response.text(); })
+        /*Segundo .then se llama despues de que el primero se haya completado
+         * se procesa la información retornada*/
+        .then((text) => {
+            //console.log(text);
+            document.querySelector(id).innerHTML = text;
+        })
+}
 
-mainElement.insertBefore(clonedItem, overlayCard);
-
+loadTemplate("/templates/header.html", "header");
+loadTemplate("/templates/footer.html", "footer");
+loadTemplate("/templates/overlayCard.html","#overlays");

@@ -1,16 +1,40 @@
-﻿.cardOverlay{
-    width:17em;
-    background-color:var(--color1);
-    border-radius:10px;
+﻿:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
+}
+
+.cardOverlay{
+    width:15em;
+    height:15em;
+    background-color:var(--colorPrincipalOscuro);
+    border-radius:1em;
     padding:1em;
     display:flex;
     flex-direction:column;
+    font-family:Poppins;
 }
 
-.previewOverlay-main {
-    width: 7em;
-    height: 7em;
-    align-self:center;
+.cardOverlay p {
+    color: var(--colorSecundario);
+        
+}
+
+.image_card {
+    padding:1.5em;
+    background-color:var(--colorSecundario);
+    border-radius:1em;
+    display:flex;
+    justify-content:center;
+}
+
+.image_card img{
+    width:12em;
+}
+
+.overlayName {
+    color: var(--colorTerciario);
 }
 
 .info-cardOverlay img {

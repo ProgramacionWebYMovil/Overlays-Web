@@ -6,21 +6,35 @@
     <title>My Overlays</title>
 
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <!--<script type="module" src="/js/myOverlays.js"></script>-->
-    <link rel="stylesheet" href="/styles/big_style/myOverlays.css" />
+    <script type="module" src="/js/myOverlays.js"></script>
+    <link rel="stylesheet" href="/styles/big_style/myOverlays.css"
+          media="screen and (min-width:1024px)" />
+    <link rel="stylesheet" href="/styles/mid_style/myOverlays.css"
+          media="screen and (min-width:768px) and (max-width:1023px)" />
+    <link rel="stylesheet" href="/styles/small_style/myOverlays.css"
+          media="screen and (max-width:767px)" />
     <link rel="stylesheet" href="/styles/big_style/header.css" />
     <link rel="stylesheet" href="/styles/big_style/footer.css" />
 
 </head>
 <body>
-    <header w3-include-html="/templates/header.html"></header>
+    <header></header>
     <main>
-        <div w3-include-html="/templates/templateOverlays.html"></div>
+        <h1>My library</h1>
+        
+        <section id="overlays"></section>
+
+
+        <!--Avanzar página si la hay-->
+        <div>
+            <button></button>
+            <p>Página 1 de 1</p>
+            <button></button>
+        </div>
     </main>
-    <footer w3-include-html="/templates/footer.html"></footer>
+    <footer></footer>
 
 
-    <script>w3IncludeHTML();</script>
     
 </body>
 </html>
