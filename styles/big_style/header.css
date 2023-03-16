@@ -16,6 +16,7 @@ nav {
     font-size: 1em;
     padding-left:inherit;
     justify-content: space-around;
+    gap: 20%;
     align-items: center;
 }
 
@@ -65,6 +66,7 @@ nav {
 .dropall_elements{
     list-style-type: none;
     display: inline-flex;
+    width:100%;
     justify-content: space-around;
     align-items: center;
     font-size: 1em;
@@ -122,7 +124,6 @@ nav {
     z-index: 1;
     flex-direction: column;
     width: max-content;
-
 }
 
 /*Condición para mostrar el session Options*/
