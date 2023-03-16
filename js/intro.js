@@ -62,9 +62,9 @@ function fetchJson(json) {
 function loadJson(json) {
     var data;
     //Ingles
-    if (true) {
+    var language = window.navigator.language.toString();
+    if (language.includes("en")) {
         data = json.english;
-
     //Español
     } else {
         data = json.spanish;
@@ -78,7 +78,6 @@ function loadJson(json) {
      */
     for (key in data) {
         body.querySelector("#" + key).innerHTML = data[key];
-        console.log("hola");
     }
 }
 

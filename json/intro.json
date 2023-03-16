@@ -25,6 +25,27 @@
   },
 
   "spanish": {
-    
+    "section1_h1": "Streaming Overlays",
+    "section1_h2": "Mejora la calidad de tus retransmisiones en vivo añadiendo overlays customizables",
+    "section2_h2": "¿Qué es un overlay?",
+    "section2_p": "Un overlay es un gráfico que puedes superponer en tus directos para enriquecer la experiencia de tus viewers",
+    "section3_h2": "Nuestros overlays",
+    "section3_h3_1": "Contador",
+    "section3_p_1": "Añade un contador a tu streaming con el fin de añadir hype a tus espectadores",
+    "section3_h3_2": " Ruleta Random",
+    "section3_p_2": "Crea una ruleta de la fortuna para elegir entre premios y desafíos",
+    "section3_h3_3": "Marcadores",
+    "section3_p_3": "Stremea cualquier evento deportivo y muestra los resultados con overlays de fútbol, baloncesto, tenis o pádel",
+    "section3_h3_4": "Cara o cruz",
+    "section3_p_4": "Deja que el destino de tu streaming lo decida la suerte. Un simple cara o cruz para decidir tu próximo juego",
+    "section4_h2": "¿Como funciona?",
+    "section4_h3_1": "Selecciona tu overlay",
+    "section4_p_1": "Elige entre 5 superposiciones diferentes, marcadores, contadores, ruletas, etc",
+    "section4_h3_2": "Customizalo a tu gusto",
+    "section4_p_2": "Modifica el texto y los colores de tu gráfico",
+    "section4_h3_3": "Añadelo a tu stream",
+    "section4_p_3": "Copia y pega el enlace generado para tu overlay en tu software de streaming favorito",
+    "section5_h2": "Stremea donde quieras",
+    "section6_h2": "Con el software que quieras"
   }
 }

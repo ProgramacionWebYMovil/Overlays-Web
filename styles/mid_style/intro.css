@@ -106,6 +106,7 @@ section {
     width: 15em;
     justify-content: flex-start;
     height: auto;
+    border: 2px inset var(--colorSecundario);
 }
 
 
