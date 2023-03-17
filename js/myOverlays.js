@@ -161,10 +161,10 @@ function nextPage() {
     }
 
     if (currentPage == nPages) {
-        document.querySelector("#nextPage").style.display = "none";
+        document.querySelector("#nextPage").style.visibility = "hidden";
     }
 
-    document.querySelector("#previousPage").style.display = "flex";
+    document.querySelector("#previousPage").style.visibility = "initial";
     
 }
 
@@ -177,10 +177,10 @@ function previousPage() {
     }
 
     if (currentPage == 1) {
-        document.querySelector("#previousPage").style.display = "none";
+        document.querySelector("#previousPage").style.visibility = "hidden";
     }
 
-    document.querySelector("#nextPage").style.display = "flex";
+    document.querySelector("#nextPage").style.visibility = "initial";
 }
 
 
@@ -190,5 +190,5 @@ fetchCards("/templates/overlayCard.html", "/json/myOverlays.json");
 
 document.querySelector("#nextPage").addEventListener("click", nextPage, false);
 document.querySelector("#previousPage").addEventListener("click", previousPage, false);
-document.querySelector("#previousPage").style.display = "none";
+document.querySelector("#previousPage").style.visibility = "hidden";
 
