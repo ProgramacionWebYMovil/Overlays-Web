@@ -18,6 +18,11 @@ let json = null;
 let jsonSort = null;
 let cardHTML = null;
 
+/*VARIABLES PARA LA NAVEGACIÓN DE MYOVERLAYS*/
+let currentPage = 1;
+let nPages = 0;
+let cardsPerPage = 0;
+
 
 /*FUNCION PARA EL FETCH DE LAS CARTAS
  * realiza el fetch de cardtemplate
@@ -44,9 +49,18 @@ async function fetchCards(fileTemplate, fileJson) {
         new Date(a.overlay_date).getTime());
 
 
-    //DEPENDIENDO DE EN QUE DISPOSITIVO ESTE, CARGARÉ MÁS CARTAS O MENOS
-    //Para big_style
-    loadCards(8,0);
+    /*CALCULAMOS INFORMACION DEL GRID
+     *  - Páginas que hay
+     *  - Cards por páginas
+     */
+    pageCalculator();
+
+    /*DEPENDIENDO DE EN QUE DISPOSITIVO ESTE, CARGARÉ MÁS CARTAS O MENOS
+     * amountInsert será la cantidad maxima que aguanta el grid 
+     *      (si no hay tantos overlyas se añaden los que hay)
+     * mismatch será el que indique que overlays se insertan, dependiendo de que pagina estemos
+     */
+    loadCards(cardsPerPage, (currentPage - 1) * cardsPerPage);
 
     
 
@@ -86,14 +100,95 @@ function loadCards(amountInsert,mismatch) {
     }
 
 
+    let overlays = document.querySelector("#overlays");
     /*Meto todo el documentFragment en el section #overlays
      * de un golpe, asi evito tener que estar editando el DOM
      * en cada paso*/
-    document.querySelector("#overlays").appendChild(df);
+    overlays.appendChild(df);
+
 
 }
+
+function deleteCards() {
+    let overlays = document.querySelector("#overlays");
+    overlays.innerHTML = "";
+}
+
+
+/*FUNCION PAGECALCULATOR
+ * calculamos informacion del grid:
+ *  - Páginas que hay
+ *  - Cards por páginas
+ */
+function pageCalculator() {
+
+    let overlays = document.querySelector("#overlays");
+    /*COMPROBAR CUANTAS PÁGINAS DE CARTAS HABRÁ
+ * Primero averiguo cuantas cartas entran en el grid actual
+ */
+    let nColums = window.getComputedStyle(overlays).
+        getPropertyValue('grid-template-columns').split(" ").length;
+    let nRows = window.getComputedStyle(overlays).
+        getPropertyValue('grid-template-rows').split(" ").length;
+    //Ahora calculamos el numero de páginas que habría
+    nPages = jsonSort.length / (nColums * nRows);
+    //Y el número de cards que caben en una pagina
+    cardsPerPage = nColums * nRows;
+    /*Comprobar que sea un numero entero
+     * si no lo es, añadimos una pagina mas*/
+    if (nPages % 1 != 0) {
+        nPages = Math.trunc(nPages);
+        nPages++;
+    }
+
+    setPageText();
+
+
+    
+}
+
+function setPageText() {
+    document.querySelector("#actualPage").innerHTML = currentPage;
+    document.querySelector("#nPages").innerHTML = nPages;
+}
+
+function nextPage() {
+    if (currentPage < nPages) {
+        currentPage++;
+        deleteCards();
+        loadCards(cardsPerPage, (currentPage - 1) * cardsPerPage);
+        setPageText();
+    }
+
+    if (currentPage == nPages) {
+        document.querySelector("#nextPage").style.display = "none";
+    }
+
+    document.querySelector("#previousPage").style.display = "flex";
+    
+}
+
+function previousPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        deleteCards();
+        loadCards(cardsPerPage, (currentPage - 1) * cardsPerPage);
+        setPageText();
+    }
+
+    if (currentPage == 1) {
+        document.querySelector("#previousPage").style.display = "none";
+    }
+
+    document.querySelector("#nextPage").style.display = "flex";
+}
+
 
 loadTemplate("/templates/header.html", "header");
 loadTemplate("/templates/footer.html", "footer");
 fetchCards("/templates/overlayCard.html", "/json/myOverlays.json");
+
+document.querySelector("#nextPage").addEventListener("click", nextPage, false);
+document.querySelector("#previousPage").addEventListener("click", previousPage, false);
+document.querySelector("#previousPage").style.display = "none";
 
