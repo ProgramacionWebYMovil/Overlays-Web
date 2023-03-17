@@ -16,25 +16,29 @@
     font-family:Poppins;
 }
 
-.cardOverlay p {
-    color: var(--colorSecundario);
-        
-}
-
 .image_card {
     padding:1.5em;
     background-color:var(--colorSecundario);
     border-radius:1em;
     display:flex;
     justify-content:center;
+    height:2em;
+    width:auto;
 }
 
-.image_card img{
-    width:12em;
+.image_card img {
+    /*Para que se vea bien en chrome*/
+    max-width: -webkit-fill-available;
 }
 
-.overlayName {
+.overlay_name {
     color: var(--colorTerciario);
+    font-size: 1.1em;
+    /*Limitar a solo 1 lineas el texto*/
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .info-cardOverlay img {
@@ -42,17 +46,36 @@
     height: 1.5em;
 }
 
+.overlay_description {
+    font-size: 0.9em;
+    color: var(--colorSecundario);
+    margin: 0 auto 0 auto;
+    /*Limitar a solo 3 lineas el texto*/
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
-.date-cardOverlay {
+
+.section_date {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+}
+
+.section_date p {
+    margin-left: 0.5em;
+    margin: 0 0 0 0.5em;
 }
 
 .info-cardOverlay {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    margin-top:0.5em;
+    color:var(--colorSecundario);
+    font-size:0.8em;
+    margin-top:auto;
+
 }
 
 .cardOverlay button{
