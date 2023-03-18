@@ -1,0 +1,37 @@
+{
+    "english": {
+        "title1": "LOG IN",
+        "title2": "CREATE ACCOUNT",
+        "name": "FULL NAME",
+        "nameInfo": "Must be a valid name format.",
+        "mail": "EMAIL",
+        "mailInfo": "Must be a valid email format.",
+        "password": "PASSWORD",
+        "passwordInfo": "Must contain at least one number and one uppercase and lowercase letter, at least one symbol (!@#$%^&*_=+-) and at least 8 or more characters.",
+        "repeatPassword": "CONFIRM PASSWORD",
+        "repeatPasswordMatch": "Passwords don't match",
+        "textChangeOption2": "If you have already an account, please ",
+        "textChangeOption1": "If you don't have an account, please ",
+        "fieldRequirementText": "This field is required"
+
+      
+    },
+  
+    "spanish": {
+        "title1": "INICIAR SESIÓN",
+        "title2": "CREAR CUENTA",
+        "name": "NOMBRE COMPLETO",
+        "nameInfo": "Debe ser un formato de nombre válido.",
+        "mail": "CORREO ELECTRÓNICO",
+        "mailInfo": "Debe ser un formato de correo electrónico válido.",
+        "password": "CONTRASEÑA",
+        "passwordInfo": "Debe contener al menos un dígito y una letra mayúscula, al menos un símbolo (!@#$%^&*_=+-) y 8 o más caracteres",
+        "repeatPassword": "CONFIRMA CONTRASEÑA",
+        "repeatPasswordMatch": "Las contraseñas no coinciden.",
+        "textChangeOption2": "Si ya tienes una cuenta, por favor ",
+        "textChangeOption1": "Si aun no tienes cuenta, por favor ",
+        "fieldRequirementText": "Este campo es necesario"
+      
+    }
+  }
+  

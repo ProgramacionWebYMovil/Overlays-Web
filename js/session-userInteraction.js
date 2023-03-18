@@ -7,11 +7,12 @@ let passwordLi;
 let passwordConfirmLi;
 let sessionOptionsLi;
 
+// content data
 
+let pageInfo;
 
-function loadPage(){
-    getUlElements(document.querySelector("#sessionForm ul").childNodes);
-    addEventsListener();
+function init(data){
+    data = pageInfo;
 }
 
 function formValidate(inputElement){
