@@ -8,21 +8,24 @@
 header{
     position: sticky;
     top:0;
+    z-index: 999;
 }
 
-body {
+#body-howToUse {
     background: var(--colorPrincipal);
     margin: auto;
-    display: grid;
-    grid-template-rows: minmax(max-content,78px) 1fr;
-    grid-template-columns: 1fr minmax(max-content,1fr) 1fr;
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
     font-family: Poppins, serif
 }
 
 #howToUse{
-    display: grid;
-
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    justify-content: center;
+    text-align: center;
 }
 
 #title-howToUse {
@@ -39,25 +42,29 @@ body {
 
 .container-howToUse {
     list-style: none;
-    margin: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
 }
 
 .box-howToUse {
     background: var(--colorPrincipalOscuro);
     border: 2px solid var(--colorTerciario);
-    width: 750px;
-    height: auto;
+    width: auto;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
     margin-left: auto;
     margin-right: auto;
+    display: inline-block;
+    padding: 0.5em;
 }
 
 .type-howToUse {
     color: var(--colorTerciario);
     text-align: center;
     font-size: 2em;
-    margin: 1em;
 }
 
 .description-howToUse {

@@ -8,6 +8,7 @@
 header {
     position: sticky;
     top:0;
+    z-index: 999;
 }
 
 #body-howToUse {
@@ -41,9 +42,9 @@ header {
 .container-howToUse {
     list-style: none;
     margin: auto;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     grid-auto-columns: auto;
+    padding: 0;
 }
 
 .box-howToUse {
