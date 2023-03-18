@@ -1,29 +1,28 @@
-﻿:root {
+:root {
     --colorPrincipal: #032A88;
     --colorSecundario: #FFFFFF;
     --colorTerciario: #FFBB00;
     --colorPrincipalOscuro: #04006B;
 }
 
-header {
+header{
     position: sticky;
     top:0;
 }
 
 body {
     background: var(--colorPrincipal);
-    margin: 0;
+    margin: auto;
     display: grid;
-    grid-template: 'header''body''footer';
+    grid-template-rows: minmax(max-content,78px) 1fr;
+    grid-template-columns: 1fr minmax(max-content,1fr) 1fr;
     overflow-x: hidden;
     font-family: Poppins, serif
 }
 
-#howToUse {
+#howToUse{
     display: grid;
-    grid-template: 'title' 'introduction' 'container';
-    justify-items: center;
-    place-self: center;
+
 }
 
 #title-howToUse {
@@ -41,15 +40,14 @@ body {
 .container-howToUse {
     list-style: none;
     margin: auto;
-    display: grid;
-    grid-auto-columns: auto;
 }
 
 .box-howToUse {
     background: var(--colorPrincipalOscuro);
     border: 2px solid var(--colorTerciario);
-    border-radius: 20px;
     width: 750px;
+    height: auto;
+    border-radius: 20px;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -59,6 +57,7 @@ body {
     color: var(--colorTerciario);
     text-align: center;
     font-size: 2em;
+    margin: 1em;
 }
 
 .description-howToUse {

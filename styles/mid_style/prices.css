@@ -1,0 +1,122 @@
+:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
+
+body{
+    margin:0;
+    font-family:Poppins;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+body {
+    background-color: var(--colorPrincipal);
+    overflow-x:hidden;
+}
+
+#plans {
+    display: flex;
+}
+
+h1 {
+    color:var(--colorTerciario);
+
+}
+
+#titulo2 {
+    color:var(--colorSecundario)
+}
+
+#plans ul {
+
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style-type:none;
+}
+
+
+.plan button {
+    width: 100%;
+    border: none;
+    font-family: Poppins;
+    border-radius: 15px;
+    background-color: var(--colorTerciario);
+}
+
+.plan h2{
+    font-size:2em;
+    padding:0.5em;
+    margin:0em;
+}
+
+.features {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tick-cross {
+    font-size: 1.5em;
+    margin-right: 1em;
+    float: left;
+}
+
+.plan h3, h2{
+    color:var(--colorTerciario);
+}
+
+.plan p{
+    color: white;
+    font-family:Poppins;
+}
+
+
+.plan {
+    background: var(--colorPrincipalOscuro);
+    margin: 2em;
+    padding: 1.5em;
+    display: flex;
+    border-radius: 1em;
+    width: 15em;
+    position: relative;
+    flex-direction: column;
+}
+
+.plan_list .features {
+    display: none;
+    z-index: 1;
+}
+
+.plan_list:focus-within .features  {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    border-color:var(--colorTerciario);
+}
+
+#button-purchase:hover{
+    background-color: #5FAD43;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+#button-purchase a{
+    font-family: Poppins;
+    color: #1b1b1b;
+}
