@@ -12,7 +12,7 @@ header{
 
 body{
     margin:0;
-    font-family:Poppins;
+    font-family: Poppins, serif;
 }
 
 main {
@@ -54,7 +54,7 @@ h1 {
 .plan button {
     width: 100%;
     border: none;
-    font-family: Poppins;
+    font-family: Poppins, serif;
     border-radius: 15px;
     background-color: var(--colorTerciario);
 }
@@ -62,7 +62,7 @@ h1 {
 .plan h2{
     font-size:2em;
     padding:0.5em;
-    margin:0em;
+    margin:0;
 }
 
 .features {
@@ -83,7 +83,7 @@ h1 {
 
 .plan p{
     color: white;
-    font-family:Poppins;
+    font-family: Poppins, serif;
 }
 
 
@@ -117,7 +117,7 @@ hr {
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 #button-purchase a{
-    font-family: Poppins;
+    font-family: Poppins, serif;
     color: #1b1b1b;
 }
 
