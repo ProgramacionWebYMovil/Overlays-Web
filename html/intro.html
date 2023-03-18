@@ -1,69 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Home</title>
-        <script src="http://www.w3schools.com/lib/w3data.js"></script>
-        <link rel="icon" type="image/png" href="/images/logotypes/logo.png">
-        <link rel="stylesheet" href="/styles/big_style/header.css" />
-        <link rel="stylesheet" href="/styles/big_style/intro.css" />
-        <link rel="stylesheet" href="/styles/big_style/footer.css" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Streaming Overlays</title>
+    <script src="/js/intro.js"></script>
+    <link rel="icon" type="image/png" href="/images/logotypes/logo.png">
+    <link rel="stylesheet" href="/styles/big_style/header.css" />
+    <link rel="stylesheet" href="/styles/big_style/intro.css"
+          media="screen and (min-width:1024px)" />
+    <link rel="stylesheet" href="/styles/mid_style/intro.css"
+          media="screen and (min-width:768px) and (max-width:1023px)" />
+    <link rel="stylesheet" href="/styles/small_style/intro.css"
+          media="screen and (max-width:767px)" />
+    <link rel="stylesheet" href="/styles/big_style/footer.css" />
+</head>
 
     <body>
-        <header w3-include-html="/templates/header.html"></header>
-        <script>w3IncludeHTML();</script>
+        <header></header>
+        
+        <section id="section1">
+            <img src="/images/logotypes/logo.png" alt="Imagen del Logo"/>
+            <h1 id="section1_h1"></h1>
+            <h2 id="section1_h2"> Enhance the quality of your live performances with our customizable overlays.</h2>
+        </section>
 
-        <div id="logo-intro">
-            <img src="../images/logotypes/logo.png" alt="Imagen del Logo"/>
-            <p id="brand_name-intro">Streaming Overlays</p>
-            <p id="description-intro"> Enhance the quality of your live performances with our customizable overlays.</p>
-        </div>
+        <section id="section2">
+            <h2 id="section2_h2">¿Que es un overlay?</h2>
+            <p id="section2_p">Un overlay es un gráfico que puedes superponer en tus directos para enriquecer la experiencia de tus viewers</p>
+        </section>
 
-        <ul id="products_purpose-intro">
-
-            <li id="products-intro">
-                <p id="products_text-intro"> Type of Overlays:</p>
-                <div class="products_images-intro">
-                    <figure>
-                        <img src="../images/products_purpose/score.png" alt="Score image"/>
-                        <figcaption>Scoreboard</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/products_purpose/timer.png" alt="Timer image"/>
-                        <figcaption>Timer</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/products_purpose/coin.png" alt="Coin image"/>
-                        <figcaption>Head or Tails</figcaption>
-                    </figure>
-                </div>
-            </li>
-
-            <li id="purpose-intro">
-                <p id="purpose_text-intro"> What are they used for?</p>
-                <div class="purpose_container-intro">
-                    <div class="purpose_images-intro">
-                        <img src="../images/products_purpose/football.png" alt="Football image"/>
-                        <img src="../images/products_purpose/basket.png" alt="Basketball image"/>
-                        <img src="../images/products_purpose/padel.png" alt="Padel image"/>
-                        <img src="../images/products_purpose/tennis.png" alt="Tennis image"/>
-                        <img src="../images/products_purpose/imagination.png" alt="Imagination image"/>
+        <section id="section3">
+            <h2 id="section3_h2">Nuestros overlays</h2>
+            <div id="cards_Overlays">
+                <div class="card_overlay">
+                    <div class="image_card">
+                        <img src="/images/overlays_preview/timer.png" />
                     </div>
-
-                    <div class="purpose_names-intro">
-                        <p>Football</p>
-                        <p>Basketball</p>
-                        <p>Padel</p>
-                        <p>Tennis</p>
-                        <p>...and more! <br> Everything you could imagine!</p>
-                    </div>
+                    <h3 id="section3_h3_1">Cuenta atras</h3>
+                    <p id="section3_p_1">TEXTO texto texto texto</p>
                 </div>
-            </li>
 
-        </ul>
+                <div class="card_overlay">
+                    <div class="image_card">
+                        <img />
+                    </div>
+                    <h3 id="section3_h3_2">Ruleta</h3>
+                    <p id="section3_p_2">TEXTO texto texto texto</p>
+                </div>
+                
+                <div class="card_overlay">
+                    <div class="image_card">
+                        <img src="/images/overlays_preview/football.png" />
+                    </div>
+                    <h3 id="section3_h3_3">Marcadores</h3>
+                    <p id="section3_p_3">TEXTO texto texto texto</p>
+                </div>
+                 
+                <div class="card_overlay">
+                    <div class="image_card">
+                        <img />
+                    </div>
+                    <h3 id="section3_h3_4">Moneda</h3>
+                    <p id="section3_p_4">TEXTO texto texto texto</p>
+                </div>
+            </div>
+        </section>
 
-        <footer w3-include-html="/templates/footer.html"></footer>
-        <script>w3IncludeHTML();</script>
+        <section id="section4">
+            <h2 id="section4_h2">Como funciona</h2>
+            <div id="cards_howWork">
+                <div class="cardHowWork">
+                    <img alt="Icono de overlay" src="/images/icons/overlay.png" />
+                    <h3 id="section4_h3_1">Selecciona tu overlay</h3>
+                    <p id="section4_p_1">Elige entre x superposiciones disponibles</p>
+                </div>
+                <div class="cardHowWork">
+                    <img alt="Icono de editar" src="/images/icons/edit.png" />
+                    <h3 id="section4_h3_2">Customizalo a tu gusto</h3>
+                    <p id="section4_p_2">Modifica el texto y los colores...</p>
+                </div>
+                <div class="cardHowWork">
+                    <img alt="Icono de añadir" src="/images/icons/add.png" />
+                    <h3 id="section4_h3_3">Añadelo a tu stream</h3>
+                    <p id="section4_p_3">Copia y pega el enlace generado para tu overlay en tu plataforma favorita</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="section5">
+            <h2 id="section5_h2">Stremea donde quieras</h2>
+            <div class="images">
+                <img class="platforms" src="/images/platforms/youtube_platform.png" alt="Youtube">
+                <img class="platforms" src="/images/platforms/twitch_platform.png" alt="Twitch"/>
+                <img class="platforms" src="/images/platforms/facebook_platform.png" alt="Facebook Gaming"/>
+                <img class="platforms" src="/images/platforms/tiktok_platform.png" alt="Tik Tok Live"/>
+            </div>
+        </section>
+
+        <section id="section6">
+            <h2 id="section6_h2">Con el software que quieras</h2>
+            <div class="images">
+                <img class="software_programs" src="/images/software_programs/streamlabs_software.png" alt="Streamlabs" />
+                <img class="software_programs" src="/images/software_programs/obs_software.png" alt="OBS" />
+                <img class="software_programs" src="/images/software_programs/wirecast_software.png" alt="Wirecast" />
+                <img class="software_programs" src="/images/software_programs/vmix_software.png" alt="Vmix" />
+            </div>
+        </section>
+
+        <footer></footer>
     </body>
 </html>
