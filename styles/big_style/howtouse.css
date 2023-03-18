@@ -10,7 +10,7 @@ header {
     top:0;
 }
 
-body {
+#body-howToUse {
     background: var(--colorPrincipal);
     margin: 0;
     display: grid;

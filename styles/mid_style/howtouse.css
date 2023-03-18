@@ -10,19 +10,19 @@ header {
     top:0;
 }
 
-body {
+#body-howToUse {
     background: var(--colorPrincipal);
     margin: 0;
-    display: grid;
-    grid-template: 'header''body''footer';
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
     font-family: Poppins, serif
 }
 
 #howToUse {
-    display: grid;
-    grid-template: 'title' 'introduction' 'container';
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     place-self: center;
 }
 
@@ -41,7 +41,8 @@ body {
 .container-howToUse {
     list-style: none;
     margin: auto;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-auto-columns: auto;
 }
 
@@ -49,10 +50,11 @@ body {
     background: var(--colorPrincipalOscuro);
     border: 2px solid var(--colorTerciario);
     border-radius: 20px;
-    width: 750px;
-    margin-bottom: 20px;
+    width: auto;
+    margin-bottom: 2em;
     margin-left: auto;
     margin-right: auto;
+    padding: 2em;
 }
 
 .type-howToUse {
