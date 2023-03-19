@@ -44,9 +44,7 @@ async function fetchCards(fileTemplate, fileJson) {
     json = await jsonResponse.json();
 
     /*ORDENAR EL JSON POR FECHA, MAS RECIENTE A MENOS RECIENTE*/
-    jsonSort = json.sort((a, b) =>
-        new Date(b.overlay_date).getTime() -
-        new Date(a.overlay_date).getTime());
+    jsonSort = sortJSON(json);
 
 
     /*CALCULAMOS INFORMACION DEL GRID
@@ -86,19 +84,82 @@ function loadCards(amountInsert,mismatch) {
         let cardTemplate = document.createElement("div");
         cardTemplate.innerHTML = cardHTML;
         cardTemplate.className = "cardOverlay";
+        
 
         let cardInfo = jsonSort[i];
         /*Inserto todas las caracteristicas de las cartas*/
+        cardTemplate.id = cardInfo.id;
         cardTemplate.querySelector(".image_card").firstElementChild.src = cardInfo.image_card;
         cardTemplate.querySelector(".overlay_name").innerHTML = cardInfo.overlay_name;
         cardTemplate.querySelector(".overlay_description").innerHTML = cardInfo.overlay_description;
         cardTemplate.querySelector(".overlay_date").innerHTML = cardInfo.overlay_date;
+
+
+        /*EVENTO PARA DESPLEGAR EL DROPDOWN DE LOS TRES PUNTITOS*/
+        cardTemplate.querySelector(".card_dropdown_button")
+            .addEventListener("click", function dropDown() {
+            /*Event.currentTarget es el objeto que ha lanzado el evento
+             *Tengo que seleccionar el id del cardOverlay*/
+                //Selecciono el card overlay que activó el evento
+                var cardOverlay = event.currentTarget.parentElement.parentElement.parentElement;
+                //Selecciono el contenido que se va a desplegar o cerrar
+                var card_dropdown_content = cardOverlay.children[3].children[1].children[1];
+                if (card_dropdown_content.style.display == "block") {
+                    card_dropdown_content.style.display = "none";
+                } else {
+                    card_dropdown_content.style.display = "block";
+                }
+         
+            });
+
+        cardTemplate.querySelector(".use_overlay")
+            .addEventListener("click", function useOverlay() {
+                console.log("Hola");
+            });
+
+        cardTemplate.querySelector(".edit_overlay")
+            .addEventListener("click", function editOverlay() {
+                console.log("Hola2");
+            });
+
+        //DELETE OVERLAY EVENT
+        cardTemplate.querySelector(".delete_overlay")
+            .addEventListener("click", function deleteOverlay() {
+                //Buscar el overlay-card y coger el id para borrarlo de la BD
+                var id = event.currentTarget.parentElement.
+                    parentElement.
+                    parentElement.
+                    parentElement.
+                    parentElement.id;
+                for (i in json) {
+                    if (json[i].id == id) {
+                        delete json[i];
+                    }
+                }
+                //QUITO EL ELEMENTO NULL QUE SE QUEDA CUANDO SE HACE UN DELETE
+                json = cleanJSON(json);
+                //VUELVO A ORDENAR EL NUEVO JSON
+                jsonSort = sortJSON(json);
+                //BORRO DE LA PANTALLA LOS OVERLAYS
+                deleteCards();
+                //CALCULO LAS PAGINAS POR SI HAY QUE CAMBIAR EL NUMERO DE PAGINAS ETC
+                pageCalculator();
+                //CARGO LOS OVERLAYS RESTANTES
+                loadCards(cardsPerPage, (currentPage - 1) * cardsPerPage);
+            });
 
         //Inserto la carta en el document fragment
         df.appendChild(cardTemplate);
         cardTemplate = null;
     }
 
+    if (json.length == 0) {
+        document.querySelector("#messageNoOverlays").style.display = "block";
+        currentPage = 0;
+        setPageText();
+    } else {
+        document.querySelector("#messageNoOverlays").style.display = "none";
+    }
 
     let overlays = document.querySelector("#overlays");
     /*Meto todo el documentFragment en el section #overlays
@@ -107,6 +168,18 @@ function loadCards(amountInsert,mismatch) {
     overlays.appendChild(df);
 
 
+}
+
+/*Cuando se elimina un elemento del JSON, se queda empty
+ * Uso este metodo para limpiarme el JSON que se pasa por parametro*/
+function cleanJSON(jsonToClean) {
+    return jsonToClean.filter(e => e != null);
+}
+
+function sortJSON(jsonToSort) {
+    return jsonToSort.sort((a, b) =>
+        new Date(b.overlay_date).getTime() -
+        new Date(a.overlay_date).getTime()); 
 }
 
 function deleteCards() {
@@ -121,7 +194,7 @@ function deleteCards() {
  *  - Cards por páginas
  */
 function pageCalculator() {
-
+    let nPagesOld = nPages;
     let overlays = document.querySelector("#overlays");
     /*COMPROBAR CUANTAS PÁGINAS DE CARTAS HABRÁ
  * Primero averiguo cuantas cartas entran en el grid actual
@@ -141,6 +214,13 @@ function pageCalculator() {
         nPages++;
     }
 
+    //SI se borra alguna card, no se quede currentPage en una pagina donde no sale nada
+    if (nPagesOld > nPages && currentPage != 1) {
+        currentPage--;
+    }
+
+    
+    
     setPageText();
 
 
@@ -150,6 +230,10 @@ function pageCalculator() {
 function setPageText() {
     document.querySelector("#actualPage").innerHTML = currentPage;
     document.querySelector("#nPages").innerHTML = nPages;
+    if (nPages == 1 || nPages == 0) {
+        document.querySelector("#nextPage").style.visibility = "hidden";
+        document.querySelector("#previousPage").style.visibility = "hidden";
+    }
 }
 
 function nextPage() {
@@ -179,14 +263,17 @@ function previousPage() {
     if (currentPage == 1) {
         document.querySelector("#previousPage").style.visibility = "hidden";
     }
-
+    
     document.querySelector("#nextPage").style.visibility = "initial";
 }
+
+
 
 
 loadTemplate("/templates/header.html", "header");
 loadTemplate("/templates/footer.html", "footer");
 fetchCards("/templates/overlayCard.html", "/json/myOverlays.json");
+
 
 document.querySelector("#nextPage").addEventListener("click", nextPage, false);
 document.querySelector("#previousPage").addEventListener("click", previousPage, false);

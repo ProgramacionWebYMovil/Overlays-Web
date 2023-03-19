@@ -81,3 +81,7 @@ svg{
 #previousPage {
     display:none;
 }
+
+#messageNoOverlays{
+    color:var(--colorSecundario);
+}

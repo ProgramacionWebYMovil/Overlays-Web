@@ -78,10 +78,44 @@
 
 }
 
+
 .cardOverlay button{
     background:none;
     border:none;
 }
+
+
+/*MENU DESPLEGABLE*/
+
+.card_dropdown {
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card_dropdown_button img{
+    display:flex;
+    align-items:flex-start;
+}
+
+.card_dropdown_content{
+    display:none;
+    position:absolute;
+    align-items:center;
+    padding:10px;
+    background-color:var(--colorPrincipal);
+    margin-top:-8em;
+    /*animation:5s;*/
+    list-style-type:none;
+    border-radius:0.5em;
+}
+
+    .card_dropdown_content button {
+        color: var(--colorTerciario);
+        font-size:1.2em;
+        font-family:Poppins;
+    }
 
 
 
