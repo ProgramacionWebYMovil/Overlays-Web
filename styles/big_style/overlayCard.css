@@ -1,16 +1,44 @@
-﻿.cardOverlay{
-    width:17em;
-    background-color:var(--color1);
-    border-radius:10px;
+﻿:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
+}
+
+.cardOverlay{
+    width:15em;
+    height:15em;
+    background-color:var(--colorPrincipalOscuro);
+    border-radius:1em;
     padding:1em;
     display:flex;
     flex-direction:column;
+    font-family:Poppins;
 }
 
-.previewOverlay-main {
-    width: 7em;
-    height: 7em;
-    align-self:center;
+.image_card {
+    padding:1.5em;
+    background-color:var(--colorSecundario);
+    border-radius:1em;
+    display:flex;
+    justify-content:center;
+    height:2em;
+    width:auto;
+}
+
+.image_card img {
+    /*Para que se vea bien en chrome*/
+    max-width: -webkit-fill-available;
+}
+
+.overlay_name {
+    color: var(--colorTerciario);
+    font-size: 1.1em;
+    /*Limitar a solo 1 lineas el texto*/
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .info-cardOverlay img {
@@ -18,23 +46,76 @@
     height: 1.5em;
 }
 
+.overlay_description {
+    font-size: 0.9em;
+    color: var(--colorSecundario);
+    margin: 0 auto 0 auto;
+    /*Limitar a solo 3 lineas el texto*/
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
-.date-cardOverlay {
+
+.section_date {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+}
+
+.section_date p {
+    margin-left: 0.5em;
+    margin: 0 0 0 0.5em;
 }
 
 .info-cardOverlay {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    margin-top:0.5em;
+    color:var(--colorSecundario);
+    font-size:0.8em;
+    margin-top:auto;
+
 }
+
 
 .cardOverlay button{
     background:none;
     border:none;
 }
+
+
+/*MENU DESPLEGABLE*/
+
+.card_dropdown {
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card_dropdown_button img{
+    display:flex;
+    align-items:flex-start;
+}
+
+.card_dropdown_content{
+    display:none;
+    position:absolute;
+    align-items:center;
+    padding:10px;
+    background-color:var(--colorPrincipal);
+    margin-top:-8em;
+    /*animation:5s;*/
+    list-style-type:none;
+    border-radius:0.5em;
+}
+
+    .card_dropdown_content button {
+        color: var(--colorTerciario);
+        font-size:1.2em;
+        font-family:Poppins;
+    }
 
 
 

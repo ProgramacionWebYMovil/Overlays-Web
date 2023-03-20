@@ -1,11 +1,11 @@
-﻿:root {
+:root {
     --colorPrincipal: #032A88;
     --colorSecundario: #FFFFFF;
     --colorTerciario: #FFBB00;
     --colorPrincipalOscuro: #04006B;
 }
 
-#nav_header{
+#nav_header {
     background: linear-gradient(var(--colorPrincipalOscuro),var(--colorPrincipal));
     font-family: Poppins, serif;
 }
@@ -39,7 +39,7 @@
 }
 
 #menu-header #title a{
-    font-size:2em;
+    font-size:1.5em;
     text-decoration: none;
 }
 
@@ -59,29 +59,57 @@
     color: var(--colorPrincipal);
 }
 
-.dropall{
-    width: 40%;
+.dropall {
+    width: 2.4em;
+    height: 2em;
+    background-color: #FFBB00;
+    border-radius: 5%;
+
+    list-style-type: none;
+
+    display: inline-flex;
+    flex-direction: column;
+    overflow:visible;
+    position: relative;
 }
 
 .dropall i{
-    display: none;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #DCDCDC;
+    text-align: center;
 }
 
-.dropall_elements{
+.dropall .dropall_elements {
     list-style-type: none;
+    color: var(--colorTerciario);
+    display: none;
+    position: absolute;
+    text-decoration: none;
+    z-index: 1;
+    flex-direction: column;
+    left: -6em;
+
+    background-color: rgb(0,0,0, 0.8);
+    padding: 10px;
+    border-radius: 5%;
+
+    gap: 0.5em;
+}
+
+.dropall:hover .dropall_elements{
     display: inline-flex;
-    width:100%;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1em;
-    padding-left:inherit;
-    margin-left:0.2em;
+}
+
+.dropall:hover i{
+    color: #04006B;
 }
 
 /*Creación del dropdown menu*/
 #menu-header #dropmenu {
     display: inline-flex;
     flex-direction: column;
+    justify-content: space-between;
     overflow:visible;
     position:relative;
 }
@@ -95,8 +123,13 @@
 }
 
 .dropmenu_elements {
-    top: 2em;
+    top: 0;
     background:none;
+    left: -6.2em;
+
+    background-color: rgb(0,0,0, 0.8);
+    padding: 10px;
+    border-radius: 5%;
 }
 
 #dropmenu .dropmenu_elements a {
@@ -128,6 +161,11 @@
     z-index: 1;
     flex-direction: column;
     width: max-content;
+
+    background-color: rgb(0,0,0, 0.8);
+    padding: 10px;
+    border-radius: 5%;
+    top: 0.2em;
 }
 
 /*Condición para mostrar el session Options*/

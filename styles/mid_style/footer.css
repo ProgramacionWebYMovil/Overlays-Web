@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --colorPrincipal:#032A88;
     --colorSecundario: #FFFFFF;
     --colorTerciario:#FFBB00;
@@ -13,18 +13,8 @@
     background: linear-gradient(var(--colorPrincipalOscuro),var(--colorPrincipal));
     color: var(--colorSecundario);
     font-family: Poppins;
-}
-
-.li-footer {
-    list-style-type: none;
     display: flex;
-    margin: inherit;
-}
-
-.li-footer a {
-    text-decoration:none;
-    color:var(--colorSecundario);
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    flex-direction: column;
 }
 
 .li-footer a:hover{
@@ -38,6 +28,7 @@
 
 #main-footer {
     display:flex;
+    flex-direction: column;
     justify-content:space-around;
 }
 
@@ -45,10 +36,12 @@
     width:150px;
     height:150px;
     margin-top: 60px;
+    display: none;
 }
 
 #nav_footer {
     display:flex;
+    flex-direction: column;
     justify-content:space-around;
 }
 
@@ -58,6 +51,23 @@
     text-decoration:none;
 }
 
+.ul-footer{
+    list-style-type:none;
+    column-count: 3;
+    column-gap: 30px;
+    border-bottom: 1px solid #ffbb00;
+    padding-bottom: 1em;
+}
+
+.ul-footer li:first-child{
+    break-before: column;
+}
+
+h3{
+    color:var(--colorTerciario);
+}
+
+/*Pie de footer: Copyright*/
 #copyright-footer{
     text-align:center;
     font-size:0.8em;
@@ -71,13 +81,9 @@
     margin: 0px 10px;
 }
 
-.ul-footer{
-    min-width:166px;
-    list-style-type:none;
-}
-
-h3{
-    color:var(--colorTerciario);
+/* No se ve el mensaje para este tamaño*/
+#ul-contac_us{
+    display: none;
 }
 
 #form-footer {
