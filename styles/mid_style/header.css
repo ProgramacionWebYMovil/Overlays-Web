@@ -5,7 +5,7 @@
     --colorPrincipalOscuro: #04006B;
 }
 
-nav {
+#nav_header {
     background: linear-gradient(var(--colorPrincipalOscuro),var(--colorPrincipal));
     font-family: Poppins, serif;
 }
