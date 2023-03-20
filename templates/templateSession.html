@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 id="titleForm" style="text-align: center;">CREATE ACCOUNT</h1>
-    <form id="sessionForm" action="" method="post" autocomplete="off">
+    <form id="sessionForm" action="" method="post" autocomplete="off" onsubmit="alert('Hecho');return false;">
         <ul>
             <li>
                 <label for="name">FULL NAME</label>
@@ -24,11 +24,11 @@
                 <input type="password" id="password" name="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\.!@#$%^&*_=+-]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, at least one symbol (!@#$%^&*_=+-) and at least 8 or more characters"  > 
             </li>
             <li>
-                <label for="password">CONFIRM PASSWORD</label>
+                <label for="passwordRepeat">CONFIRM PASSWORD</label>
                 <input type="password" id="passwordRepeat" name="passwordRepeat" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\.!@#$%^&*_=+-]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, at least one symbol (!@#$%^&*_=+-) and at least 8 or more characters"required>
             </li>
             <li>
-                <input type="submit" id="submit" value="Sign up" > </input>
+                <input type="submit" id="submit" value="Sign up"  > </input>
                 <div id="changeSessionOptions">
                     <p>
                         If you have already an account,<br/> please <input id="changeButton" type="button" value="log in"/> .

@@ -9,11 +9,8 @@ let sessionOptionsLi;
 
 // content data
 
-let pageInfo;
 
-function init(data){
-    data = pageInfo;
-}
+
 
 function formValidate(inputElement){
     
@@ -29,14 +26,31 @@ function formValidate(inputElement){
 
 }
 
+
+
 function resolveValidation(inputElement, error){
     switch(error){
         case "valueMissing":
-            inputElement.setCustomValidity("This field is required");
+            inputElement.setCustomValidity(pageInfo.fieldRequirementText);
             break;
         
         case "patternMismatch":
-            inputElement.setCustomValidity(inputElement.title);
+
+            switch(inputElement.name){
+                case "name":
+                    inputElement.setCustomValidity(pageInfo.nameInfo);
+                    break;
+
+                case "mail":
+                    inputElement.setCustomValidity(pageInfo.mailInfo);
+                    break;
+
+                default:
+                    inputElement.setCustomValidity(pageInfo.passwordInfo);
+                    break;    
+                
+            }
+
             break;
     }
 
@@ -52,7 +66,7 @@ function getUlElements(ul){
 
 function addEventsListener(){
 
-    document.querySelector("#changeButton").addEventListener("click",() => changePage(changeButton));
+    document.querySelector("#changeButton").addEventListener("click",changeButton => changePage(changeButton));
 
     document.querySelector("#submit").addEventListener("click",checkPasswordRepeat);
 
@@ -74,12 +88,12 @@ function addEventsListener(){
 
 function checkPasswordRepeat(){
     let passwordRepeat = document.querySelector("#passwordRepeat");
-    if( passwordRepeat.value !== document.querySelector("#password").value) passwordRepeat.setCustomValidity("Passwords don't match.");
+    if( passwordRepeat.value !== document.querySelector("#password").value) passwordRepeat.setCustomValidity(pageInfo.repeatPasswordMatch);
     else passwordRepeat.setCustomValidity("");
 }
 
 function changeContent(buttonValue,submitButtonValue,titleInner,textChangeInner){
-    let textChange = document.querySelector("#changeSessionOptions").querySelector("p");
+    let textChange = document.querySelector("#changeSessionOptions");
     let submitButton = document.querySelector("#submit");
     let title = document.querySelector("#titleForm");
     let changeButton = document.querySelector("#changeButton");
@@ -94,14 +108,14 @@ function changeContent(buttonValue,submitButtonValue,titleInner,textChangeInner)
 function changePage(button){
     let formList = document.querySelector("#sessionForm ul");
     switch(button.value){
-        case "log in":
-            changeContent("sign up","Log in","LOG IN",`If you don't have an account,<br/>please `);
+        case pageInfo.buttonChangeOption2:
+            changeContent(pageInfo.buttonChangeOption1,pageInfo.submitValue1,pageInfo.title1,pageInfo.textChangeOption1);
             passwordConfirmLi = formList.removeChild(passwordConfirmLi);
             fullNameLi = formList.removeChild(fullNameLi);
             break;
 
         default:
-            changeContent("log in","Sign up","CREATE ACCOUNT",`If you have already an account,<br /> please `)
+            changeContent(pageInfo.buttonChangeOption2,pageInfo.submitValue2,pageInfo.title2,pageInfo.textChangeOption2)
             formList.insertBefore(fullNameLi,mailLi);
             formList.insertBefore(passwordConfirmLi,sessionOptionsLi);
     }
