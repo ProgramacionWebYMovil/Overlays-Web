@@ -1,12 +1,34 @@
 let pageInfo;
 
+document.addEventListener('DOMContentLoaded',loadPage);
+
 function loadPage(){
 
-    getUlElements(document.querySelector("#sessionForm ul").childNodes);
-    loadPageContent("/json/session-content.json",addEventsListener);
+    loadTemplate("/templates/header.html","header");
+    loadTemplate("/templates/templateSession.html","main", () => loadPageContent("/json/session-content.json",addEventsListener));
+
+    
+}
+
+function loadTemplate(url,typeElement,callBack){
+
+    fetch(url).then(response => {
+        return response.text();
+    }).then(data => {
+        data = data.split("</head>");
+        let main = document.createElement(typeElement);
+        main.innerHTML = data[1];
+        document.querySelector("head").innerHTML += data[0].replace("<head>","");
+        document.querySelector("body").appendChild(main);
+
+        if(callBack) callBack();
+    })
+
+    
 }
 
 function loadPageContent(url,callBack){
+    getUlElements(document.querySelector("#sessionForm ul").childNodes);
     fetch(url).then(response => response.json()).then(data => {
         switch(navigator.language){
             case "es":
@@ -36,7 +58,10 @@ function setPageData(){
 
 function setSessionOptionsData(){
     document.querySelector("#submit").value = pageInfo.submitValue2;
-
+    document.querySelector("form").onsubmit = () => {
+        onSubmit();
+        return false;
+    }
     let button = document.querySelector("#changeButton");
     button.value = pageInfo.buttonChangeOption2;
     document.querySelector("#changeSessionOptions").innerHTML = pageInfo.textChangeOption2 + `${button.outerHTML}`;

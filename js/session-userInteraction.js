@@ -1,4 +1,4 @@
-w3IncludeHTML(loadPage);
+
 
 // ul elements
 let fullNameLi;
@@ -25,8 +25,6 @@ function formValidate(inputElement){
     }
 
 }
-
-
 
 function resolveValidation(inputElement, error){
     switch(error){
@@ -120,4 +118,13 @@ function changePage(button){
             formList.insertBefore(passwordConfirmLi,sessionOptionsLi);
     }
     document.querySelector("#changeButton").addEventListener("click",() => changePage(changeButton));
+}
+
+function onSubmit(){
+
+    fetch("/json/userOverlays.json").then(data => { return data.json() }).then(items => { 
+        localStorage.setItem("json",JSON.stringify(items));
+        localStorage.setItem("stateSession",true);
+        window.location.href="/html/myOverlays.html";
+    });
 }
