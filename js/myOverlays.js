@@ -167,6 +167,8 @@ function loadCards(amountInsert,mismatch) {
      * en cada paso*/
     overlays.appendChild(df);
 
+    //localStorage.setItem("prueba", JSON.stringify(json));
+
 
 }
 
@@ -278,4 +280,6 @@ fetchCards("/templates/overlayCard.html", "/json/myOverlays.json");
 document.querySelector("#nextPage").addEventListener("click", nextPage, false);
 document.querySelector("#previousPage").addEventListener("click", previousPage, false);
 document.querySelector("#previousPage").style.visibility = "hidden";
+
+
 
