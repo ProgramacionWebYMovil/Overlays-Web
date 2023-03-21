@@ -22,5 +22,12 @@ buttons.forEach(button => {
     });
 });
 
+/*BOTÓN "Purchase"*/
+function irAPagina() {
+    window.location.href = "payment.html";
+}
+
+
+
 
 
