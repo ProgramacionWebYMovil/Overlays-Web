@@ -96,6 +96,7 @@ h1 {
     width: 15em;
     position: relative;
     flex-direction: column;
+    height: fit-content
 }
 
 
