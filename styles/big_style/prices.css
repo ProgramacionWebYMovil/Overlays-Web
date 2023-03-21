@@ -8,6 +8,7 @@
 header{
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 body{
@@ -70,7 +71,6 @@ h1 {
     align-items: center;
 }
 
-
 .tick-cross {
     font-size: 1.5em;
     margin-right: 1em;
@@ -98,15 +98,18 @@ h1 {
     flex-direction: column;
 }
 
+
 .plan_list .features {
     display: none;
     z-index: 1;
 }
-
+/*
 .plan_list:focus-within .features  {
     display: flex;
     justify-content: center;
 }
+*/
+
 
 hr {
     border-color:var(--colorTerciario);
