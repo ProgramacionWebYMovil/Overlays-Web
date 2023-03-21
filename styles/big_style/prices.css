@@ -103,7 +103,7 @@ h1 {
     display: none;
     z-index: 1;
 }
-/*
+/* SE IMPLENTA EN JS
 .plan_list:focus-within .features  {
     display: flex;
     justify-content: center;
