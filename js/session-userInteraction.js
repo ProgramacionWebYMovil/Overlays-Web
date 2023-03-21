@@ -123,8 +123,8 @@ function changePage(button){
 function onSubmit(){
 
     fetch("/json/userOverlays.json").then(data => { return data.json() }).then(items => { 
-        localStorage.setItem("json",JSON.stringify(items));
-        localStorage.setItem("stateSession",true);
+        sessionStorage.setItem("json",JSON.stringify(items));
+        sessionStorage.setItem("stateSession",true);
         window.location.href="/html/myOverlays.html";
     });
 }
