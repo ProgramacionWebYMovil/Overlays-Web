@@ -1,4 +1,4 @@
-function loadTemplate(fileName, id) {
+function loadTemplate(fileName, id, callback) {
 
     //FETCH 
     fetch(fileName)
@@ -8,7 +8,15 @@ function loadTemplate(fileName, id) {
          * se procesa la información retornada*/
         .then((text) => {
             //console.log(text);
-            document.querySelector(id).innerHTML = text;
+            if (callback) {
+                callback(text);
+            } else {
+                text = text.split("</head>");
+
+                document.querySelector("head").innerHTML += text[0].replace("<head>", "");
+                document.querySelector(id).innerHTML = text[1];
+            }
+            
         })
 }
 
@@ -24,27 +32,16 @@ let nPages = 0;
 let cardsPerPage = 0;
 
 
-/*FUNCION PARA EL FETCH DE LAS CARTAS
- * realiza el fetch de cardtemplate
- * y el fetch del json
- */
-async function fetchCards(fileTemplate, fileJson) {
 
-    /*Promise.all starts fetch request in parallel, and waits
-     * until all of them are resolved
-     * 
-     * If any request fails, then the whole parallel promise 
-     * gets rejected right away with the failed request error.*/
-    const [cardResponse, jsonResponse] = await Promise.all([
-        fetch(fileTemplate),
-        fetch(fileJson)
-    ]);
+function loadCardsTemplate(data) {
 
-    cardHTML = await cardResponse.text();
-    json = await jsonResponse.json();
+    //Cargo el json desde el sessionStorage
+    loadJSON();
 
     /*ORDENAR EL JSON POR FECHA, MAS RECIENTE A MENOS RECIENTE*/
     jsonSort = sortJSON(json);
+
+    cardHTML = data;
 
 
     /*CALCULAMOS INFORMACION DEL GRID
@@ -59,16 +56,26 @@ async function fetchCards(fileTemplate, fileJson) {
      * mismatch será el que indique que overlays se insertan, dependiendo de que pagina estemos
      */
     loadCards(cardsPerPage, (currentPage - 1) * cardsPerPage);
-
-    
-
-    
 }
+
+
+function loadJSON() {
+    json = JSON.parse(sessionStorage.getItem("userOverlays"));
+}
+
+function storeJSON(){
+    sessionStorage.setItem("userOverlays", JSON.stringify(json))
+}
+
+
 
 /*FUNCION LOADCARDS para cargar las cartas en el dom
  * amountInsert: numero que nos indica cuantas cartas hay que cargar
  * mismatch: numero de cartas que nos hemos saltado porque estamos en otra página*/
-function loadCards(amountInsert,mismatch) {
+function loadCards(amountInsert, mismatch) {
+
+   
+
     /*INSERTAR Y CREAR LAS CARTAS*/
     let df = new DocumentFragment();
 
@@ -93,6 +100,7 @@ function loadCards(amountInsert,mismatch) {
         cardTemplate.querySelector(".overlay_name").innerHTML = cardInfo.overlay_name;
         cardTemplate.querySelector(".overlay_description").innerHTML = cardInfo.overlay_description;
         cardTemplate.querySelector(".overlay_date").innerHTML = cardInfo.overlay_date;
+        cardTemplate.removeChild(cardTemplate.getElementsByClassName("card_button")[0]);
 
 
         /*EVENTO PARA DESPLEGAR EL DROPDOWN DE LOS TRES PUNTITOS*/
@@ -114,7 +122,7 @@ function loadCards(amountInsert,mismatch) {
 
         cardTemplate.querySelector(".use_overlay")
             .addEventListener("click", function useOverlay() {
-                console.log("Hola");
+                
             });
 
         cardTemplate.querySelector(".edit_overlay")
@@ -144,6 +152,8 @@ function loadCards(amountInsert,mismatch) {
                 deleteCards();
                 //CALCULO LAS PAGINAS POR SI HAY QUE CAMBIAR EL NUMERO DE PAGINAS ETC
                 pageCalculator();
+                //GUARDO EL JSON EN EL SESSION STORAGE
+                storeJSON();
                 //CARGO LOS OVERLAYS RESTANTES
                 loadCards(cardsPerPage, (currentPage - 1) * cardsPerPage);
             });
@@ -274,7 +284,7 @@ function previousPage() {
 
 loadTemplate("/templates/header.html", "header");
 loadTemplate("/templates/footer.html", "footer");
-fetchCards("/templates/overlayCard.html", "/json/myOverlays.json");
+loadTemplate("/templates/overlayCard.html", "", loadCardsTemplate);
 
 
 document.querySelector("#nextPage").addEventListener("click", nextPage, false);

@@ -79,7 +79,7 @@
 }
 
 
-.cardOverlay button{
+.card_dropdown button{
     background:none;
     border:none;
 }
@@ -116,6 +116,15 @@
         font-size:1.2em;
         font-family:Poppins;
     }
+
+.card_button{
+    color:var(--colorPrincipal);
+    padding:1em;
+    background-color:var(--colorTerciario);
+    border:none;
+    border-radius:1em;
+    font-family:Poppins;
+}
 
 
 
