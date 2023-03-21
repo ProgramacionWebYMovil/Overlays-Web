@@ -117,6 +117,8 @@ function loadCards(amountInsert, mismatch) {
      * de un golpe, asi evito tener que estar editando el DOM
      * en cada paso*/
     overlays.appendChild(df);
+
+    addEventsListener();
 }
 
 /*FUNCION PAGECALCULATOR
