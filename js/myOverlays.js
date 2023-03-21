@@ -207,18 +207,19 @@ function deleteCards() {
  */
 function pageCalculator() {
     let nPagesOld = nPages;
-    let overlays = document.querySelector("#overlays");
     /*COMPROBAR CUANTAS PÁGINAS DE CARTAS HABRÁ
  * Primero averiguo cuantas cartas entran en el grid actual
  */
-    let nColums = window.getComputedStyle(overlays).
-        getPropertyValue('grid-template-columns').split(" ").length;
-    let nRows = window.getComputedStyle(overlays).
-        getPropertyValue('grid-template-rows').split(" ").length;
+    var windowSize = window.innerWidth;
+
+    if (windowSize >= 1024) {
+        cardsPerPage = 8;
+    } else {
+        cardsPerPage = 4;
+    }
+    
     //Ahora calculamos el numero de páginas que habría
-    nPages = jsonSort.length / (nColums * nRows);
-    //Y el número de cards que caben en una pagina
-    cardsPerPage = nColums * nRows;
+    nPages = json.length / cardsPerPage;
     /*Comprobar que sea un numero entero
      * si no lo es, añadimos una pagina mas*/
     if (nPages % 1 != 0) {

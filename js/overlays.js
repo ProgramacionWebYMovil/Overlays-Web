@@ -18,15 +18,9 @@ function loadTemplate(fileName, id, callback) {
         /*Segundo .then se llama despues de que el primero se haya completado
          * se procesa la información retornada*/
         .then((text) => {
-            //console.log(text);
-            if (callback) {
-                callback(text);
-            } else {
-                text = text.split("</head>");
-
-                document.querySelector("head").innerHTML += text[0].replace("<head>", "");
-                document.querySelector(id).innerHTML = text[1];
-            }
+            text = text.split("</head>");
+            document.querySelector("head").innerHTML += text[0].replace("<head>", "");
+            document.querySelector(id).innerHTML = text[1];
 
         })
 }
@@ -49,6 +43,7 @@ async function fetchCards(fileTemplate, fileJson) {
 
     cardHTML = await cardResponse.text();
     json = await jsonResponse.json();
+
 
 
     /*CALCULAMOS INFORMACION DEL GRID
@@ -91,14 +86,13 @@ function loadCards(amountInsert, mismatch) {
         cardTemplate.innerHTML = cardHTML;
         cardTemplate.className = "cardOverlay";
 
-
         let cardInfo = json[i];
         /*Inserto todas las caracteristicas de las cartas*/
         cardTemplate.querySelector(".image_card").firstElementChild.src = cardInfo.image_card;
         var language = window.navigator.language.toString();
         if (language.includes("en")) {
-            cardTemplate.querySelector(".overlay_name_EN").innerHTML = cardInfo.overlay_name;
-            cardTemplate.querySelector(".overlay_description_EN").innerHTML = cardInfo.overlay_description;
+            cardTemplate.querySelector(".overlay_name").innerHTML = cardInfo.overlay_name_EN;
+            cardTemplate.querySelector(".overlay_description").innerHTML = cardInfo.overlay_description_EN;
         } else {
             cardTemplate.querySelector(".overlay_name").innerHTML = cardInfo.overlay_name;
             cardTemplate.querySelector(".overlay_description").innerHTML = cardInfo.overlay_description;
@@ -132,18 +126,19 @@ function loadCards(amountInsert, mismatch) {
  */
 function pageCalculator() {
     let nPagesOld = nPages;
-    let overlays = document.querySelector("#overlays");
     /*COMPROBAR CUANTAS PÁGINAS DE CARTAS HABRÁ
  * Primero averiguo cuantas cartas entran en el grid actual
  */
-    let nColums = window.getComputedStyle(overlays).
-        getPropertyValue('grid-template-columns').split(" ").length;
-    let nRows = window.getComputedStyle(overlays).
-        getPropertyValue('grid-template-rows').split(" ").length;
+    var windowSize = window.innerWidth;
+
+    if (windowSize >= 1024) {
+        cardsPerPage = 8;
+    } else {
+        cardsPerPage = 4;
+    }
+
     //Ahora calculamos el numero de páginas que habría
-    nPages = json.length / (nColums * nRows);
-    //Y el número de cards que caben en una pagina
-    cardsPerPage = nColums * nRows;
+    nPages = json.length / cardsPerPage;
     /*Comprobar que sea un numero entero
      * si no lo es, añadimos una pagina mas*/
     if (nPages % 1 != 0) {
