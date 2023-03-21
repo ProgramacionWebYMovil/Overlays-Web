@@ -1,0 +1,34 @@
+{
+
+    "english": {
+        "exploreList" : {
+            "title" : "Explore",
+            "home" : "Home",
+            "howToUse" : "How to use",
+            "pricing" : "Pricing"
+        },
+
+        
+        
+    
+    },
+
+    
+
+    "spanish": {
+    
+    },
+
+    "common":{
+        "logoImg" : "/images/logotypes/logo.png",
+        "followListImgs" : {
+            "instagramImg" : "/images/icons/instagram.png",
+            "youtubeImg" : "/images/icons/youtube.png",
+            "tiktokImg" : "/images/icons/tik tok.png",
+            "facebookImg" : "/images/icons/facebook.png"
+        }
+
+    }
+
+    
+}
