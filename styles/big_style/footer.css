@@ -39,6 +39,8 @@
 #main-footer {
     display:flex;
     justify-content:space-around;
+    flex-direction:row;
+    text-align:initial;
 }
 
 #logo-footer{
@@ -47,10 +49,7 @@
     margin-top: 60px;
 }
 
-#nav_footer {
-    display:flex;
-    justify-content:space-around;
-}
+
 
 .socialLink-footer{
     padding-left:10px;
@@ -65,6 +64,8 @@
     justify-content:center;
     align-items:center;
     margin-bottom:10px;
+    flex-direction:row;
+    margin-top:1em;
 }
 
 .tag-footer {
@@ -74,7 +75,10 @@
 .ul-footer{
     min-width:166px;
     list-style-type:none;
+    margin-top:0;
 }
+
+
 
 h3{
     color:var(--colorTerciario);
@@ -82,12 +86,14 @@ h3{
 
 #form-footer {
     display: flex;
-    flex-direction: column;
+    
     align-items: flex-end;
 }
 
 #message-form-footer{
     display:flex;
+    flex-direction:row;
+    text-align:initial;
 }
 
 #textArea-form-footer {
@@ -102,5 +108,19 @@ h3{
     margin-right: 10px;
     margin:0 10px 10px 0;
     flex-direction: column;
+}
+
+#message-form{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+}
+
+#message-form button{
+    margin-top:0.3em;
+    background-color:var(--colorTerciario);
+    border:none;
+    border-radius:0.2em;
+    color:var(--colorPrincipalOscuro);
 }
 
