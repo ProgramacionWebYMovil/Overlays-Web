@@ -11,7 +11,7 @@
     <body id="body_header">
         <nav>
             <section id="menu-header">
-                <h1 id="title"><img src="../images/logotypes/logo.png" alt="Imagen del Logo"/><a href="/html/intro.html">Streaming Overlays</a></h1>
+                <h1 id="title"><img id= "logo-header" src="../images/logotypes/logo.png" alt="Imagen del Logo"/><a href="/html/intro.html">Streaming Overlays</a></h1>
 
                 <section class="dropall"> <i>&#8801;</i>
                     <ul class="dropall_elements">
@@ -26,14 +26,20 @@
                             </div>
                         </li>
 
-                        <li><a href="/html/prices.html">Prices</a></li>
-                        <li><a href="/html/howToUse.html">How to use</a></li>
+                        <li id="prices"><a href="/html/prices.html">Prices</a></li>
+                        <li id="howtouse"><a href="/html/howToUse.html">How to use</a></li>
 
                         <li id="sessionOptions">
                             <img id="icono_usuario" src="/images/icons/user-yellow.png" alt="User Icon"/>
                             <div>
-                                <a href="/html/session.html">Log in</a>
-                                <a href="/html/session.html">Sing up</a>
+                                <div id="not_logged">
+                                    <a href="/html/session.html">Log in</a>
+                                    <a href="/html/session.html">Sing up</a>
+                                </div>
+                                <div id="logged">
+                                    <a href="/html/myOverlays.html">My Library</a>
+                                    <a href="/html/intro.html">Log out</a>
+                                </div>
                             </div>
                         </li>
                     </ul>
