@@ -59,9 +59,9 @@
     padding-bottom: 1em;
 }
 
-    .ul-footer:first-child {
-        margin-top: 2em;
-    }
+.ul-footer:first-child {
+   margin-top: 2em;
+}
 
 
 .ul-footer li:first-child{
