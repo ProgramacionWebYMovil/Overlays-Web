@@ -17,7 +17,6 @@ function loadFooterContent(){
 
         footerContent.commonContent = data.common;
         
-
         switch(navigator.language){
             case "es":
             case "es-ES":
@@ -28,17 +27,20 @@ function loadFooterContent(){
                 footerContent.lenguageContent = data.english;     
         }
 
-        document.querySelector("#logo-footer").src = footerContent.commonContent.logoImg;
-        loadExploreList(footerContent.lenguageContent.exploreList);
-        loadFollowList({
-            followListTitle: footerContent.lenguageContent.followListTitle,
-            followListId : footerContent.commonContent.followListId,
-            followListImgs: footerContent.commonContent.followListImgs,
-            followListUrls: footerContent.commonContent.followListUrls
-        });
-        loadContactList(footerContent.lenguageContent.contactList);
-
+        loadSections(footerContent);
     })
+}
+
+function loadSections(footerContent){
+    document.querySelector("#logo-footer").src = footerContent.commonContent.logoImg;
+    loadExploreList(footerContent.lenguageContent.exploreList);
+    loadFollowList({
+        followListTitle: footerContent.lenguageContent.followListTitle,
+        followListId : footerContent.commonContent.followListId,
+        followListImgs: footerContent.commonContent.followListImgs,
+        followListUrls: footerContent.commonContent.followListUrls
+    });
+    loadContactList(footerContent.lenguageContent.contactList);
 }
 
 function loadContactList(data){
