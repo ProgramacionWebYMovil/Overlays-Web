@@ -46,6 +46,7 @@ function loadSections(footerContent){
 function loadContactList(data){
     document.querySelector("#ul-contac_us")
     .querySelector(".title")
+    .querySelector("h3")
     .innerHTML = data.title;
 
     document.querySelectorAll("label").forEach(label => {
