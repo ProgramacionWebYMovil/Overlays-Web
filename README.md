@@ -21,7 +21,7 @@ El repositorio está formado por:
 
 - json: Json de cada de cada html y template.
 
--php: Recoge el envío de un email hacía nosotros desde el footer (Contac us).
+- php: Recoge el envío de un email hacía nosotros desde el footer (Contac us).
 
 - styles:
 
