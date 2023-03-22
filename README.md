@@ -10,11 +10,17 @@ El repositorio está formado por:
     · Sprint 2: Diseño Figma, tamaño tablet y móvil.
     
 -fonts: Las fuentes de letras que utilizamos.
+
 -html: Las páginas finales en html
+
 -images: Recoge todo tipo de imágenes, logos, iconos, y fondos.
+
 -js: JavaScripts de cada html, template y además de los overlays.
+
 -json: Json de cada de cada html y template.
+
 -php: Recoge el envío de un email hacía nosotros desde el footer (Contac us).
+
 -styles:
     · big_style: CSS de los archivos html en tamaño desktop (min-width:1024px)
     · mid_style: CSS de los archivos html en tamaño tablet ((min-width:768px) and (max-width:1023px))
