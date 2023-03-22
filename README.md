@@ -7,6 +7,7 @@ El repositorio está formado por:
 
 -MockUps:
     · Sprint 1: Diseño Figma, tamaño dektop
+    
     · Sprint 2: Diseño Figma, tamaño tablet y móvil.
     
 -fonts: Las fuentes de letras que utilizamos.
@@ -23,7 +24,9 @@ El repositorio está formado por:
 
 -styles:
     · big_style: CSS de los archivos html en tamaño desktop (min-width:1024px)
+    
     · mid_style: CSS de los archivos html en tamaño tablet ((min-width:768px) and (max-width:1023px))
+    
     · small_style: CSS de los archivos html en tamaño móvil (max-width:767px)
     
 -templates: Templates en html, que se utilizan el las páginas finales de la carpeta "html"
