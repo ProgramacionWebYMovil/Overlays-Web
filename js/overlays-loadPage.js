@@ -22,7 +22,24 @@ function loadTemplate(fileName, id, callback) {
             document.querySelector("head").innerHTML += text[0].replace("<head>", "");
             document.querySelector(id).innerHTML = text[1];
 
+            if (callback) loadJs(callback);
         })
+}
+
+/*FUNCION PARA AÑADIR EL CONTENIDO DE LOS TEMPLATES FOOTER Y HEADER*/
+function loadJs(js) {
+    let footerScript = document.createElement("script");
+
+    fetch(js).then(response => {
+        return response.text();
+    }).then(data => {
+        footerScript.innerHTML = data;
+
+        document.head.appendChild(footerScript);
+
+        loadFooterContent();
+
+    })
 }
 
 /*FUNCION PARA EL FETCH DE LAS CARTAS
@@ -202,5 +219,5 @@ function previousPage() {
 }
 
 loadTemplate("/templates/header.html", "header");
-loadTemplate("/templates/footer.html", "footer");
+loadTemplate("/templates/footer.html", "footer", "/js/footer.js");
 fetchCards("/templates/overlayCard.html","/json/overlays.json");

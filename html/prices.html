@@ -4,32 +4,71 @@
 <head>
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
     <title>Pricing</title>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    
     <link rel="icon" type="image/png" href="/images/logotypes/logo.png">
     <link rel="stylesheet" type="text/css" href="/styles/big_style/prices.css" media="screen and (min-width:1024px)"/>
     <link rel="stylesheet" type="text/css" href="/styles/mid_style/prices.css" media="screen and (min-width:768px) and (max-width:1023px)"/>
     <link rel="stylesheet" type="text/css" href="/styles/small_style/prices.css" media="screen and (max-width:767px)"/>
-    <link rel="stylesheet" type="text/css" href="/styles/big_style/footer.css" />
 </head>
 <body>
-    <header w3-include-html="/templates/header.html"></header>
+    <header></header>
     <main>
         <h1>Pricing</h1>
         <h2 id="titulo2">Choose the best choice for yourself</h2>
         <div id="plans">
-            <div class="plan">
+
+            <section class="plan">
                 <ul class="plan_list">
                     <li>
-                        <h2>Free</h2>
+                        <h2 id="plan1_title">Free</h2>
                         <hr />
                     </li>
                     
                     <li>
-                        <h3><span style="font-size: 1.5em">$0</span>/month</h3>
+                        <h3 id="plan1_money"><span style="font-size: 1.5em">$0</span>/month</h3>
                     </li>
 
                     <li>
-                        <button class="button-moreInfo">
+                        <button id="plan1_moreInfo" class="button-moreInfo">More info</button>
+                    </li>
+
+
+                    <li>
+                        <div class="features">
+                            <p id="plan1_icon1"class="tick-cross">
+                                <span style="color: green;">&#10003;</span>
+                            </p>
+                            <p id="plan1_feature1">Use all our overlays</p>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="features">
+                            <p id="plan1_icon2" class="tick-cross">&#10060</p>
+                            <p id="plan1_feature2">Use a single overlay<br />of each type</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="features">
+                            <p id="plan1_icon3" class="tick-cross">&#10060</p>
+                            <p id="plan1_feature3">You can´t customize<br /> our overlays</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="plan">
+                <ul class="plan_list">
+                    <li>
+                        <h2 id="plan2_title">Premium</h2>
+                        <hr />
+                    </li>
+                    <li>
+                        <h3 id="plan2_money"><span style="font-size: 1.5em">$4.99</span>/month</h3>
+                    </li>
+
+                    <li>
+                        <button id="plan2_moreInfo" class="button-moreInfo">
                             More info
                         </button>
                     </li>
@@ -37,79 +76,35 @@
 
                     <li>
                         <div class="features">
-                            <p class="tick-cross">
+                            <p id="plan2_icon1" class="tick-cross">
                                 <span style="color: green;">&#10003;</span>
                             </p>
-                            <p>Use all our overlays</p>
+                            <p id="plan2_feature1">Use all our overlays</p>
                         </div>
                     </li>
-                    
                     <li>
                         <div class="features">
-                            <p class="tick-cross">&#10060</p>
-                            <p>Use a single overlay<br />of each type</p>
-                        </div>
-                    <li/>
-                    <li>
-                        <div class="features">
-                            <p class="tick-cross">&#10060</p>
-                            <p>You can´t customize<br /> our overlays</p>
-                        </div>
-                    </li>
-
-
-
-
-                </ul>
-            </div>
-            <div class="plan">
-                <ul class="plan_list">
-                    <li>
-                        <h2>Premium</h2>
-                        <hr />
-                    </li>
-                    <li>
-                        <h3><span style="font-size: 1.5em">$4.99</span>/month</h3>
-                    </li>
-
-                    <li>
-                        <button class="button-moreInfo">
-                            More info
-                        </button>
-                    </li>
-
-
-                    <li>
-                        <div class="features">
-                            <p class="tick-cross">
+                            <p id="plan2_icon2" class="tick-cross">
                                 <span style="color: green;">&#10003;</span>
                             </p>
-                            <p>Use all our overlays</p>
+                            <p id="plan2_feature2">Use each type of overlay<br />more than once</p>
                         </div>
                     </li>
                     <li>
                         <div class="features">
-                            <p class="tick-cross">
-                                <span style="color: green;">&#10003;</span>
+                            <p id="plan2_icon3" class="tick-cross"><span style="color: green;">&#10003;</span>
                             </p>
-                            <p>Use each type of overlay<br />more than once</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="features">
-                            <p class="tick-cross"><span style="color: green;">&#10003;</span>
-                            </p>
-                            <p>Customize the overlays<br />as you wish </p>
+                            <p id="plan2_feature3"></p>
                         </div>
                     </li>
                 </ul>
-                <button id="button-purchase" onclick="">
+                <button id="button-purchase" onclick="irAPagina()">
                     Purchase
                 </button>
-            </div>
+            </section>
         </div>
     </main>
-    <footer w3-include-html="/templates/footer.html"></footer>
-    <script>w3IncludeHTML();</script>
+    <footer></footer>
+    <script src="/js/prices.js"></script>
 </body>
 </html>
