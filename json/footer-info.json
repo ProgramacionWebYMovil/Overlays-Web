@@ -8,27 +8,53 @@
             "pricing" : "Pricing"
         },
 
-        
-        
-    
+        "contactList" : {
+            "name" : "Name:",
+            "email": "Email:",
+            "message": "Message:",
+            "submit" : "Send"
+            
+        },
+
+        "followListTitle" : "Follow us"
     },
 
-    
-
     "spanish": {
+        "exploreList" : {
+            "title" : "Explorar",
+            "home" : "Inicio",
+            "howToUse" : "Como usar",
+            "pricing" : "Precios"
+        },
+
+        "contactList" : {
+            "title" : "Contáctanos",
+            "name" : "Nombre:",
+            "email": "Correo electrónico:",
+            "message": "Mensaje:",
+            "submit" : "Enviar"
+            
+        },
+
+        "followListTitle" : "Síguenos"
     
     },
 
     "common":{
         "logoImg" : "/images/logotypes/logo.png",
+        "followListId" : "Streaming Overlays",
         "followListImgs" : {
             "instagramImg" : "/images/icons/instagram.png",
             "youtubeImg" : "/images/icons/youtube.png",
             "tiktokImg" : "/images/icons/tik tok.png",
             "facebookImg" : "/images/icons/facebook.png"
-        }
-
+        },
+        "followListUrls" :{
+            "instagramUrl" : "https://www.instagram.com/",
+            "youtubeUrl" : "https://www.youtube.com/",
+            "tiktokUrl" : "https://www.tiktok.com/",
+            "facebookUrl" : "https://www.facebook.com/"
+        },
+        "copyrigth" : "<a>Privacy Policy</a><p class='tag-footer'>|</p><p>Copyright © 2023 Lorem ipsum</p><p class='tag-footer'>|</p><a >Cookie policy</a>"
     }
-
-    
 }
