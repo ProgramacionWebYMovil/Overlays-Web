@@ -95,6 +95,7 @@ h1 {
     width: 15em;
     position: relative;
     flex-direction: column;
+    height: fit-content
 }
 
 .plan_list .features {
@@ -102,10 +103,12 @@ h1 {
     z-index: 1;
 }
 
+/* SE IMPLENTA EN JS
 .plan_list:focus-within .features  {
     display: flex;
     justify-content: center;
 }
+*/
 
 hr {
     border-color:var(--colorTerciario);

@@ -1,0 +1,85 @@
+﻿:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+h1 {
+    color: var(--colorTerciario);
+}
+
+
+footer {
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1em 3em 0 3em;
+    align-items:center;
+}
+
+body {
+    background-color: var(--colorPrincipal);
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Poppins;
+}
+
+#overlays {
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+    grid-template-rows: repeat(4,auto);
+    grid-row-gap: 2em;
+    justify-items: center;
+}
+
+#pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 0 0;
+    color: var(--colorSecundario);
+}
+
+#pageText {
+    display: flex;
+}
+
+
+
+
+
+
+
+svg {
+    display: flex;
+    fill: white;
+}
+
+#pages button {
+    width: 40px;
+    height: 40px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 0 1em 0 1em;
+}
+
+#previousPage {
+    display: none;
+}
+

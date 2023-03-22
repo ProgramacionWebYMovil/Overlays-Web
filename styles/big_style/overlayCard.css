@@ -1,16 +1,41 @@
-﻿.cardOverlay{
-    width:17em;
-    background-color:var(--color1);
-    border-radius:10px;
-    padding:1em;
-    display:flex;
-    flex-direction:column;
+﻿:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
 }
 
-.previewOverlay-main {
-    width: 7em;
-    height: 7em;
-    align-self:center;
+.cardOverlay{
+    width:15em;
+    height:17em;
+    background-color:var(--colorPrincipalOscuro);
+    border-radius:1em;
+    padding:1em;
+    flex-direction:column;
+    font-family:Poppins;
+    display:flex;
+}
+
+.image_card {
+    padding:4px;
+    background-color:var(--colorSecundario);
+    border-radius:0.4em;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:72px;
+}
+
+.image_card img {
+    width:232px;
+    height:72px;
+}
+
+.overlay_name {
+    color: var(--colorTerciario);
+    font-size: 1.1em;
+    height:fit-content;
+    
 }
 
 .info-cardOverlay img {
@@ -18,22 +43,22 @@
     height: 1.5em;
 }
 
-
-.date-cardOverlay {
-    display: flex;
-    align-items: center;
+.overlay_description {
+    font-size: 0.9em;
+    color: var(--colorSecundario);
+    margin-top:0;
 }
 
-.info-cardOverlay {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top:0.5em;
-}
 
-.cardOverlay button{
-    background:none;
+
+.card_button{
+    color:var(--colorPrincipal);
+    padding:1em;
+    background-color:var(--colorTerciario);
     border:none;
+    border-radius:1em;
+    font-family:Poppins;
+    margin-top:auto;
 }
 
 

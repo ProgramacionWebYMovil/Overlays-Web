@@ -5,6 +5,13 @@
     --colorPrincipalOscuro: #04006B;
 }
 
+body{
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
 #scoreboard{
     display:flex;
     flex-direction:column;
@@ -18,9 +25,9 @@
 }
 
 .names {
-    background-color: black;
+    background-color: var(--colorPrincipal);
     padding: 0.5em;
-    color: white;
+    color: var(--colorSecundario);
     border-radius:0.1em 0 0 0.1em ;
 }
 
@@ -35,17 +42,17 @@
 }
 
 .puntos {
-    background-color: black;
+    background-color: var(--colorTerciario);
     padding: 0.5em;
-    color: white;
+    color: var(--colorPrincipal);
     border-radius:0 0.1em 0.1em 0;
 }
 
 
 .sets{
-    background-color:white;
+    background-color:var(--colorPrincipal);
     display:flex;
-    color:black;
+    color:var(--colorTerciario);
 }
 
 .sets1, .sets2, .sets3 {

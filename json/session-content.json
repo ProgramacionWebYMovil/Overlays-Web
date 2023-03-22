@@ -10,11 +10,14 @@
         "passwordInfo": "Must contain at least one number and one uppercase and lowercase letter, at least one symbol (!@#$%^&*_=+-) and at least 8 or more characters.",
         "repeatPassword": "CONFIRM PASSWORD",
         "repeatPasswordMatch": "Passwords don't match",
-        "textChangeOption2": "If you have already an account, please ",
-        "textChangeOption1": "If you don't have an account, please ",
-        "fieldRequirementText": "This field is required"
-
-      
+        "textChangeOption2": "If you have already an account,<br/> please ",
+        "textChangeOption1": "If you don't have an account,<br/> please ",
+        "buttonChangeOption1" : "create an account." ,
+        "buttonChangeOption2" : "log in.",
+        "fieldRequirementText": "This field is required",
+        "submitValue1": "Log in",
+        "submitValue2": "Sign up"
+        
     },
   
     "spanish": {
@@ -28,10 +31,13 @@
         "passwordInfo": "Debe contener al menos un dígito y una letra mayúscula, al menos un símbolo (!@#$%^&*_=+-) y 8 o más caracteres",
         "repeatPassword": "CONFIRMA CONTRASEÑA",
         "repeatPasswordMatch": "Las contraseñas no coinciden.",
-        "textChangeOption2": "Si ya tienes una cuenta, por favor ",
-        "textChangeOption1": "Si aun no tienes cuenta, por favor ",
-        "fieldRequirementText": "Este campo es necesario"
-      
+        "textChangeOption2": "Si ya tienes una cuenta,<br/> por favor ",
+        "textChangeOption1": "Si aún no tienes cuenta,<br/> por favor ",
+        "buttonChangeOption1" : "créate una cuenta." ,
+        "buttonChangeOption2" : "inicia sesión.",
+        "fieldRequirementText": "Este campo es necesario",
+        "submitValue1": "Iniciar sesión",
+        "submitValue2": "Crear cuenta"
     }
   }
   

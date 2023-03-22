@@ -1,74 +1,80 @@
-﻿<div id="footer">
-    <div id="main-footer">
-        <a href="/html/intro.html">
-            <img id="logo-footer" src="/images/logotypes/logo.png" >
-        </a>
-        <ul class="ul-footer">
-            <li><h3>Explora</h3></li>
-            <li class="li-footer"><a href="/html/intro.html">Home</a></li>
-            <li class="li-footer"><a href="/html/overlays.html">Overlays</a></li>
-            <li class="li-footer"><a href="/html/howToUse.html">How to use</a></li>
-            <li class="li-footer"><a href="/html/prices.html">Pricing</a></li>
-        </ul>
 
-        <ul class="ul-footer">
-            <li><h3>Síguenos</h3></li>
-            <li class="li-footer">
-                <img src="/images/icons/instagram.png" class="social-icon" alt="Logo de instagram" />
-                <a class="socialLink-footer" href="">Lorem ipsum</a>
-            </li>
-            <li class="li-footer">
-                <img src="/images/icons/youtube.png" class="social-icon" alt="Logo de youtube" />
-                <a class="socialLink-footer" href="">Lorem ipsum</a>
-            </li>
-            <li class="li-footer">
-                <img src="/images/icons/tik tok.png" class="social-icon" alt="Logo de tik tok" />
-                <a class="socialLink-footer" href="">Lorem ipsum</a>
-            </li>
-            <li class="li-footer">
-                <img src="/images/icons/facebook.png" class="social-icon" alt="Logo de facebook" />
-                <a class="socialLink-footer" href="">Lorem ipsum</a>
-            </li>
-        </ul>
+﻿<head>
+    <link rel="stylesheet" type="text/css" href="/styles/big_style/footer.css" media="screen and (min-width:1024px)"/>
+    <link rel="stylesheet" type="text/css" href="/styles/mid_style/footer.css" media="screen and (min-width:768px) and (max-width:1023px)"/>
+    <link rel="stylesheet" type="text/css" href="/styles/small_style/footer.css" media="screen and (max-width:767px)"/>
+    <script src="/js/footer.js"></script>
+</head>
 
-        <ul class="ul-footer">
+    
+        <div id="footer">
+            <section id="main-footer">
+                
+                    <a href="/html/intro.html"><img id="logo-footer" src="/images/logotypes/logo.png" alt="Logo image"></a>
+                    <nav id="nav_footer">
+                        <ul id="exploreSection" class="ul-footer">
+                            <li class="title"><h3>Explore</h3></li>
+                            <li class="li-footer"><a href="/html/intro.html">Home</a></li>
+                            <li class="li-footer"><a href="/html/overlays.html">Overlays</a></li>
+                            <li class="li-footer"><a href="/html/howToUse.html">How to use</a></li>
+                            <li class="li-footer"><a href="/html/prices.html">Pricing</a></li>
+                        </ul>
+                    </nav>
 
+            <ul id="followSection" class="ul-footer">
+                <li class="title"><h3></h3></li>
+                <li id ="instagram" class="li-footer">
+                    <img src="/images/icons/instagram.png" class="social-icon" alt="Logo de instagram" />
+                    <a class="socialLink-footer" href=""></a>
+                </li>
+                <li id ="youtube" class="li-footer">
+                    <img src="/images/icons/youtube.png" class="social-icon" alt="Logo de youtube" />
+                    <a class="socialLink-footer" href=""></a>
+                </li>
+                <li id ="tiktok" class="li-footer">
+                    <img src="/images/icons/tik tok.png" class="social-icon" alt="Logo de tik tok" />
+                    <a class="socialLink-footer" href=""></a>
+                </li>
+                <li id ="facebook" class="li-footer">
+                    <img src="/images/icons/facebook.png" class="social-icon" alt="Logo de facebook" />
+                    <a class="socialLink-footer" href=""></a>
+                </li>
+            </ul>
+        
+
+        <ul class="ul-footer" id="ul-contac_us">
+            <li class="title"><h3></h3></li>
             <li>
-                <h3>Contacto</h3>
-            </li>
-            <li>
-                <form id="form-footer" method="post" name="emailForm" action="/php/form-to-email.php">
-                    <div id="message-form-footer">
+                <form id="form-footer" method="post" name="emailForm" action="/php/form-to-email.php" onsubmit="return false;">
+                    <section id="message-form-footer">
                         <div>
                             <div class="nameEmail-form-footer">
-                                <label for="name">Name:</label>
+                                <label for="name"></label>
                                 <input type="text" name="name" />
                             </div>
                             <div class="nameEmail-form-footer">
-                                <label for="email">Email:</label>
+                                <label for="email"></label>
                                 <input type="email" name="email" />
                             </div>
                         </div>
-
-                        <div>
-                            <label for="message">Message:</label>
+                        <div id="message-form">
+                            <label for="message"></label>
                             <textarea id="textArea-form-footer" type="text" name="message"></textarea>
+                            <button type="submit">Send</button>
                         </div>
-                    </div>
-                    <button type="submit">Send</button>
-
+                    </section>
+                    
                 </form>
             </li>
-            
         </ul>
-    </div>
+    </section>
 
-
-    <div id="copyright-footer">
+    <section id="copyright-footer">
         <a>Privacy Policy</a>
         <p class="tag-footer">|</p>
         <p>Copyright © 2023 Lorem ipsum</p>
         <p class="tag-footer">|</p>
         <a >Cookie policy</a>
-    </div>
+    </section>
+    
 </div>
