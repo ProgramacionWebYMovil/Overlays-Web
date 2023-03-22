@@ -1,0 +1,32 @@
+{
+    "english": {
+
+        "title":"Purchasing process",
+
+       "labels": {
+            "li1" : "CARD NUMBER",
+            "li2" : "EXPIRITY DATE",
+            "li3" : "FULL NAME",
+            "li4" : "CVV",
+            "li5" : "Do you want to save this card?",
+            "li6" : "Confirm"
+       }
+
+    },
+  
+    "spanish": {
+
+        "title" : "Proceso de compra",
+
+        "labels": {
+            "li1" : "NUMERO DE TARJETA",
+            "li2" : "FECHA DE CADUCIDAD",
+            "li3" : "NOMBRE COMPLETO",
+            "li4" : "CVV",
+            "li5" : "¿Quieres guardar esta tarjeta?",
+            "li6" : "Confirmar"
+
+        }
+    }
+}
+  

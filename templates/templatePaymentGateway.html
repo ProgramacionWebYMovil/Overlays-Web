@@ -3,35 +3,36 @@
 </head>
 
 <body>
-    <div id="payment">
-        <form id="paymentGateway">
-            <ul>
-                <li>
-                    <label for="cardNumber">CARD NUMBER</label>
-                    <input type="number" id="cardNumber" name="user_card" />
-                </li>
-                <li>
-                    <label for="expiryDate">EXPIRY DATE</label>
-                    <input type="month" id="expiryDate" name="user_card_expireDate" />
-                
-                </li>
-                <li>
-                    <label for="fullName">FULL NAME</label>
-                    <input type="text" id="fullName" name="user_name" />
-                </li>
-                <li>
-                    <label for="cvv">CVV</label>
-                    <input type="number" id="cvv" name="user_card_cvv" maxlength="3" />
-                </li>
-                <li>
-                    <label for="saveCard">Do you want to save this card?</label>
-                    <input type="checkbox" id="saveCard" />
-                </li>
+    <h2 id="titlePayment"></h2>
+    <form id="paymentGatewayForm">
+        <ul>
+            <li id="li1">
+                <label for="cardNumber">CARD NUMBER</label>
+                <input type="number" id="cardNumber" name="user_card" required />
+            </li>
+            <li id="li2">
+                <label for="expiryDate">EXPIRY DATE</label>
+                <input type="month" id="expiryDate" name="user_card_expireDate" required/>
             
-            </ul>
-            <button>
-                SUBMIT PAYMENT
-            </button>
-        </form>
-    </div>
+            </li>
+            <li id="li3">
+                <label for="fullName">FULL NAME</label>
+                <input type="text" id="fullName" name="user_name" required/>
+            </li>
+            <li id="li4">
+                <label for="cvv">CVV</label>
+                <input type="number" id="cvv" name="user_card_cvv" max="999" required/>
+            </li>
+            <li id="li5">
+                <label for="saveCard">Do you want to save this card?</label>
+                <input type="checkbox" id="saveCard">
+            </li>
+
+            <li id="li6">
+                <input type = "submit" id="submit" value="">
+            </li>
+        
+        </ul>
+        
+    </form>
 </body>
