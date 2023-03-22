@@ -39,10 +39,10 @@ body {
 
 #overlays {
     display: grid;
-    grid-template-columns: repeat(4,auto);
-    grid-template-rows: repeat(2,auto);
+    grid-template-columns: repeat(1,auto);
+    grid-template-rows: repeat(4,auto);
     grid-row-gap:2em;
-    justify-items:start;
+    justify-items:center;
 }
 
 #pages{
@@ -84,14 +84,4 @@ svg{
 
 #messageNoOverlays{
     color:var(--colorSecundario);
-}
-
-@media screen and (max-width:1250px){
-    #overlays {
-        display: grid;
-        grid-template-columns: repeat(2,auto);
-        grid-template-rows: repeat(2,auto);
-        grid-row-gap: 2em;
-        justify-items: center;
-    }
 }

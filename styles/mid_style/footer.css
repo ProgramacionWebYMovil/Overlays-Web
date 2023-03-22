@@ -59,9 +59,27 @@
     padding-bottom: 1em;
 }
 
+.ul-footer:first-child {
+   margin-top: 2em;
+}
+
+
 .ul-footer li:first-child{
     break-before: column;
 }
+
+
+.ul-footer .li-footer{
+    display:flex;
+    justify-content:center;
+    margin:1em;
+}
+
+.li-footer a {
+    color: var(--colorSecundario);
+    text-decoration: none;
+}
+
 
 h3{
     color:var(--colorTerciario);
@@ -75,6 +93,7 @@ h3{
     justify-content:center;
     align-items:center;
     margin-bottom:10px;
+    flex-direction:row;
 }
 
 .tag-footer {

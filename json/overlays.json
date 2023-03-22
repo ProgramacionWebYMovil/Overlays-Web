@@ -1,0 +1,25 @@
+[
+  {
+    "image_card": "/images/overlays_preview/timer.png",
+    "overlay_description": "Con este contador conseguirás que tus viewers no se pierdan lo más importante de tu stream",
+    "overlay_name": "Contador",
+    "overlay_name_EN": "Timer",
+    "overlay_description_EN": "With this timer you will have your viewers hype for your stream"
+  },
+
+  {
+    "image_card": "/images/overlays_preview/football.png",
+    "overlay_description": "Añade tu marcador de futbol en tus retransmisiones deportivas",
+    "overlay_name": "Marcador de futbol",
+    "overlay_name_EN": "Football scoreboard",
+    "overlay_description_EN": "Add your football scoreboard to your sports lives"
+  },
+
+  {
+    "image_card": "/images/overlays_preview/tennis.png",
+    "overlay_description": "Añade tu marcador de tenis en tus retransmisiones deportivas",
+    "overlay_name": "Marcador de tenis",
+    "overlay_name_EN": "Tennis scoreboard",
+    "overlay_description_EN": "Add your tennis scoreboard to your sports lives"
+  }
+]
