@@ -1,3 +1,45 @@
 {
+  "english": {
+    "plan1_title": "Free",
+    "plan1_money": "<span style='font-size: 1.5em'>$0</span>/month",
+    "plan1_moreInfo": "More info",
+    "plan1_icon1": "<span style='color: green;'>&#10003;</span>",
+    "plan1_feature1": "Use all our overlays",
+    "plan1_icon2": "&#10060",
+    "plan1_feature2": "Use a single overlay<br />of each type",
+    "plan1_icon3": "&#10060",
+    "plan1_feature3": "You can´t customize<br /> our overlays",
+    "plan2_title": "Premium",
+    "plan2_money": "<span style='font-size: 1.5em'>$4.99</span>/month",
+    "plan2_moreInfo": "More info",
+    "plan2_icon1": "<span style='color: green;'>&#10003;</span>",
+    "plan2_feature1": "Use all our overlays",
+    "plan2_icon2": "<span style='color: green;'>&#10003;</span>",
+    "plan2_feature2": "Use each type of overlay<br />more than once",
+    "plan2_icon3": "<span style='color: green;'>&#10003;</span>",
+    "plan2_feature3": "Customize the overlays<br />as you wish",
+    "button-purchase": "Purchase"
+  },
 
+  "spanish": {
+    "plan1_title": "Gratuito",
+    "plan1_money": "<span style='font-size: 1.5em'>$0</span>/mes",
+    "plan1_moreInfo": "Mas información",
+    "plan1_icon1": "<span style='color: green;'>&#10003;</span>",
+    "plan1_feature1": "Usa todos nuestros overlays",
+    "plan1_icon2": "&#10060",
+    "plan1_feature2": "Usa solo un overlay<br />de cada tipo",
+    "plan1_icon3": "&#10060",
+    "plan1_feature3": "No puedes editar a tu gusto<br />los overlays",
+    "plan2_title": "Premium",
+    "plan2_money": "<span style='font-size: 1.5em'>$4.99</span>/mes",
+    "plan2_moreInfo": "Mas información",
+    "plan2_icon1": "<span style='color: green;'>&#10003;</span>",
+    "plan2_feature1": "Usa todos nuestros overlays",
+    "plan2_icon2": "<span style='color: green;'>&#10003;</span>",
+    "plan2_feature2": "Usa los overlays todas las veces que desees",
+    "plan2_icon3": "<span style='color: green;'>&#10003;</span>",
+    "plan2_feature3": "Edita los overlays a tu gusto",
+    "button-purchase": "Comprar"
+  }
 }
