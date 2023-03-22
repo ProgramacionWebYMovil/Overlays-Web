@@ -1,5 +1,5 @@
 
-document.addEventListener("DOMContentLoaded",loadFooterContent);
+// document.addEventListener("DOMContentLoaded",loadFooterContent);
 
 
 function loadFooterContent(){

@@ -34,7 +34,7 @@
 
 
 //METODO PARA FETCH
-function loadTemplate(fileName, id) {
+function loadTemplate(fileName, id, js) {
 
     //FETCH 
     fetch(fileName)
@@ -42,13 +42,32 @@ function loadTemplate(fileName, id) {
         .then((response) => { return response.text(); })
         /*Segundo .then se llama despues de que el primero se haya completado
          * se procesa la informaci�n retornada*/
-        .then((text) => {
+        .then(async (text) => {
             //console.log(text);
             text = text.split("</head>");
 
             document.querySelector("head").innerHTML += text[0].replace("<head>", "");
             document.querySelector(id).innerHTML = text[1];
+
+            if(js) loadJs(js);
         });
+
+        
+}
+
+function loadJs(js){
+    let footerScript = document.createElement("script");
+                
+    fetch(js).then(response => {
+        return response.text();
+    }).then(data => {
+        footerScript.innerHTML= data;
+        
+        document.head.appendChild(footerScript);
+
+        loadFooterContent();
+    
+    })
 }
 
 function fetchJson(json) {
@@ -86,5 +105,5 @@ function loadJson(json) {
 
 
 loadTemplate("/templates/header.html", "header");
-loadTemplate("/templates/footer.html", "footer");
+loadTemplate("/templates/footer.html", "footer","/js/footer.js");
 fetchJson("/json/intro.json");
