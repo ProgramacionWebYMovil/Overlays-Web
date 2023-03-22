@@ -38,10 +38,10 @@ body {
 
 #overlays {
     display: grid;
-    grid-template-columns: repeat(4,auto);
+    grid-template-columns: repeat(2,auto);
     grid-template-rows: repeat(2,auto);
     grid-row-gap: 2em;
-    justify-items: start;
+    justify-items: center;
 }
 
 #pages {

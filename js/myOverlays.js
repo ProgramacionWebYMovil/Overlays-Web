@@ -212,7 +212,7 @@ function pageCalculator() {
  */
     var windowSize = window.innerWidth;
 
-    if (windowSize >= 1024) {
+    if (windowSize >= 1250) {
         cardsPerPage = 8;
     } else {
         cardsPerPage = 4;
