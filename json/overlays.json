@@ -1,0 +1,25 @@
+[
+  {
+    "image_card": "/images/overlays_preview/timer.png",
+    "overlay_description": "Esta es una descripción de un overlay",
+    "overlay_name": "Temporizador",
+    "overlay_name_EN": "Timer",
+    "overlay_description_EN": "This is a description of an overlay"
+  },
+
+  {
+    "image_card": "/images/overlays_preview/football.png",
+    "overlay_description": "asdfasdf safasadafd de un overla Esta es una descripción de un overlay",
+    "overlay_name": "Marcador de futbol",
+    "overlay_name_EN": "Football scoreboard",
+    "overlay_description_EN": "This is a description of an overlay"
+  },
+
+  {
+    "image_card": "/images/overlays_preview/tennis.png",
+    "overlay_description": "asdfasdf safasadafd de un overla Esta es una descripción de un overlay",
+    "overlay_name": "Marcador de tenis",
+    "overlay_name_EN": "Football scoreboard",
+    "overlay_description_EN": "This is a description of an overlay"
+  }
+]

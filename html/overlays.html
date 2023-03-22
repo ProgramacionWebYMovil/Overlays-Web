@@ -4,21 +4,44 @@
 <head>
     <meta charset="utf-8" />
     <title>Overlays</title>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
     <link rel="icon" type="image/png" href="/images/logotypes/logo.png">
-    <link rel="stylesheet" href="/styles/big_style/products.css" />
-    <link rel="stylesheet" href="/styles/big_style/header.css" />
-    <link rel="stylesheet" href="/styles/big_style/footer.css" />
-    <script src="/js/overlays.js"></script>
+    <link rel="stylesheet" href="/styles/big_style/overlays.css" />
+    <!--CSS DEL LOS OVERLAYS CARDS-->
+    <link rel="stylesheet" href="../styles/big_style/overlayCard.css">
+    <script src="/js/overlays-userInteraction.js"></script>
+    <script src="/js/overlays-loadPage.js"></script>
 </head>
 <body>
-    <header w3-include-html="/templates/header.html"></header>
+    <header></header>
     <main>
-        <div w3-include-html="/templates/templateOverlays.html"></div>
+        <h1>Overlays</h1>
+        <section id="overlays">
+        </section>
+
+
+        <!--Avanzar página si la hay-->
+        <div id="pages">
+            <button id="previousPage">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M15.5 20.4L7.1 12l8.4-8.4L16.9 5l-7 7 7 7z"></path>
+                </svg>
+            </button>
+            <div id="pageText">
+                <p id="pageWord">Page&nbsp;</p>
+                <p id="actualPage"></p>
+                <p id="fromWord">&nbsp;of&nbsp;</p>
+                <p id="nPages"></p>
+            </div>
+            <button id="nextPage">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M8.5 20.4l8.4-8.4-8.4-8.4L7.1 5l7 7-7 7z"></path>
+                </svg>
+            </button>
+        </div>
     </main>
-    <footer w3-include-html="/templates/footer.html"></footer>
+    <footer></footer>
 
 
-    <script>w3IncludeHTML();</script>
+
 </body>
 </html>
