@@ -39,7 +39,6 @@ function load_names(data){
     document.querySelector("#dropmenu-top").innerHTML = data.overlays;
     document.querySelector("#prices").querySelector("a").innerHTML = data.prices;
 
-    console.log(document.querySelector(".dropall_elements"));
     document.querySelector("#howToUse").querySelector("a").innerHTML = data.howtouse;
 }
 
@@ -54,7 +53,7 @@ function  load_dropmenu_elements(data) {
 
 function load_logged_options(data) {
     let notlogged_section = document.querySelector("#not_logged").querySelectorAll("a");
-    console.log(notlogged_section);
+
     notlogged_section[0].innerHTML = data.option1;
     notlogged_section[1].innerHTML = data.option2;
 
@@ -64,7 +63,6 @@ function load_logged_options(data) {
 }
 
 function session(option){
-    console.log("Pulsado");
     sessionStorage.setItem("sessionOption",option);
     window.location.href = "/html/session.html";
 }
@@ -79,7 +77,6 @@ function sessionState(){
     let loged = document.querySelector("#logged");
 
     let not_logedA = not_loged.querySelectorAll("a");
-    console.log(not_logedA[0]);
     not_logedA[0].addEventListener("click",() =>session("log in"));
     not_logedA[1].addEventListener("click",() =>session("sign up"));
 
