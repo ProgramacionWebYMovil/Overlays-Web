@@ -121,7 +121,8 @@
 }
 
 .dropall_elements a {
-    display: block;
+    display: flex;
+    justify-content:flex-start;
 }
 
 .dropmenu_elements {

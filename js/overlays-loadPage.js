@@ -9,36 +9,47 @@ let currentPage = 1;
 let nPages = 0;
 let cardsPerPage = 0;
 
-function loadTemplate(fileName, id, callback) {
+//METODO PARA FETCH
+function loadTemplate(fileName, id, url) {
 
     //FETCH 
     fetch(fileName)
-        //Primer .then se especifica que queremos del objeto (html) bruto que nos devolverá la llamada fetch
+        //Primer .then se especifica que queremos del objeto (html) bruto que nos devolver� la llamada fetch
         .then((response) => { return response.text(); })
         /*Segundo .then se llama despues de que el primero se haya completado
-         * se procesa la información retornada*/
-        .then((text) => {
+         * se procesa la informaci�n retornada*/
+        .then(async (text) => {
+            //console.log(text);
             text = text.split("</head>");
+
             document.querySelector("head").innerHTML += text[0].replace("<head>", "");
             document.querySelector(id).innerHTML = text[1];
 
-            if (callback) loadJs(callback);
-        })
+            if (url) loadJs(url, id);
+        });
+
+
 }
 
-/*FUNCION PARA AÑADIR EL CONTENIDO DE LOS TEMPLATES FOOTER Y HEADER*/
-function loadJs(js) {
-    let footerScript = document.createElement("script");
+function loadJs(js, id) {
+    let jsScript = document.createElement("script");
 
     fetch(js).then(response => {
         return response.text();
     }).then(data => {
-        footerScript.innerHTML = data;
+        jsScript.innerHTML = data;
 
-        document.head.appendChild(footerScript);
+        document.head.appendChild(jsScript);
 
-        loadFooterContent();
+        switch (id) {
+            case "header":
+                loadHeaderContent();
+                break;
 
+            case "footer":
+                loadFooterContent();
+                break;
+        }
     })
 }
 
@@ -250,7 +261,7 @@ function previousPage() {
     document.querySelector("#nextPage").style.visibility = "initial";
 }
 
-loadTemplate("/templates/header.html", "header");
+loadTemplate("/templates/header.html", "header","/js/header.js");
 loadTemplate("/templates/footer.html", "footer", "/js/footer.js");
 fetchCards("/templates/overlayCard.html", "/json/overlays.json");
 fetchJson("/json/overlays-page.json");

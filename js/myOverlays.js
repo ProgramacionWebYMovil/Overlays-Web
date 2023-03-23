@@ -22,17 +22,25 @@
 }
 
 /*FUNCION PARA AÑADIR EL CONTENIDO DE LOS TEMPLATES FOOTER Y HEADER*/
-function loadJs(js) {
-    let footerScript = document.createElement("script");
+function loadJs(js,id) {
+    let script = document.createElement("script");
 
     fetch(js).then(response => {
         return response.text();
     }).then(data => {
-        footerScript.innerHTML = data;
+        script.innerHTML = data;
 
-        document.head.appendChild(footerScript);
+        document.head.appendChild(script);
 
-        loadFooterContent();
+        switch (id) {
+            case "header":
+                loadHeaderContent();
+                break;
+
+            case "footer":
+                loadFooterContent();
+                break;
+        }
 
     })
 }
@@ -338,7 +346,8 @@ function previousPage() {
 
 loadTemplate("/templates/header.html", "header");
 loadTemplate("/templates/footer.html", "footer");
-loadJs("/js/footer.js");
+loadJs("/js/footer.js","footer");
+loadJs("/js/header.js","header");
 loadTemplate("/templates/overlayCard.html", "", loadCardsTemplate);
 
 fetchJson("/json/myOverlays-page.json");

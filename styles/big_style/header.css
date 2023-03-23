@@ -135,6 +135,8 @@
 /*Condición para mostrar el session Options*/
 #menu-header #sessionOptions div a {
     font-weight: normal;
+    display:flex;
+    justify-content:flex-start;
 }
 
 #menu-header #sessionOptions:hover div {
