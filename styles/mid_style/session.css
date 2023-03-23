@@ -17,6 +17,7 @@ body{
 
 header{
     grid-area: header;
+    z-index: 900;
 }
 
 main{
