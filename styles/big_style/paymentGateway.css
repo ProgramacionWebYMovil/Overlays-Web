@@ -1,36 +1,68 @@
-﻿body {
-    --second-color: #ffbb00;
-    --background-main-color: #032a88;
-    --text-main-color: #ffffff;
+﻿:root {
+    --colorPrincipal: #032A88;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #FFBB00;
+    --colorPrincipalOscuro: #04006B;
+    height: 100vh;
 }
 
-#paymentGateway {
-    position:relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--text-main-color);
-    /*background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1015%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1016)'%3e%3c/rect%3e%3cpath d='M581.506773904007 490.1559813626226L586.1379828220354 556.3853544644561 683.1664380157715 516.3238545364966z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1107.2579829693047-31.927283198959838L1017.3508505473173-22.477662800816958 1076.4788473555254 107.65822563309254z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M540.505%2c445.989C569.075%2c446.083%2c593.977%2c428.184%2c608.191%2c403.401C622.33%2c378.749%2c625.828%2c347.844%2c610.536%2c323.89C596.141%2c301.341%2c567.227%2c296.106%2c540.505%2c297.38C516.327%2c298.533%2c494.115%2c309.614%2c481.157%2c330.058C467.139%2c352.175%2c461.654%2c379.65%2c473.586%2c402.958C486.538%2c428.259%2c512.081%2c445.895%2c540.505%2c445.989' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M155.841%2c190.088C197.292%2c191.874%2c241.145%2c179.746%2c262.511%2c144.181C284.391%2c107.76%2c277.061%2c61.646%2c254.711%2c25.512C233.558%2c-8.687%2c196.053%2c-28.263%2c155.841%2c-28.277C115.604%2c-28.291%2c76.526%2c-9.656%2c56.855%2c25.445C37.571%2c59.856%2c43.663%2c101.819%2c63.988%2c135.626C83.646%2c168.323%2c117.725%2c188.446%2c155.841%2c190.088' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1250.839543630113 499.8778731380142L1376.0671208268775 584.3449405007742 1460.5341881896377 459.11736330400964 1335.306610992873 374.6502959412496z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M816.182%2c618.217C865.658%2c616.831%2c908.56%2c586.543%2c932.761%2c543.368C956.402%2c501.193%2c956.662%2c450.748%2c933.994%2c408.042C909.728%2c362.325%2c867.893%2c321.534%2c816.182%2c323.732C766.85%2c325.829%2c738.892%2c374.423%2c714.531%2c417.372C690.641%2c459.492%2c665.845%2c507.028%2c687.712%2c550.233C711.161%2c596.565%2c764.274%2c619.671%2c816.182%2c618.217' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1015'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='50%25' y1='100%25' x2='50%25' y2='0%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1016'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(3%2c 42%2c 136%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
-    */
-}
-
-#paymentGateway ul{
-    list-style-type:none;
-    justify-content:space-between;
+body{
     
+    margin: 0;
+    display: grid;
+    grid-template-rows: minmax(max-content,78px) 1fr;
+    grid-template-columns: 1fr minmax(max-content,1fr) 1fr;
+    grid-template-areas: "header header header" ". main .";
+    background-size:cover;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(3%2c 42%2c 136%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c376.523C70.932%2c376.342%2c143.176%2c352.14%2c195.6%2c304.359C244.786%2c259.529%2c246.526%2c185.737%2c275.211%2c125.685C304.564%2c64.235%2c366.153%2c15.46%2c366.128%2c-52.641C366.102%2c-123.011%2c329.069%2c-193.225%2c275.076%2c-238.355C223.684%2c-281.312%2c150.355%2c-275.438%2c84.561%2c-287.99C25.684%2c-299.222%2c-30.888%2c-314.687%2c-90.463%2c-308.09C-159.446%2c-300.452%2c-238.844%2c-298.784%2c-285.118%2c-247.056C-331.444%2c-195.271%2c-324.791%2c-116.116%2c-324.354%2c-46.635C-323.968%2c14.815%2c-303.77%2c71.384%2c-282.753%2c129.129C-259.909%2c191.894%2c-246.512%2c261.379%2c-196.244%2c305.361C-142.794%2c352.127%2c-71.021%2c376.705%2c0%2c376.523' fill='%2302226d'%3e%3c/path%3e%3cpath d='M1440 837.957C1510.681 856.669 1585.381 921.1320000000001 1649.477 885.952 1712.3 851.47 1690.587 753.083 1716.422 686.238 1740.219 624.668 1802.8 574.5 1795.193 508.931 1787.57 443.221 1718.128 406.375 1677.864 353.889 1634.421 297.259 1614.503 216.94600000000003 1549.164 188.22199999999998 1482.376 158.861 1403.305 176.96699999999998 1335.256 203.27300000000002 1270.496 228.30700000000002 1217.528 275.733 1176.984 332.095 1138.844 385.11400000000003 1123.718 448.571 1112.5140000000001 512.915 1101.001 579.0360000000001 1074.8519999999999 653.728 1111.152 710.1800000000001 1147.52 766.738 1228.76 766.814 1291.437 791.168 1340.831 810.361 1388.773 824.395 1440 837.957' fill='%230432a3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");   
 }
 
-#paymentGateway ul li{
+header{
+    grid-area:header;
+}
+
+main{
+    font-size: 1.5em;
+    grid-area: main;
+    justify-self: center;
+    align-self: center;
+    color:var(--colorSecundario);
+    display: grid;
+    grid-template-rows: 4em minmax(max-content,1fr);
+    grid-template-areas: 
+        "title"
+        "form";
+}
+
+#paymentGatewayForm{
+    grid-area: form;
+    justify-self: center;
+    align-self: auto;
+}
+
+#titlePayment{
+    grid-area: title;
+}
+
+#paymentGatewayForm ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+#paymentGatewayForm ul li{
     display:flex;
-    flex-direction:column;
-    align-items:flex-start;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 0.5em;
 }
 
-#paymentGateway button{
-    color: var(--text-main-color);
-    background:var(--second-color);
-    border:none;
-    font-size:large;
-    border-radius:5px;
-
+#submit{
+    align-self: center;
+    font-size: x-large;
+    background: var(--colorTerciario);
+    color: var(--colorPrincipal);
+    border: none;
+    border-radius: 7px;
 }
+
+
