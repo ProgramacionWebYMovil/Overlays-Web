@@ -75,6 +75,42 @@ function loadCardsTemplate(data) {
     loadCards(cardsPerPage, (currentPage - 1) * cardsPerPage);
 }
 
+function fetchJson(json) {
+    fetch(json)
+        .then(data => {
+            return data.json()
+        })
+        .then(items => {
+            
+            loadJsonPage(items);
+        })
+}
+
+function loadJsonPage(jsonPage) {
+    var data;
+    //Ingles
+    var language = window.navigator.language.toString();
+    if (language.includes("en")) {
+        data = jsonPage.english;
+        //Espa�ol
+    } else {
+        data = jsonPage.spanish;
+    }
+
+    
+
+    let body = document.querySelector('body');
+    /*Recorro el json
+     * data es json.english
+     * key ser� cada clave
+     * data[key] es el valor de cada clave
+     */
+    let key;
+    for (key in data) {
+        body.querySelector("#" + key).innerHTML = data[key];
+    }
+}
+
 
 function loadJSON() {
     json = JSON.parse(sessionStorage.getItem("userOverlays"));
@@ -304,6 +340,8 @@ loadTemplate("/templates/header.html", "header");
 loadTemplate("/templates/footer.html", "footer");
 loadJs("/js/footer.js");
 loadTemplate("/templates/overlayCard.html", "", loadCardsTemplate);
+
+fetchJson("/json/myOverlays-page.json");
 
 
 document.querySelector("#nextPage").addEventListener("click", nextPage, false);

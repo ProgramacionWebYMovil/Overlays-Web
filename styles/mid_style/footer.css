@@ -51,17 +51,26 @@
     text-decoration:none;
 }
 
-.ul-footer{
-    list-style-type:none;
-    column-count: 3;
-    column-gap: 30px;
+.ul-footer {
+    list-style-type: none;
     border-bottom: 1px solid #ffbb00;
     padding-bottom: 1em;
+    display: grid;
+    grid-template-areas:
+        "title title"
+        "li-footer  li-footer"
+        "li-footer  li-footer";
+    justify-content: space-around;
+    margin: 0;
+    margin-block: 0;
+    padding-inline-start: 0;
 }
 
-.ul-footer:first-child {
-   margin-top: 2em;
+
+.ul-footer .title{
+    grid-area:title;
 }
+
 
 
 .ul-footer li:first-child{

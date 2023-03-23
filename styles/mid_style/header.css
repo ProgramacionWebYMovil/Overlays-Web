@@ -15,9 +15,10 @@
     width: 100%;
     font-size: 1em;
     padding-left:inherit;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 20%;
     align-items: center;
+    flex-direction:row;
 }
 
 #menu-header a {
@@ -29,6 +30,7 @@
 #title {
     display: flex;
     align-items: center;
+    margin-left:1.5em;
 }
 
 #menu-header #title img{
@@ -74,12 +76,13 @@
     padding: 0;
     border-width: 0;
     text-align: left;
+    margin-right:1.5em;
 }
 
 .dropall i{
     font-size: 1.8em;
     font-weight: bold;
-    color: #DCDCDC;
+    color: var(--colorPrincipal);
     text-align: center;
     align-self: center;
 }

@@ -1,0 +1,13 @@
+{
+  "english": {
+    "h1_title": "My overlays",
+    "pageWord": "Page&nbsp",
+    "fromWord": "&nbspof&nbsp"
+  },
+
+  "spanish": {
+    "h1_title": "Mis overlays",
+    "pageWord": "Página&nbsp",
+    "fromWord": "&nbspde&nbsp"
+  }
+}
