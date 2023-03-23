@@ -85,7 +85,6 @@ function sessionState(){
 
     loged.querySelectorAll("a")[1].addEventListener("click",logOut);
 
-    console.log(sessionStorage.getItem("stateSession"));
     if(sessionStorage.getItem("stateSession") === "true") not_loged.style = "display:none;"
     else loged.style = "display:none;";
 }
