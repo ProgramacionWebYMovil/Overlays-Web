@@ -82,6 +82,8 @@ function addEventsListener(){
             }
         );
     }  
+
+    if(sessionStorage.getItem("sessionOption") === "log in") changePage(document.querySelector("#changeButton"));
 }
 
 function checkPasswordRepeat(){
