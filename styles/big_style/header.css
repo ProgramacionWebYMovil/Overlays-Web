@@ -61,6 +61,8 @@
 
 .dropall{
     width: 40%;
+    background: none;
+    border: none;
 }
 
 .dropall i{

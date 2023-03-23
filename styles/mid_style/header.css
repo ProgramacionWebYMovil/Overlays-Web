@@ -60,8 +60,7 @@
 }
 
 .dropall {
-    width: 2.4em;
-    height: 2em;
+    width: 2.8em;
     background-color: #FFBB00;
     border-radius: 5%;
 
@@ -71,6 +70,10 @@
     flex-direction: column;
     overflow:visible;
     position: relative;
+
+    padding: 0;
+    border-width: 0;
+    text-align: left;
 }
 
 .dropall i{
@@ -78,6 +81,7 @@
     font-weight: bold;
     color: #DCDCDC;
     text-align: center;
+    align-self: center;
 }
 
 .dropall .dropall_elements {
@@ -88,92 +92,56 @@
     text-decoration: none;
     z-index: 1;
     flex-direction: column;
-    left: -6em;
+
+    left: -8em;
+    top: -1em;
 
     background-color: rgb(0,0,0, 0.8);
     padding: 10px;
     border-radius: 5%;
 
-    gap: 0.5em;
+    gap: 0.4em;
 }
 
-.dropall:hover .dropall_elements{
+
+.dropall:focus-within .dropall_elements{
     display: inline-flex;
 }
 
-.dropall:hover i{
+.dropall:focus i{
     color: #04006B;
 }
 
-/*Creación del dropdown menu*/
-#menu-header #dropmenu {
-    display: inline-flex;
+.dropall_elements{
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    overflow:visible;
-    position:relative;
 }
 
-#menu-header #dropmenu div {
-    display: none;
-    text-decoration-line: none;
-    position:absolute;
-    z-index: 1;
-    flex-direction: column;
+.dropall_elements a {
+    display: block;
 }
 
 .dropmenu_elements {
-    top: 0;
-    background:none;
-    left: -6.2em;
-
-    background-color: rgb(0,0,0, 0.8);
-    padding: 10px;
+    background-color: rgb(255,255,255, 0.1);
     border-radius: 5%;
+    font-weight: normal;
 }
 
-#dropmenu .dropmenu_elements a {
-    float: left;
+#sessionOptions {
     display: block;
-    text-align: left;
-    font-weight: normal;
-}
-
-/*Condición para mostrar el dropdown menu*/
-#menu-header #dropmenu:hover div{
-    display: inline-flex;
-    justify-content:center;
-}
-
-/*Creación del session Options*/
-#menu-header #sessionOptions {
-    display: inline-flex;
-    flex-direction: column;
-    height: 2em;
-    width: 2em;
-    overflow: visible;
-    align-items: flex-start;
-}
-
-#menu-header #sessionOptions div {
-    display: none;
-    text-decoration-line: none;
-    z-index: 1;
-    flex-direction: column;
-    width: max-content;
-
-    background-color: rgb(0,0,0, 0.8);
-    padding: 10px;
+    text-align: center;
+    background-color: rgb(255,255,255, 0.1);
     border-radius: 5%;
-    top: 0.2em;
 }
 
-/*Condición para mostrar el session Options*/
-#menu-header #sessionOptions div a {
-    font-weight: normal;
+#sessionOptions img {
+    margin-top: 0.5em;
 }
 
-#menu-header #sessionOptions:hover div {
-    display: inline-flex;
-    justify-content:left;
-}
+
+
+
+
+
+
+
