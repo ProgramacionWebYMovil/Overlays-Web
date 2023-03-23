@@ -34,7 +34,7 @@
 
 
 //METODO PARA FETCH
-function loadTemplate(fileName, id, js) {
+function loadTemplate(fileName, id, url) {
 
     //FETCH 
     fetch(fileName)
@@ -49,24 +49,31 @@ function loadTemplate(fileName, id, js) {
             document.querySelector("head").innerHTML += text[0].replace("<head>", "");
             document.querySelector(id).innerHTML = text[1];
 
-            if(js) loadJs(js);
+            if(url) loadJs(url,id);
         });
 
         
 }
 
-function loadJs(js){
-    let footerScript = document.createElement("script");
+function loadJs(js,id){
+    let jsScript = document.createElement("script");
                 
     fetch(js).then(response => {
         return response.text();
     }).then(data => {
-        footerScript.innerHTML= data;
+        jsScript.innerHTML= data;
         
-        document.head.appendChild(footerScript);
-
-        loadFooterContent();
+        document.head.appendChild(jsScript);
     
+        switch(id){
+            case "header":
+                loadHeaderContent();
+                break;
+
+            case "footer":
+                loadFooterContent();
+                break;
+        }
     })
 }
 
@@ -104,6 +111,6 @@ function loadJson(json) {
 
 
 
-loadTemplate("/templates/header.html", "header");
-loadTemplate("/templates/footer.html", "footer","/js/footer.js");
+loadTemplate("/templates/header.html", "header","/js/header.js");
+//loadTemplate("/templates/footer.html", "footer","/js/footer.js");
 fetchJson("/json/intro.json");

@@ -24,6 +24,7 @@ function loadHeaderContent(){
             }
 
             loadSections(headerContent);
+            sessionState();
         })
 }
 
@@ -37,24 +38,54 @@ function loadSections(headerContent){
 function load_names(data){
     document.querySelector("#dropmenu-top").innerHTML = data.overlays;
     document.querySelector("#prices").querySelector("a").innerHTML = data.prices;
+
+    console.log(document.querySelector(".dropall_elements"));
     document.querySelector("#howToUse").querySelector("a").innerHTML = data.howtouse;
 }
 
 function  load_dropmenu_elements(data) {
-    document.querySelector("#football").querySelector("a").innerHTML = data.football;
-    document.querySelector("#basketball").querySelector("a").innerHTML = data.basketball;
-    document.querySelector("#padel").querySelector("a").innerHTML = data.padel;
-    document.querySelector("#tennis").querySelector("a").innerHTML = data.tennis;
-    document.querySelector("#others").querySelector("a").innerHTML = data.others;
+    document.querySelector("#football").innerHTML = data.football;
+    document.querySelector("#basketball").innerHTML = data.basketball;
+    document.querySelector("#padel").innerHTML = data.padel;
+    document.querySelector("#tennis").innerHTML = data.tennis;
+    document.querySelector("#others").innerHTML = data.others;
 
 }
 
 function load_logged_options(data) {
     let notlogged_section = document.querySelector("#not_logged").querySelectorAll("a");
-    notlogged_section[0].querySelector("a").innerHTML = data.option1;
-    notlogged_section[1].querySelector("a").innerHTML = data.option2;
+    console.log(notlogged_section);
+    notlogged_section[0].innerHTML = data.option1;
+    notlogged_section[1].innerHTML = data.option2;
 
     let logged_section = document.querySelector("#logged").querySelectorAll("a");
-    logged_section[0].querySelector("a").innerHTML = data.option3;
-    logged_section[1].querySelector("a").innerHTML = data.option4;
+    logged_section[0].innerHTML = data.option3;
+    logged_section[1].innerHTML = data.option4;
+}
+
+function session(option){
+    console.log("Pulsado");
+    sessionStorage.setItem("sessionOption",option);
+    window.location.href = "/html/session.html";
+}
+
+function logOut(){
+    sessionStorage.setItem("stateSession","false");
+    window.location.href = "/html/intro.html";
+}
+
+function sessionState(){
+    let not_loged = document.querySelector("#not_logged");
+    let loged = document.querySelector("#logged");
+
+    let not_logedA = not_loged.querySelectorAll("a");
+    console.log(not_logedA[0]);
+    not_logedA[0].addEventListener("click",() =>session("log in"));
+    not_logedA[1].addEventListener("click",() =>session("sign up"));
+
+    loged.querySelectorAll("a")[1].addEventListener("click",logOut);
+
+    console.log(sessionStorage.getItem("stateSession"));
+    if(sessionStorage.getItem("stateSession") === "true") not_loged.style = "display:none;"
+    else loged.style = "display:none;";
 }
