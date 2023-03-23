@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",loadPage);
 
 function loadPage(){
-    loadTemplate("/templates/header.html","header");
+    loadTemplate("/templates/header.html","header","/js/header.js");
     loadTemplate("/templates/templatePaymentGateway.html","main");
     loadContent("/json/payment.json");
 
@@ -21,10 +21,32 @@ function loadTemplate(fileName, id, js) {
             document.querySelector("head").innerHTML += text[0].replace("<head>", "");
             document.querySelector(id).innerHTML = text[1];
 
-            if(js) loadJs(js);
+            if(js) loadJs(js,id);
         });
 
         
+}
+
+function loadJs(js,id){
+    let jsScript = document.createElement("script");
+                
+    fetch(js).then(response => {
+        return response.text();
+    }).then(data => {
+        jsScript.innerHTML= data;
+        
+        document.head.appendChild(jsScript);
+    
+        switch(id){
+            case "header":
+                loadHeaderContent();
+                break;
+
+            case "footer":
+                loadFooterContent();
+                break;
+        }
+    })
 }
 
 
