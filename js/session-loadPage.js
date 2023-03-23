@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded',loadPage);
 
 function loadPage(){
 
-    loadTemplate("/templates/header.html","header");
+    loadTemplate("/templates/header.html","header" ,() => loadJs("/js/header.js","header"));
     loadTemplate("/templates/templateSession.html","main", () => loadPageContent("/json/session-content.json",addEventsListener));
 
     
@@ -25,6 +25,28 @@ function loadTemplate(url,typeElement,callBack){
     })
 
     
+}
+
+function loadJs(js,id){
+    let jsScript = document.createElement("script");
+                
+    fetch(js).then(response => {
+        return response.text();
+    }).then(data => {
+        jsScript.innerHTML= data;
+        
+        document.head.appendChild(jsScript);
+    
+        switch(id){
+            case "header":
+                loadHeaderContent();
+                break;
+
+            case "footer":
+                loadFooterContent();
+                break;
+        }
+    })
 }
 
 function loadPageContent(url,callBack){
