@@ -23,12 +23,12 @@ function loadHeaderContent(){
                     headerContent.lenguageContent = data.english;
             }
 
-            loadSections(headerContent);
+            loadSectionsHeader(headerContent);
             sessionState();
         })
 }
 
-function loadSections(headerContent){
+function loadSectionsHeader(headerContent){
     //document.querySelector("#logo-header").src = headerContent.commonContent.logoImg;
     load_names(headerContent.lenguageContent.names);
     load_dropmenu_elements(headerContent.lenguageContent.dropmenu_elements);

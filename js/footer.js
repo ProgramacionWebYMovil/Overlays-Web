@@ -1,7 +1,4 @@
 
-// document.addEventListener("DOMContentLoaded",loadFooterContent);
-
-
 function loadFooterContent(){
 
     let footerContent = {
@@ -27,11 +24,11 @@ function loadFooterContent(){
                 footerContent.lenguageContent = data.english;     
         }
 
-        loadSections(footerContent);
+        loadSectionsFooter(footerContent);
     })
 }
 
-function loadSections(footerContent){
+function loadSectionsFooter(footerContent){
     document.querySelector("#logo-footer").src = footerContent.commonContent.logoImg;
     loadExploreList(footerContent.lenguageContent.exploreList);
     loadFollowList({
@@ -74,7 +71,6 @@ function loadContactList(data){
 
 function loadExploreList(data){
     let exploreSection = document.querySelector("#exploreSection").querySelectorAll("li");
-    
     exploreSection[0].querySelector("h3").innerHTML = data.title;
     exploreSection[1].querySelector("a").innerHTML = data.home;
     exploreSection[2].querySelector("a").innerHTML = data.howToUse;

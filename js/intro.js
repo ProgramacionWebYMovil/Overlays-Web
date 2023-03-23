@@ -112,5 +112,5 @@ function loadJson(json) {
 
 
 loadTemplate("/templates/header.html", "header","/js/header.js");
-//loadTemplate("/templates/footer.html", "footer","/js/footer.js");
+loadTemplate("/templates/footer.html", "footer","/js/footer.js");
 fetchJson("/json/intro.json");
