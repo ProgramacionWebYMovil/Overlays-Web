@@ -42,10 +42,8 @@ function loadTemplate(fileName, id, url) {
         .then((response) => { return response.text(); })
         /*Segundo .then se llama despues de que el primero se haya completado
          * se procesa la informaci�n retornada*/
-        .then(async (text) => {
-            //console.log(text);
+        .then( (text) => {
             text = text.split("</head>");
-
             document.querySelector("head").innerHTML += text[0].replace("<head>", "");
             document.querySelector(id).innerHTML = text[1];
 

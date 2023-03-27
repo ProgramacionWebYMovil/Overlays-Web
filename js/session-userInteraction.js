@@ -54,6 +54,12 @@ function resolveValidation(inputElement, error){
 
 }
 
+function checkPasswordRepeat(){
+    let passwordRepeat = document.querySelector("#passwordRepeat");
+    if( passwordRepeat.value !== document.querySelector("#password").value) passwordRepeat.setCustomValidity(pageInfo.repeatPasswordMatch);
+    else passwordRepeat.setCustomValidity("");
+}
+
 function getUlElements(ul){
     fullNameLi = ul[1];
     mailLi = ul[3];
@@ -86,11 +92,7 @@ function addEventsListener(){
     if(sessionStorage.getItem("sessionOption") === "log in") changePage(document.querySelector("#changeButton"));
 }
 
-function checkPasswordRepeat(){
-    let passwordRepeat = document.querySelector("#passwordRepeat");
-    if( passwordRepeat.value !== document.querySelector("#password").value) passwordRepeat.setCustomValidity(pageInfo.repeatPasswordMatch);
-    else passwordRepeat.setCustomValidity("");
-}
+
 
 function changeContent(buttonValue,submitButtonValue,titleInner,textChangeInner){
     let textChange = document.querySelector("#changeSessionOptions");

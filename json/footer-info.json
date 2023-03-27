@@ -9,6 +9,7 @@
         },
 
         "contactList" : {
+            "title" : "Contact us",
             "name" : "Name:",
             "email": "Email:",
             "message": "Message:",
