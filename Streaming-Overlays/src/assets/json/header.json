@@ -1,0 +1,57 @@
+{
+
+  "english": {
+    "names" : {
+      "overlays" : "Overlays",
+      "prices" : "Prices",
+      "howtouse" : "How to Use"
+    },
+
+    "dropmenu_elements" : {
+      "football" : "Football",
+      "basketball" : "Basketball",
+      "padel" : "Padel",
+      "tennis" : "Tennis",
+      "others" : "Others"
+    },
+
+    "logged_options" : {
+      "option1" : "Log in",
+      "option2" : "Sign up",
+      "option3" : "My Library",
+      "option4" : "Log out"
+    }
+
+  },
+
+  "spanish": {
+    "names" : {
+      "overlays" : "Overlays",
+      "prices" : "Precios",
+      "howtouse" : "Cómo se usa"
+    },
+
+    "dropmenu_elements" : {
+      "football" : "Fútbol",
+      "basketball" : "Baloncesto",
+      "padel" : "Padel",
+      "tennis" : "Tenis",
+      "others" : "Otros"
+    },
+
+    "logged_options" : {
+      "option1" : "Iniciar sesión",
+      "option2" : "Crear cuenta",
+      "option3" : "Mi Librería",
+      "option4" : "Cerrar sesión"
+    }
+  },
+
+  "common":{
+    "logo_title" : {
+      "logoImg" : "/images/logotypes/logo.png",
+      "title" : "Streaming Overlays"
+    },
+    "iconImg" : "/images/icons/user-yellow.png"
+  }
+}
